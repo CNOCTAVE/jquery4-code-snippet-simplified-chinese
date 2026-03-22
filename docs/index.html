@@ -174,7 +174,8 @@ without any warranty.
                         <p class="q-ma-md">$ npm install -g vsce</p>
                         <q-separator></q-separator>
                         <div id="detail_contents_of_extension" class="title1 q-ma-md text-primary">扩展中的详细内容</div>
-                        <div v-for="(v, k) in details" :key="k" style="border: 1px grey solid; border-radius: 5px; margin: 0px 0px 5px 0px;">
+                        <div v-for="(v, k) in details" :key="k"
+                            style="border: 1px grey solid; border-radius: 5px; margin: 0px 0px 5px 0px;">
                             <div class="text-h5 q-ma-md bg-red-10 text-white">{{k}}</div>
                             <div class="text-h5 q-ma-md text-red-10" style="background: #f8dbde;">快速输入前缀：</div>
                             <p class="q-ma-md">{{v.prefix}}</p>
@@ -272,9 +273,16 @@ without any warranty.
                     },
                     leftDrawerOpen: true,
                     get_details: async (page, size) => {
+                        Quasar.Loading.show({
+                            spinnerColor: 'white',
+                            messageColor: 'white',
+                            backgroundColor: 'black',
+                            message: '正在加载扩展中的详细内容'
+                        });
                         const url = 'jquery4.json';
                         let response = await axios.get(url);
                         if (response.status !== 200) {
+                            Quasar.Loading.hide();
                             Quasar.Notify.create({
                                 type: 'negative',
                                 message: '加载扩展中的详细内容失败。请检查网络连接'
@@ -290,6 +298,7 @@ without any warranty.
                             return;
                         }
                         else {
+                            Quasar.Loading.hide();
                             this.details = response.data;
                         }
                     },
