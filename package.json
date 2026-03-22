@@ -1,0 +1,64 @@
+{
+  "name": "jquery4-code-snippet-simplified-chinese",
+  "displayName": "jQuery4 Code Snippet (简体中文)",
+  "description": "jQuery4 代码片段，包含简体中文注释",
+  "author": "Yu Hongbo <yuhongbo@member.fsf.org>, CNOCTAVE <cnoctave@qq.com>",
+  "email": "cnoctave@qq.com",
+  "version": "0.0.1",
+  "publisher": "your-publisher-name",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CNOCTAVE/jquery4-code-snippet-simplified-chinese"
+  },
+  "bugs": {
+    "url": "https://github.com/CNOCTAVE/ottohub-electron/issues",
+    "email": "cnoctave@qq.com"
+  },
+  "license": "AGPL-3.0-only",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/jquery4.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/jquery4.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/jquery4.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/jquery4.json"
+      },
+      {
+        "language": "react",
+        "path": "./snippets/jquery4.json"
+      },
+      {
+        "language": "angular",
+        "path": "./snippets/jquery4.json"
+      },
+      {
+        "language": "svelte",
+        "path": "./snippets/jquery4.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/jquery4.json"
+      }
+    ]
+  },
+  "publishConfig": {
+      "registry": "https://registry.npmjs.org/",
+      "access": "public"
+  }
+}

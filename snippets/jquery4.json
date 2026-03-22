@@ -1,0 +1,4912 @@
+{
+    "创建一个新的 jQuery 对象1": {
+        "prefix": "$add( selector )",
+        "body": [
+            "// selector",
+            "// 类型: Selector",
+            "// 表示选择器表达式的字符串，用于查找要添加到匹配元素集合中的其他元素。",
+            "$('选择器字符串').add(${selector});"
+        ],
+        "description": "创建一个新的 jQuery 对象，并将元素添加到匹配元素的集合中。"
+    },
+    "创建一个新的 jQuery 对象2": {
+        "prefix": "$add( elements )",
+        "body": [
+            "// elements",
+            "// 类型: Element[]",
+            "// 要添加到匹配元素集合中的一个或多个元素。",
+            "$('选择器字符串').add(${elements});"
+        ],
+        "description": "创建一个新的 jQuery 对象，并将元素添加到匹配元素的集合中。"
+    },
+    "创建一个新的 jQuery 对象3": {
+        "prefix": "$add( html )",
+        "body": [
+            "// html",
+            "// 类型: htmlString",
+            "// 要添加到匹配元素集合中的 HTML 字符串。",
+            "$('选择器字符串').add(${html});"
+        ],
+        "description": "创建一个新的 jQuery 对象，并将元素添加到匹配元素的集合中。"
+    },
+    "创建一个新的 jQuery 对象4": {
+        "prefix": "$add( selection )",
+        "body": [
+            "// selection",
+            "// 类型: jQuery",
+            "// 要添加到匹配元素集合中的 jQuery 对象。",
+            "$('选择器字符串').add(${selection});"
+        ],
+        "description": "创建一个新的 jQuery 对象，并将元素添加到匹配元素的集合中。"
+    },
+    "创建一个新的 jQuery 对象5": {
+        "prefix": "$add( selector, context )",
+        "body": [
+            "// selector",
+            "// 类型: Selector",
+            "// 表示选择器表达式的字符串，用于查找要添加到匹配元素集合中的其他元素。",
+            "// context",
+            "// 类型: Element",
+            "// 选择器应开始匹配的文档位置；类似于 $(selector, context) 方法的 context 参数。",
+            "$('选择器字符串').add(${selector}, ${context});"
+        ],
+        "description": "创建一个新的 jQuery 对象，并将元素添加到匹配元素的集合中。"
+    },
+    "将栈上先前的一组元素添加到当前集合中，可以选择性地使用选择器进行筛选。": {
+        "prefix": "$addBack( [selector ] )",
+        "body": [
+            "// selector",
+            "// 类型: Selector（可选）",
+            "// 包含选择器表达式的字符串，用于将当前元素集与特定元素进行匹配。",
+            "$('选择器字符串').addBack(${selector});"
+        ],
+        "description": "将栈上先前的一组元素添加到当前集合中，可以选择性地使用选择器进行筛选。"
+    },
+    "将指定的类添加到匹配元素集合中的每个元素1": {
+        "prefix": "$addClass( className )",
+        "body": [
+            "// className",
+            "// 类型: String",
+            "// 要添加到每个匹配元素的 class 属性中的一个或多个以空格分隔的类名。",
+            "$('选择器字符串').addClass(${className});"
+        ],
+        "description": "将指定的类添加到匹配元素集合中的每个元素。"
+    },
+    "将指定的类添加到匹配元素集合中的每个元素2": {
+        "prefix": "$addClass( classNames )",
+        "body": [
+            "// classNames",
+            "// 类型: Array",
+            "// 要添加到每个匹配元素的 class 属性中的类数组",
+            "$('选择器字符串').addClass(${classNames}[]);"
+        ],
+        "description": "将指定的类添加到匹配元素集合中的每个元素。"
+    },
+    "将指定的类添加到匹配元素集合中的每个元素3": {
+        "prefix": "$addClass( function )",
+        "body": [
+            "// function",
+            "// 类型: Function( Integer index, String currentClassName ) => String",
+            "// 一个返回一个或多个以空格分隔的类名的函数，这些类名将添加到现有类名中。该函数接收集合中元素的索引位置和现有类名作为参数。在函数内部，`this` 指的是集合中的当前元素。",
+            "// 类型: Function( Integer index, String currentClassName ) => String | Array",
+            "// 一个函数，返回一个或多个以空格分隔的类名，或者一个类名数组，这些类名将被添加到现有类名中。该函数接收集合中元素的索引位置和现有类名作为参数。在函数内部，`this` 指的是集合中的当前元素。",
+            "$('选择器字符串').addClass(${function}( index ) {",
+            "\treturn 'item-' + index;",
+            "});"
+        ],
+        "description": "将指定的类添加到匹配元素集合中的每个元素。"
+    },
+    "在匹配元素集合中的每个元素之后插入由参数指定的内容1": {
+        "prefix": "$after( function )",
+        "body": [
+            "// function",
+            "// 类型: Function( Integer index ) => htmlString or Element or Text or jQuery",
+            "// 该函数返回一个 HTML 字符串、DOM 元素、文本节点或 jQuery 对象，用于插入到匹配元素集合中每个元素之后。它接收元素在集合中的索引位置作为参数。在函数内部，`this` 参数指的是集合中的当前元素。",
+            "$('选择器字符串').after(${function}( index ) {",
+            "\treturn '<div>' + this.className + '</div>';",
+            "});"
+        ],
+        "description": "在匹配元素集合中的每个元素之后插入由参数指定的内容。"
+    },
+    "在匹配元素集合中的每个元素之后插入由参数指定的内容2": {
+        "prefix": "$after( function-html )",
+        "body": [
+            "// function-html",
+            "// 类型: Function( Integer index, String html ) => htmlString or Element or Text or jQuery",
+            "// 该函数返回一个 HTML 字符串、DOM 元素、文本节点或 jQuery 对象，用于插入到匹配元素集合中每个元素之后。它接收两个参数：元素在集合中的索引位置和元素的旧 HTML 值。在函数内部，`this` 指的是集合中的当前元素。",
+            "$('选择器字符串').after(${function}( index, oldHtml ) {",
+            "\treturn '<div>' + this.className + '</div>';",
+            "});"
+        ],
+        "description": "在匹配元素集合中的每个元素之后插入由参数指定的内容。"
+    },
+    "在 Ajax 请求完成时调用": {
+        "prefix": "$on( 'ajaxComplete', handler )",
+        "body": [
+            "// ajaxComplete",
+            "// 类型: string",
+            "// 字符串'ajaxComplete'",
+            "// handler",
+            "// 类型: Function( Event event, jqXHR jqXHR, PlainObject ajaxOptions )",
+            "// 回调函数",
+            "$(document).on('ajaxComplete', ${function}(event, jqxhr, settings) {",
+            "\t$('.log').text('Triggered ajaxComplete handler.');",
+            "});"
+        ],
+        "description": "注册一个处理程序，以便在 Ajax 请求完成时调用。这是一个 Ajax 事件。"
+    },
+    "在 Ajax 请求完成并出现错误时调用": {
+        "prefix": "$on( 'ajaxError', handler )",
+        "body": [
+            "// ajaxError",
+            "// 类型: string",
+            "// 字符串'ajaxError'",
+            "// handler",
+            "// 类型: Function( Event event, jqXHR jqXHR, PlainObject ajaxSettings, String thrownError )",
+            "// 回调函数",
+            "$(document).on('ajaxError', ${function}(event, jqxhr, settings, thrownError) {",
+            "\t$('.log').text('Triggered ajaxError handler. Error info: ' + thrownError);",
+            "});"
+        ],
+        "description": "注册一个处理程序，以便在 Ajax 请求完成并出现错误时调用。这是一个 Ajax 事件。"
+    },
+    "在第一个 Ajax 请求之前调用": {
+        "prefix": "$on( 'ajaxSend', handler )",
+        "body": [
+            "// ajaxSend",
+            "// 类型: string",
+            "// 字符串'ajaxSend'",
+            "// handler",
+            "// 类型: Function( Event event, jqXHR jqXHR, PlainObject ajaxOptions )",
+            "// 回调函数",
+            "$(document).on('ajaxSend', ${function}(event, jqxhr, ajaxOptions) {",
+            "\t$('.log').text('Triggered ajaxSend handler.);",
+            "});"
+        ],
+        "description": "附加一个在发送 Ajax 请求之前要执行的函数。这是一个 Ajax 事件。"
+    },
+    "在第一个 Ajax 请求开始时调用": {
+        "prefix": "$on( 'ajaxStart', handler )",
+        "body": [
+            "// ajaxStart",
+            "// 类型: string",
+            "// 字符串'ajaxStart'",
+            "// handler",
+            "// 类型: Function()",
+            "// 回调函数",
+            "$(document).on('ajaxStart', ${function}() {",
+            "\t$('.log').text('Triggered ajaxStart handler.);",
+            "});"
+        ],
+        "description": "注册一个处理程序，以便在第一个 Ajax 请求开始时调用。这是一个 Ajax 事件。"
+    },
+    "在所有 Ajax 请求完成后调用": {
+        "prefix": "$on( 'ajaxStop', handler )",
+        "body": [
+            "// ajaxStop",
+            "// 类型: string",
+            "// 字符串'ajaxStop'",
+            "// handler",
+            "// 类型: Function()",
+            "// 回调函数",
+            "$(document).on('ajaxStop', ${function}() {",
+            "\t$('.log').text('Triggered ajaxStop handler.);",
+            "});"
+        ],
+        "description": "注册一个处理程序，以便在所有 Ajax 请求完成后调用。这是一个 Ajax 事件。"
+    },
+    "在 Ajax 请求成功完成时执行": {
+        "prefix": "$on( 'ajaxSuccess', handler )",
+        "body": [
+            "// ajaxSuccess",
+            "// 类型: string",
+            "// 字符串'ajaxSuccess'",
+            "// handler",
+            "// 类型: Function( Event event, jqXHR jqXHR, PlainObject ajaxOptions, PlainObject data )",
+            "// 回调函数",
+            "$(document).on('ajaxSuccess', ${function}(event, jqxhr, ajaxOptions, data) {",
+            "\t$('.log').text('Triggered ajaxSuccess handler.);",
+            "});"
+        ],
+        "description": "附加一个函数，该函数将在 Ajax 请求成功完成时执行。这是一个 Ajax 事件。"
+    },
+    "选择所有元素": {
+        "prefix": "$all",
+        "body": [
+            "$('*')"
+        ],
+        "description": "选择所有元素"
+    },
+    "执行动画1": {
+        "prefix": "$animate( properties [, duration ] [, easing ] [, complete ] )",
+        "body": [
+            "// properties",
+            "// 类型: PlainObject",
+            "// 动画将向其移动的 CSS 属性和值对象。",
+            "// duration (default: 400)",
+            "// 类型: Number or String",
+            "// 一个字符串或数字，用于确定动画的运行时长。",
+            "// easing (default: swing)",
+            "// 类型: String",
+            "// 一个字符串，指示过渡动画要使用的缓动函数。",
+            "// complete",
+            "// 类型: Function()",
+            "// 动画完成后要调用的函数，每个匹配的元素调用一次。",
+            "$('选择器字符串').animate(",
+            "\t{",
+            "\t\topacity: 0.25,",
+            "\t\tleft: '+=50',",
+            "\t\theight: 'toggle',",
+            "\t},",
+            "\t400,",
+            "\t'swing',",
+            "\tfunction() {",
+            "\t\t// animation complete.",
+            "\t}",
+            ");"
+        ],
+        "description": "对一组 CSS 属性执行自定义动画"
+    },
+    "执行动画2": {
+        "prefix": "$animate( properties, options )",
+        "body": [
+            "// properties",
+            "// 类型: PlainObject",
+            "// 动画将向其移动的 CSS 属性和值对象。",
+            "// options",
+            "// 类型: PlainObject",
+            "// 传递给该方法的其他选项的映射表。",
+            "//   duration (default: 400)",
+            "//   类型: Number or String",
+            "//   一个字符串或数字，用于确定动画将运行的时间长度。",
+            "//   easing (default: swing)",
+            "//   类型: String",
+            "//   一个字符串，表示用于过渡的缓动函数。",
+            "//   queue (default: true)",
+            "//   类型: Boolean or String",
+            "//   一个布尔值，表示是否将动画放入效果队列。如果为 false，动画将立即开始。从 jQuery 1.7 起，queue 选项也可以接受一个字符串，此时动画会被添加到由该字符串表示的队列中。当使用自定义队列名称时，动画不会自动开始；必须调用 .dequeue('queuename') 才能启动它。",
+            "//   specialEasing",
+            "//   类型: PlainObject",
+            "//   一个对象，包含由 properties 参数定义的一个或多个 CSS 属性及其对应的缓动函数。（版本新增：1.4）",
+            "//   step",
+            "//   类型: Function( Number now, Tween tween )",
+            "//   一个函数，用于对每个动画元素的每个动画属性进行调用。该函数提供了修改 Tween 对象的机会，以在设置属性值之前更改该属性的值。",
+            "//   progress",
+            "//   类型: Function( Promise animation, Number progress, Number remainingMs )",
+            "//   在动画的每一步之后调用的函数，无论动画属性的数量如何，每个动画元素只调用一次。（版本添加：1.8）",
+            "//   complete",
+            "//   类型: Function()",
+            "//   动画完成后调用的函数，每个匹配的元素调用一次。",
+            "//   start",
+            "//   类型: Function( Promise animation )",
+            "//   当元素上的动画开始时调用的函数。（版本新增：1.8）",
+            "//   done",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画完成（其 Promise 对象被解决）时要调用的函数。（版本添加：1.8）",
+            "//   fail",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画未能完成（其 Promise 对象被拒绝）时要调用的函数。（添加版本：1.8）",
+            "//   always",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画完成或在未完成的情况下停止时调用的函数（其 Promise 对象要么被解析，要么被拒绝）。(版本添加：1.8)",
+            "$('选择器字符串').animate( 'slow', {duration : 400});"
+        ],
+        "description": "对一组 CSS 属性执行自定义动画"
+    },
+    "正在执行动画的所有元素": {
+        "prefix": "$animated",
+        "body": [
+            "// 选择在选择器运行时正在执行动画的所有元素",
+            "$('选择器字符串:animated')"
+        ],
+        "description": "选择在选择器运行时正在执行动画的所有元素"
+    },
+    "插入到元素的末尾1": {
+        "prefix": "$append( content [, content ] )",
+        "body": [
+            "// content",
+            "// 类型: htmlString or Element or Text or Array or jQuery",
+            "// 要插入到匹配元素集合中每个元素末尾的 DOM 元素、文本节点、元素和文本节点数组、HTML 字符串或 jQuery 对象。",
+            "// content",
+            "// 类型: htmlString or Element or Text or Array or jQuery",
+            "// 要插入到匹配元素集中每个元素末尾的一个或多个附加 DOM 元素、文本节点、元素和文本节点数组、HTML 字符串或 jQuery 对象。",
+            "$('选择器字符串').append('内容');"
+        ],
+        "description": "将参数指定的内容插入到匹配元素集合中每个元素的末尾。"
+    },
+    "插入到元素的末尾2": {
+        "prefix": "$append( function )",
+        "body": [
+            "// function",
+            "// 类型: Function( Integer index, String html ) => htmlString or Element or Text or jQuery",
+            "// 该函数返回一个 HTML 字符串、DOM 元素、文本节点或 jQuery 对象，用于将其插入到匹配元素集合中每个元素的末尾。它接收两个参数：元素在集合中的索引位置和元素的旧 HTML 值。在函数内部，`this` 指的是集合中的当前元素。",
+            "$('选择器字符串').append(function(index, html) {",
+            "    // 返回要插入的内容",
+            "    return '内容';",
+            "});"
+        ],
+        "description": "将参数指定的内容插入到匹配元素集合中每个元素的末尾。"
+    },
+    "每个元素插入到目标的末尾": {
+        "prefix": "$appendTo( target )",
+        "body": [
+            "// target",
+            "// 类型: Selector or htmlString or Element or Array or jQuery",
+            "// 一个选择器、元素、HTML 字符串、元素数组或 jQuery 对象；匹配的元素集合将被插入到由此参数指定的元素的末尾。",
+            "$('选择器字符串').appendTo('.inner');"
+        ],
+        "description": "将匹配元素集合中的每个元素插入到目标的末尾。"
+    },
+    "获取或设置元素的属性值": {
+        "prefix": "$attr( attributeName )",
+        "body": [
+            "// attributeName",
+            "// 类型: String",
+            "// 要获取其值的属性的名称。",
+            "$('选择器字符串').attr('attributeName');"
+        ],
+        "description": "获取匹配元素集合中第一个元素的属性值，或为每个匹配的元素设置一个或多个属性。"
+    },
+    "选择具有指定属性且其值要么等于给定字符串，要么以该字符串开头并紧跟一个连字符（-）的元素": {
+        "prefix": "$AttributeContainsPrefixSelector",
+        "body": [
+            "// '[attribute|='value']'",
+            "// attribute: 属性名。",
+            "// value: 一个属性值。可以是有效的标识符或带引号的字符串。",
+            "// 这个选择器被引入到 CSS 规范中以处理语言属性。",
+            "$('选择器字符串[hreflang|='en']')"
+        ],
+        "description": "选择具有指定属性且其值要么等于给定字符串，要么以该字符串开头并紧跟一个连字符（-）的元素。"
+    },
+    "选择具有指定属性且其值包含给定子字符串的元素": {
+        "prefix": "$AttributeContainsSelector",
+        "body": [
+            "// '[attribute*='value']'",
+            "// attribute: 属性名。",
+            "// value: 一个属性值。可以是有效的标识符或带引号的字符串。",
+            "// 这是 jQuery 属性选择器中最宽松的一个，用于匹配值。如果选择器的字符串出现在元素的属性值中的任何位置，它就会选择该元素。将此选择器与属性包含单词选择器（例如 [attr~='word']）进行比较，后者在许多情况下更为合适。",
+            "$('选择器字符串[hreflang*='en']')"
+        ],
+        "description": "选择具有指定属性且其值包含给定子字符串的元素。"
+    },
+    "选择具有指定属性且其值包含由空格分隔的给定单词的元素": {
+        "prefix": "$AttributeContainsWordSelector",
+        "body": [
+            "// '[attribute~='value']'",
+            "// attribute: 属性名。",
+            "// value: 一个属性值。可以是有效的标识符或带引号的字符串。",
+            "// 此选择器将测试字符串与属性值中的每个单词进行匹配，其中“单词”定义为由空格分隔的字符串。如果测试字符串与任意单词完全相等，则选择器匹配。",
+            "$('选择器字符串[hreflang*='en']')"
+        ],
+        "description": "选择具有指定属性且其值包含由空格分隔的给定单词的元素。"
+    },
+    "选择具有指定属性且其值以给定字符串结尾的元素": {
+        "prefix": "$AttributeEndsWithSelector",
+        "body": [
+            "// '[attribute$='value']'",
+            "// attribute: 属性名。",
+            "// value: 一个属性值。可以是有效的标识符或带引号的字符串。",
+            "// 选择具有指定属性且其值正好以给定字符串结尾的元素。比较区分大小写。",
+            "$('选择器字符串[hreflang$='en']')"
+        ],
+        "description": "选择具有指定属性且其值以给定字符串结尾的元素。"
+    },
+    "选择具有指定属性且其值等于给定字符串的元素": {
+        "prefix": "$AttributeEqualsSelector",
+        "body": [
+            "// '[attribute=\"value\"]'",
+            "// attribute: 属性名。",
+            "// value: 一个属性值。可以是有效的标识符或带引号的字符串。",
+            "// 选择具有指定属性且其值正好等于某个值的元素。",
+            "$('选择器字符串[hreflang=\"en\"]')"
+        ],
+        "description": "选择具有指定属性且其值等于给定字符串的元素。"
+    },
+    "选择具有指定属性且其值不等于给定字符串的元素": {
+        "prefix": "$AttributeNotEqualsSelector",
+        "body": [
+            "// '[attribute!=\"value\"]'",
+            "// attribute: 属性名。",
+            "// value: 一个属性值。可以是有效的标识符或带引号的字符串。",
+            "// 选择具有指定属性且其值不等于某个值的元素。",
+            "$('选择器字符串[hreflang!=\"en\"]')"
+        ],
+        "description": "选择具有指定属性且其值不等于给定字符串的元素。"
+    },
+    "选择具有指定属性且其值以给定字符串开头的元素": {
+        "prefix": "$AttributeStartsWithSelector",
+        "body": [
+            "// '[attribute^='value']'",
+            "// attribute: 属性名。",
+            "// value: 一个属性值。可以是有效的标识符或带引号的字符串。",
+            "// 选择具有指定属性且其值以给定字符串开头的元素。",
+            "$('选择器字符串[hreflang^='en']')"
+        ],
+        "description": "选择具有指定属性且其值以给定字符串开头的元素。"
+    },
+    "在前面插入1": {
+        "prefix": "$before( content [, content ] )",
+        "body": [
+            "// content",
+            "// 类型: htmlString or Element or Text or Array or jQuery",
+            "// HTML 字符串、DOM 元素、文本节点、元素和文本节点的数组，或 jQuery 对象，在匹配元素集合中的每个元素之前插入。",
+            "// content",
+            "// 类型: htmlString or Element or Text or Array or jQuery",
+            "// 一个或多个额外的 DOM 元素、文本节点、元素和文本节点的数组、HTML 字符串或 jQuery 对象，插入到匹配元素集合的每个元素之前。",
+            "$('选择器字符串').before('.inner');"
+        ],
+        "description": "在匹配元素集合中的每个元素之前插入由参数指定的内容。"
+    },
+    "在前面插入2": {
+        "prefix": "$before( function )",
+        "body": [
+            "// function",
+            "// 类型: Function( Integer index ) => htmlString or Element or Text or jQuery",
+            "// 一个函数，返回一个 HTML 字符串、DOM 元素、文本节点或 jQuery 对象，以在匹配元素集合中的每个元素之前插入。接收元素在集合中的索引位置作为参数。在函数内部，this 指的是集合中的当前元素。",
+            "$('选择器字符串').before( function( index ) { return '内容'; } );"
+        ],
+        "description": "在匹配元素集合中的每个元素之前插入由参数指定的内容。"
+    },
+    "在前面插入3": {
+        "prefix": "$before( function-html )",
+        "body": [
+            "// function-html",
+            "// 类型: Function( Integer index, String html ) => htmlString or Element or Text or jQuery",
+            "// 一个函数，返回一个 HTML 字符串、DOM 元素、文本节点或 jQuery 对象，用于在匹配元素集合中的每个元素之前插入。接收该元素在集合中的索引位置以及元素的旧 HTML 值作为参数。在函数内部，this 指的是集合中的当前元素。",
+            "$('选择器字符串').before( function( index, html ) { return '内容' + html; } );"
+        ],
+        "description": "在匹配元素集合中的每个元素之前插入由参数指定的内容。"
+    },
+    "附加一个处理程序1": {
+        "prefix": "$bind( eventType [, eventData ], handler )",
+        "body": [
+            "// eventType",
+            "// 类型: String",
+            "// 一个包含一个或多个 DOM 事件类型的字符串，例如“click”或“submit”，或者自定义事件名称。",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 每次事件触发时执行的函数。",
+            "$('选择器字符串').bind( 'click', { key: 'value' }, function( event ) { } );"
+        ],
+        "description": "为元素的事件附加一个处理程序。"
+    },
+    "附加一个处理程序2": {
+        "prefix": "$bind( eventType [, eventData ] [, preventBubble ] )",
+        "body": [
+            "// eventType",
+            "// 类型: String",
+            "// 一个包含一个或多个 DOM 事件类型的字符串，例如“click”或“submit”，或者自定义事件名称。",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// preventBubble",
+            "// 类型: Boolean",
+            "// 将第三个参数设置为 false 将附加一个函数，该函数可以阻止默认操作的发生并阻止事件冒泡。默认值为 true。",
+            "$('选择器字符串').bind( 'click', { key: 'value' }, true );"
+        ],
+        "description": "为元素的事件附加一个处理程序。"
+    },
+    "附加一个处理程序3": {
+        "prefix": "$bind( events )",
+        "body": [
+            "// events",
+            "// 类型: Object",
+            "// 一个包含一个或多个 DOM 事件类型以及为它们执行的函数的对象。",
+            "$('选择器字符串').bind( [{eventType: 'click',handler: function( event ) { }}, {eventType: 'click',handler: function( event ) { }}] );"
+        ],
+        "description": "为元素的事件附加一个处理程序。"
+    },
+    "blur事件": {
+        "prefix": "$on( 'blur' [, eventData ], handler )",
+        "body": [
+            "// blur",
+            "// 类型: string",
+            "// 字符串'blur'",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 每次事件触发时执行的函数。",
+            "$('选择器字符串').on( 'blur' , {error: 'Blur error'}, function( event ) {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“blur”事件，或在元素上触发该事件。"
+    },
+    "选择所有按钮元素": {
+        "prefix": "$button",
+        "body": [
+            "// 使用有效 CSS 与 $(':button') 等效的选择器是 $('button, input[type='button']')。",
+            "$(':button')"
+        ],
+        "description": "选择所有按钮元素和类型为button的元素。"
+    },
+    "添加回调函数": {
+        "prefix": "$callbacks.add( callbacks )",
+        "body": [
+            "// callbacks",
+            "// 类型: Function() or Array",
+            "// 一个函数或函数数组，将被添加到回调列表中。",
+            "var callbacks = $.Callbacks();",
+            "callbacks.add( function(){} );"
+        ],
+        "description": "向回调函数列表添加一个回调函数或一组回调函数。"
+    },
+    "禁用回调函数": {
+        "prefix": "$callbacks.disable()",
+        "body": [
+            "var callbacks = $.Callbacks();",
+            "callbacks.disable();"
+        ],
+        "description": "禁止回调函数列表执行任何操作。"
+    },
+    "确定回调函数是否已被禁用": {
+        "prefix": "$callbacks.disabled()",
+        "body": [
+            "var callbacks = $.Callbacks();",
+            "callbacks.disabled();"
+        ],
+        "description": "确定回调函数列表是否已被禁用。"
+    },
+    "清空回调函数": {
+        "prefix": "$callbacks.empty()",
+        "body": [
+            "var callbacks = $.Callbacks();",
+            "callbacks.empty();"
+        ],
+        "description": "从列表中移除所有回调函数。"
+    },
+    "调用回调函数": {
+        "prefix": "$callbacks.fire( arguments )",
+        "body": [
+            "// arguments",
+            "// 类型: Anything",
+            "// 要传回回调函数列表的参数或参数列表。",
+            "var callbacks = $.Callbacks();",
+            "callbacks.fire('argument');",
+            "callbacks.fire(['argument1', 'argument2']);"
+        ],
+        "description": "使用给定的参数调用所有回调函数。"
+    },
+    "确定回调是否已经被调用": {
+        "prefix": "$callbacks.fired()",
+        "body": [
+            "var callbacks = $.Callbacks();",
+            "callbacks.fired();"
+        ],
+        "description": "确定回调是否已经至少被调用过一次。"
+    },
+    "使用给定的上下文和参数调用回调函数": {
+        "prefix": "$callbacks.fireWith( [context ] [, args ] )",
+        "body": [
+            "// context",
+            "// 类型: Anything",
+            "// 对列表中回调应被触发的上下文的引用。",
+            "// args",
+            "// 类型: ArrayLikeObject",
+            "// 一个数组或类似数组的对象，用于传递给列表中的回调函数。如果省略或未定义，则不会传递任何参数。",
+            "// 此方法返回它所附加的 Callbacks 对象 (this)。",
+            "var callbacks = $.Callbacks();",
+            "callbacks.fireWith(window, [ 'foo','bar' ]);"
+        ],
+        "description": "使用给定的上下文和参数调用列表中的所有回调函数。"
+    },
+    "确定是否有回调函数": {
+        "prefix": "$callbacks.has( [callback ] )",
+        "body": [
+            "// callback",
+            "// 类型: Function()",
+            "// 要搜索的回调。",
+            "var callbacks = $.Callbacks();",
+            "callbacks.has();",
+            "var foo = function() {};",
+            "callbacks.has( foo );"
+        ],
+        "description": "确定列表是否附有任何回调函数。如果提供了回调函数作为参数，则确定它是否在列表中。"
+    },
+    "锁定回调函数": {
+        "prefix": "$callbacks.lock()",
+        "body": [
+            "var callbacks = $.Callbacks();",
+            "callbacks.lock();"
+        ],
+        "description": "将回调函数列表锁定在其当前状态。"
+    },
+    "确定回调函数列表是否已被锁定": {
+        "prefix": "$callbacks.locked()",
+        "body": [
+            "var callbacks = $.Callbacks();",
+            "callbacks.locked();"
+        ],
+        "description": "确定回调函数列表是否已被锁定。"
+    },
+    "移除回调函数": {
+        "prefix": "$callbacks.remove( callbacks )",
+        "body": [
+            "// callbacks",
+            "// 类型: Function() or Array",
+            "// 一个函数或函数数组，从回调列表中移除。",
+            "var callbacks = $.Callbacks();",
+            "callbacks.remove( function(){} );",
+            "callbacks.remove( [function(){}, function(){}] );"
+        ],
+        "description": "从回调列表中移除一个回调或一组回调。"
+    },
+    "change事件": {
+        "prefix": "$on( 'change' [, eventData ], handler )",
+        "body": [
+            "// change",
+            "// 类型: string",
+            "// 字符串'change'。",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 每次事件触发时执行的函数。",
+            "$('选择器字符串').on( 'change' , {reason: 'Data changed'}, function( event ) {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“change”事件，或在元素上触发该事件。"
+    },
+    "复选框": {
+        "prefix": "$checkboxSelector",
+        "body": [
+            "// :checkbox",
+            "$('选择器字符串:checkbox')"
+        ],
+        "description": "选择所有类型为复选框的元素。"
+    },
+    "选中的复选框": {
+        "prefix": "$checkedSelector",
+        "body": [
+            "// :checked",
+            "$('选择器字符串:checked')"
+        ],
+        "description": "匹配所有被选中或被勾选的元素。"
+    },
+    "直接子元素": {
+        "prefix": "$ChildSelector",
+        "body": [
+            "// parent > child",
+            "// parent: 父元素",
+            "// child: 直接子元素",
+            "$('选择器字符串 > 选择器字符串')"
+        ],
+        "description": "选择由“parent”指定的元素中由“child”指定的所有直接子元素。"
+    },
+    "子元素": {
+        "prefix": "$children( [selector ] )",
+        "body": [
+            "// selector",
+            "// 类型: string",
+            "// 一个选择器字符串，用于过滤子元素。",
+            "// 给定一个表示一组 DOM 元素的 jQuery 对象，.children() 方法允许我们在 DOM 树中搜索这些元素的子元素，并从匹配的元素构建一个新的 jQuery 对象。.children() 方法与 .find() 的区别在于，.children() 只向下遍历 DOM 树的单层，而 .find() 可以向下多层遍历以选择子孙元素（孙子元素等）。还要注意，像大多数 jQuery 方法一样，.children() 不会返回文本节点；要获取包括文本和注释节点在内的所有子节点，请使用 .contents()。",
+            "$('选择器字符串').children()",
+            "$('选择器字符串').children( '选择器字符串' )"
+        ],
+        "description": "获取匹配元素集合中每个元素的子元素，可选择通过选择器进行过滤。"
+    },
+    "具有指定类的元素": {
+        "prefix": "$ClassSelector",
+        "body": [
+            "// .class",
+            "// class: 类名",
+            "$('.类名')"
+        ],
+        "description": "选择所有具有指定类的元素。"
+    },
+    "清除队列": {
+        "prefix": "$clearQueue( [queueName ] )",
+        "body": [
+            "// queueName",
+            "// 类型: string",
+            "// 一个包含队列名称的字符串。默认值为 fx，即标准效果队列。",
+            "当调用 .clearQueue() 方法时，队列中所有尚未执行的函数都会从队列中移除。当不带参数使用时，.clearQueue() 会从 fx（标准效果队列）中移除剩余的函数。以这种方式，它类似于 .stop(true)。然而，虽然 .stop() 方法仅用于动画，.clearQueue() 也可以用于移除通过 .queue() 方法添加到通用 jQuery 队列中的任何函数。",
+            "$('选择器字符串').clearQueue()",
+            "$('选择器字符串').clearQueue( queueName )"
+        ],
+        "description": "从队列中移除所有尚未运行的项目。如果提供了 queueName 参数，则仅清除该队列中的项目。"
+    },
+    "点击事件": {
+        "prefix": "$on( 'click' [, eventData ], handler )",
+        "body": [
+            "// click",
+            "// 类型: string",
+            "// 字符串'click'。",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 每次事件触发时执行的函数。",
+            "$('选择器字符串').on( 'click' , {reason: 'Data changed'}, function( event ) {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“click”事件。"
+    },
+    "深拷贝1": {
+        "prefix": "$clone( [withDataAndEvents ] )",
+        "body": [
+            "// withDataAndEvents (default: false)",
+            "// 类型: Boolean",
+            "// 一个布尔值，指示是否应将事件处理程序与元素一起复制。从 jQuery 1.4 起，元素数据也将被复制。",
+            ".clone() 方法对匹配的元素集合执行深拷贝，这意味着它会复制匹配的元素以及它们所有的子元素和文本节点。",
+            "$('选择器字符串').clone()",
+            "$('选择器字符串').clone( true )"
+        ],
+        "description": "创建匹配元素集合的深拷贝。"
+    },
+    "深拷贝2": {
+        "prefix": "$clone( [withDataAndEvents ] [, deepWithDataAndEvents ] )",
+        "body": [
+            "// withDataAndEvents (default: false)",
+            "// 类型: Boolean",
+            "// 一个布尔值，表示是否应将事件处理程序和数据与元素一起复制。默认值为 false。*在 jQuery 1.5.0 中，默认值错误地为 true；在 1.5.1 及更高版本中改回 false。",
+            "// deepWithDataAndEvents (default: value of withDataAndEvents)",
+            "// 类型: Boolean",
+            "// 一个布尔值，表示是否应该复制克隆元素的所有子元素的事件处理程序和数据。默认情况下，其值与第一个参数的值相匹配（默认值为 false）。",
+            ".clone() 方法对匹配的元素集合执行深拷贝，这意味着它会复制匹配的元素以及它们所有的子元素和文本节点。",
+            "$('选择器字符串').clone()",
+            "$('选择器字符串').clone( true )",
+            "$('选择器字符串').clone( true, false )"
+        ],
+        "description": "创建匹配元素集合的深拷贝。"
+    },
+    "最近的匹配元素1": {
+        "prefix": "$closest( selector )",
+        "body": [
+            "// selector",
+            "// 类型: Selector",
+            "// 一个包含选择器表达式的字符串，用于匹配元素。",
+            "$('选择器字符串').closest( '选择器字符串' )"
+        ],
+        "description": "对于集合中的每个元素，通过测试元素本身并沿着 DOM 树向上遍历其祖先，获取与选择器匹配的第一个元素。"
+    },
+    "最近的匹配元素2": {
+        "prefix": "$closest( selector [, context ] )",
+        "body": [
+            "// selector",
+            "// 类型: Selector",
+            "// 一个包含选择器表达式的字符串，用于匹配元素。",
+            "// context",
+            "// 类型: Element",
+            "// 一个 DOM 元素，其中可以找到匹配的元素。",
+            "var listItemII = document.getElementById( 'listItemII' );",
+            "$('选择器字符串').closest( '选择器字符串', listItemII )"
+        ],
+        "description": "对于集合中的每个元素，通过测试元素本身并沿着 DOM 树向上遍历其祖先，获取与选择器匹配的第一个元素。"
+    },
+    "最近的匹配元素3": {
+        "prefix": "$closest( selection )",
+        "body": [
+            "// selection",
+            "// 类型: jQuery",
+            "// 一个包含选择器表达式的字符串，用于匹配元素。",
+            "var listItemII = $( '#listItemII' );",
+            "$('选择器字符串').closest( '选择器字符串', listItemII )"
+        ],
+        "description": "对于集合中的每个元素，通过测试元素本身并沿着 DOM 树向上遍历其祖先，获取与选择器匹配的第一个元素。"
+    },
+    "最近的匹配元素4": {
+        "prefix": "$closest( element )",
+        "body": [
+            "// element",
+            "// 类型: Element",
+            "// 一个用于匹配元素的元素。",
+            "var listItemII = document.getElementById( 'listItemII' );",
+            "$('选择器字符串').closest( listItemII )"
+        ],
+        "description": "对于集合中的每个元素，通过测试元素本身并沿着 DOM 树向上遍历其祖先，获取与选择器匹配的第一个元素。"
+    },
+    "选择所有包含指定文本的元素": {
+        "prefix": "$contains() Selector",
+        "body": [
+            "// text",
+            "// 要查找的一串文本。区分大小写。",
+            "$( '选择器字符串:contains(text)' )",
+            "// 匹配的文本可以直接出现在所选元素内，出现在该元素的任何子孙元素内，或者两者的组合。与属性值选择器一样，:contains() 括号内的文本可以写成裸词或用引号括起来。选中文本时，大小写必须匹配。"
+        ],
+        "description": "选择所有包含指定文本的元素。"
+    },
+    "获取元素的子元素": {
+        "prefix": "$contents()",
+        "body": [
+            "// 给定一个表示一组 DOM 元素的 jQuery 对象，.contents() 方法允许我们搜索这些元素在 DOM 树中的直接子元素，并从匹配的元素构建一个新的 jQuery 对象。.contents() 和 .children() 方法类似，区别在于前者在生成的 jQuery 对象中包括文本节点和注释节点以及 HTML 元素。请注意，大多数 jQuery 操作不支持文本节点和注释节点。少数支持的操作会在其 API 文档页面上有明确说明。",
+            "// .contents() 方法也可以用于获取 iframe 的内容文档，如果 iframe 与主页面位于同一域名下。",
+            "// 从 jQuery 3.2 起，.contents() 也会返回 <template> 元素的内容。",
+            "$( '选择器字符串:contains(text)' )"
+        ],
+        "description": "获取匹配元素集合中每个元素的子元素，包括文本节点和注释节点。"
+    },
+    "绑定上下文菜单（右键菜单）1": {
+        "prefix": "$on( 'contextmenu', handler )",
+        "body": [
+            "// handler",
+            "// 类型: Function",
+            "// 一个函数，当事件发生时会被调用。",
+            "$('选择器字符串').on( 'contextmenu', function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“contextmenu”事件。"
+    },
+    "绑定上下文菜单（右键菜单）2": {
+        "prefix": "$on( 'contextmenu', [eventData ], handler )",
+        "body": [
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function",
+            "// 一个函数，当事件发生时会被调用。",
+            "$('选择器字符串').on( 'contextmenu', 'eventData', function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“contextmenu”事件。"
+    },
+    "触发上下文菜单（右键菜单）": {
+        "prefix": "$trigger( 'contextmenu' )",
+        "body": [
+            "$('选择器字符串').trigger( 'contextmenu' )"
+        ],
+        "description": "在一个元素上触发“contextmenu”事件。"
+    },
+    "获取样式属性1": {
+        "prefix": "$css( propertyName )",
+        "body": [
+            "// propertyName",
+            "// 类型: String",
+            "// 一个 CSS 属性。",
+            "$('选择器字符串').css( 'propertyName' )"
+        ],
+        "description": "获取匹配元素集合中第一个元素的计算样式属性。"
+    },
+    "获取样式属性2": {
+        "prefix": "$css( propertyNames )",
+        "body": [
+            "// propertyNames",
+            "// 类型: Array",
+            "// 一个或多个 CSS 属性的数组。",
+            "$('选择器字符串').css( ['propertyName1', 'propertyName2'] )"
+        ],
+        "description": "获取匹配元素集合中第一个元素的计算样式属性。"
+    },
+    "存储数据1": {
+        "prefix": "$data( key, value )",
+        "body": [
+            "// key",
+            "// 类型: String",
+            "// 一个用于标识数据的键。",
+            "// value",
+            "// 类型: Anything",
+            "// 新的数据值；这可以是除 undefined 以外的任何 Javascript 类型。",
+            "$('选择器字符串').data( 'key', 'value' )"
+        ],
+        "description": "存储与匹配元素相关的任意数据。"
+    },
+    "存储数据2": {
+        "prefix": "$data( obj )",
+        "body": [
+            "// obj",
+            "// 类型: Object",
+            "// 要更新的数据的键值对对象。",
+            "$('选择器字符串').data( { 'key1': 'value1', 'key2': 'value2' } )"
+        ],
+        "description": "存储与匹配元素相关的任意数据。"
+    },
+    "绑定双击事件": {
+        "prefix": "$on( 'dblclick' [, eventData ], handler )",
+        "body": [
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function",
+            "// 一个函数，当事件发生时会被调用。",
+            "$('选择器字符串').on( 'dblclick' [, eventData ], function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“dblclick”事件。"
+    },
+    "触发双击事件": {
+        "prefix": "$trigger( 'dblclick' )",
+        "body": [
+            "$('选择器字符串').trigger( 'dblclick' )"
+        ],
+        "description": "在一个元素上触发“dblclick”事件。"
+    },
+    "deferred对象always回调函数": {
+        "prefix": "$deferred.always( alwaysCallbacks [, alwaysCallbacks ] )",
+        "body": [
+            "// alwaysCallbacks",
+            "// 类型: Function()",
+            "// 一个函数，或函数数组，当 Deferred 被解决或拒绝时调用。",
+            "// alwaysCallbacks",
+            "// 类型: Function()",
+            "// 可选的附加函数，或函数数组，在 Deferred 被解决或拒绝时调用。",
+            "$.get( 'test.php' ).always(function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "添加处理程序，以在 Deferred 对象被解决或拒绝时调用。"
+    },
+    "deferred对象catch回调函数": {
+        "prefix": "$deferred.catch( failFilter )",
+        "body": [
+            "// failFilter",
+            "// 类型: Function()",
+            "// 一个函数，当 Deferred 被拒绝时调用。",
+            "$.get( 'test.php' ).then(function() {",
+            "\t// 事件处理程序",
+            "})",
+            ".catch(function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "添加处理程序，以在 Deferred 对象被拒绝时调用。"
+    },
+    "deferred对象done回调函数": {
+        "prefix": "$deferred.done( doneCallbacks [, doneCallbacks ] )",
+        "body": [
+            "// doneCallbacks",
+            "// 类型: Function()",
+            "// 一个函数，或函数数组，当 Deferred 被解决时调用。",
+            "// doneCallbacks",
+            "// 类型: Function()",
+            "// 可选的附加函数，或函数数组，在 Deferred 被解决时调用。",
+            "$.get( 'test.php' ).done(function() {",
+            "\t// 事件处理程序",
+            "})"
+        ],
+        "description": "添加处理程序，以在 Deferred 对象被解决时调用。"
+    },
+    "deferred对象fail回调函数": {
+        "prefix": "$deferred.fail( failCallbacks [, failCallbacks ] )",
+        "body": [
+            "// failCallbacks",
+            "// 类型: Function()",
+            "// 一个函数，或函数数组，当 Deferred 被拒绝时调用。",
+            "// failCallbacks",
+            "// 类型: Function()",
+            "// 可选的附加函数，或函数数组，在 Deferred 被拒绝时调用。",
+            "$.get( 'test.php' ).fail(function() {",
+            "\t// 事件处理程序",
+            "})"
+        ],
+        "description": "添加处理程序，以在 Deferred 对象被拒绝时调用。"
+    },
+    "deferred对象notify回调函数": {
+        "prefix": "$deferred.notify( args )",
+        "body": [
+            "// args",
+            "// 类型: Anything",
+            "// 传递给 progressCallbacks 的可选参数。",
+            "$.get( 'test.php' ).notify(function() {",
+            "\t// 事件处理程序",
+            "})"
+        ],
+        "description": "使用给定的参数调用 Deferred 对象上的 progressCallbacks。"
+    },
+    "deferred对象notifyWith回调函数": {
+        "prefix": "$deferred.notifyWith( context [, args ] )",
+        "body": [
+            "// context",
+            "// 类型: Object",
+            "// 传递给 progressCallbacks 的上下文对象，作为this。",
+            "// args",
+            "// 类型: Anything",
+            "// 传递给 progressCallbacks 的可选参数。",
+            "$.get( 'test.php' ).notifyWith(this, [args])"
+        ],
+        "description": "使用给定的上下文和参数调用 Deferred 对象上的 progressCallbacks。"
+    },
+    "deferred对象progress回调函数": {
+        "prefix": "$deferred.progress( progressCallbacks [, progressCallbacks ] )",
+        "body": [
+            "// progressCallbacks",
+            "// 类型: Function() or Array",
+            "// 当延迟对象生成进度通知时，将被调用的一个函数或函数数组。",
+            "// progressCallbacks",
+            "// 类型: Function() or Array",
+            "// （可选）当延迟对象生成进度通知时，将被调用的一个函数或函数数组。",
+            "$.get( 'test.php' ).notify(function() {",
+            "\t// 事件处理程序",
+            "})"
+        ],
+        "description": "添加处理程序，以便在延迟对象生成进度通知时调用。"
+    },
+    "deferred对象返回promise对象": {
+        "prefix": "$deferred.promise( [target ] )",
+        "body": [
+            "// target",
+            "// 类型: Object",
+            "// promise方法必须附加到的对象",
+            "var dfd = jQuery.Deferred();",
+            "dfd.promise();"
+        ],
+        "description": "返回一个 Deferred 的 Promise 对象。"
+    },
+    "deferred对象reject回调函数": {
+        "prefix": "$deferred.reject( [args ] )",
+        "body": [
+            "// args",
+            "// 类型: Anything",
+            "// 传递给 failCallbacks 的可选参数。",
+            "$.get( 'test.php' ).reject([args])"
+        ],
+        "description": "拒绝 Deferred 对象，并调用 failCallbacks。"
+    },
+    "deferred对象rejectWith回调函数": {
+        "prefix": "$deferred.rejectWith( context [, args ] )",
+        "body": [
+            "// context",
+            "// 类型: Object",
+            "// 传递给 failCallbacks 的上下文对象，作为this。",
+            "// args",
+            "// 类型: Anything",
+            "// 传递给 failCallbacks 的可选参数。",
+            "$.get( 'test.php' ).rejectWith(this, [args])"
+        ],
+        "description": "使用给定的上下文和参数调用 Deferred 对象上的 failCallbacks。"
+    },
+    "deferred对象resolve回调函数": {
+        "prefix": "$deferred.resolve( [args ] )",
+        "body": [
+            "// args",
+            "// 类型: Anything",
+            "// 传递给 doneCallbacks 的可选参数。",
+            "$.get( 'test.php' ).resolve([args])"
+        ],
+        "description": "解决 Deferred 对象，并调用 doneCallbacks。"
+    },
+    "deferred对象resolveWith回调函数": {
+        "prefix": "$deferred.resolveWith( context [, args ] )",
+        "body": [
+            "// context",
+            "// 类型: Object",
+            "// 传递给 doneCallbacks 的上下文对象，作为this。",
+            "// args",
+            "// 类型: Anything",
+            "// 传递给 doneCallbacks 的可选参数。",
+            "$.get( 'test.php' ).resolveWith(this, [args])"
+        ],
+        "description": "使用给定的上下文和参数调用 Deferred 对象上的 doneCallbacks。"
+    },
+    "deferred对象state回调函数": {
+        "prefix": "$deferred.state()",
+        "body": [
+            "$.get( 'test.php' ).state()"
+        ],
+        "description": "返回 Deferred 对象的当前状态。"
+    },
+    "deferred对象then回调函数1": {
+        "prefix": "$deferred.then( doneFilter [, failFilter ] [, progressFilter ] )",
+        "body": [
+            "// doneFilter",
+            "// 类型: Function()",
+            "// 当deferred对象被解决时调用的函数。",
+            "// failFilter",
+            "// 类型: Function()",
+            "// （可选）当deferred对象被拒绝时调用的函数。",
+            "// progressFilter",
+            "// 类型: Function()",
+            "// （可选）当deferred对象生成进度通知时调用的函数。",
+            "$.get( 'test.php' ).then(",
+            "\tfunction() {}, // doneFilter",
+            "\tfunction() {}, // failFilter",
+            "\tfunction() {}  // progressFilter",
+            ");"
+        ],
+        "description": "添加处理程序，当 Deferred 对象被解决、被拒绝或仍在进行中时调用。"
+    },
+    "deferred对象then回调函数2": {
+        "prefix": "$deferred.then( doneCallbacks, failCallbacks )",
+        "body": [
+            "// doneCallbacks",
+            "// 类型: Function()",
+            "// 当deferred对象被解决时调用的函数或函数数组。",
+            "// failCallbacks",
+            "// 类型: Function()",
+            "// 当deferred对象被拒绝时调用的函数或函数数组。",
+            "$.get( 'test.php' ).then(",
+            "\t[function() {}], // doneCallbacks",
+            "\t[function() {}], // failCallbacks",
+            ");"
+        ],
+        "description": "添加处理程序，当 Deferred 对象被解决、被拒绝或仍在进行中时调用。"
+    },
+    "deferred对象then回调函数3": {
+        "prefix": "$deferred.then( doneCallbacks, failCallbacks [, progressCallbacks ] )",
+        "body": [
+            "// doneCallbacks",
+            "// 类型: Function()",
+            "// 当deferred对象被解决时调用的函数或函数数组。",
+            "// failCallbacks",
+            "// 类型: Function()",
+            "// 当deferred对象被拒绝时调用的函数或函数数组。",
+            "// progressCallbacks",
+            "// 类型: Function()",
+            "// （可选）当deferred对象生成进度通知时调用的函数或函数数组。",
+            "$.get( 'test.php' ).then(",
+            "\t[function() {}], // doneCallbacks",
+            "\t[function() {}], // failCallbacks",
+            "\t[function() {}]  // progressCallbacks",
+            ");"
+        ],
+        "description": "添加处理程序，当 Deferred 对象被解决、被拒绝或仍在进行中时调用。"
+    },
+    "延迟后续项目执行": {
+        "prefix": "$delay( duration [, queueName ] )",
+        "body": [
+            "// duration",
+            "// 类型: Integer",
+            "// 延迟执行的时间（以毫秒为单位）。",
+            "// queueName",
+            "// 类型: String",
+            "// （可选）队列的名称。",
+            "$('选择器字符串').delay( 800 )",
+            "$('选择器字符串').delay( 800, 'queueName' )"
+        ],
+        "description": "设置一个定时器以延迟队列中后续项目的执行。"
+    },
+    "执行队列中的下一个函数": {
+        "prefix": "$dequeue( [queueName ] )",
+        "body": [
+            "// queueName",
+            "// 类型: String",
+            "// （可选）队列的名称。",
+            "$('选择器字符串').dequeue()",
+            "$('选择器字符串').dequeue( 'queueName' )"
+        ],
+        "description": "对匹配的元素执行队列中的下一个函数。"
+    },
+    "选择给定祖先的所有后代元素": {
+        "prefix": "$Descendant Selector(ancestor descendant)",
+        "body": [
+            "// ancestor",
+            "// 任意选择器",
+            "// descendant",
+            "// 用于过滤后代元素的选择器。",
+            "$('form fieldset input')"
+        ],
+        "description": "选择给定祖先的所有后代元素。"
+    },
+    "从 DOM 中移除匹配的元素集合": {
+        "prefix": "$detach( [selector ] )",
+        "body": [
+            "// selector",
+            "// 类型: Selector",
+            "// 一个选择器表达式，用于过滤要被移除的匹配元素集合。",
+            "$('选择器字符串').detach()",
+            "// .detach() 方法与 .remove() 方法类似，区别在于前者保留了被移除元素的所有 jQuery 数据关联和事件处理程序，而后者则将它们全部删除。使用 .detach() 可以方便地将元素从 DOM 中移除，并在以后重新插入到 DOM 中时保留其数据和事件处理程序。"
+        ],
+        "description": "从 DOM 中移除匹配的元素集合。"
+    },
+    "选择所有被禁用的元素": {
+        "prefix": "$disabled Selector",
+        "body": [
+            "$('选择器字符串:disabled')"
+        ],
+        "description": "选择所有被禁用的元素。"
+    },
+    "遍历元素集合": {
+        "prefix": "$each( function )",
+        "body": [
+            "// function",
+            "// 类型: Function( Integer index, Element element )",
+            "// 对每个匹配的元素执行的函数。",
+            "$('选择器字符串').each(function( index, element ) {",
+            "\t// 函数体",
+            "});"
+        ],
+        "description": "遍历一个 jQuery 对象，对每个匹配的元素执行一个函数。"
+    },
+    "选择元素": {
+        "prefix": "$Element Selector",
+        "body": [
+            "$(\"div\")"
+        ],
+        "description": "选择具有指定标签名称的所有元素。"
+    },
+    "清空元素中的文本和节点": {
+        "prefix": "$empty()",
+        "body": [
+            "$('选择器字符串').empty()"
+        ],
+        "description": "从 DOM 中移除匹配元素集合的所有子节点。"
+    },
+    "选择所有没有子元素的元素（包括文本节点）": {
+        "prefix": "$empty Selector",
+        "body": [
+            "$('选择器字符串:empty')"
+        ],
+        "description": "选择所有没有子元素的元素（包括文本节点）。"
+    },
+    "选择所有启用的元素": {
+        "prefix": "$enabled Selector",
+        "body": [
+            "$('选择器字符串:enabled')"
+        ],
+        "description": "选择所有启用的元素。"
+    },
+    "结束操作": {
+        "prefix": "$end()",
+        "body": [
+            "$('选择器字符串').end()"
+        ],
+        "description": "结束当前链中最近的过滤操作，并将匹配元素的集合返回到其先前状态。"
+    },
+    "缩减元素集合1": {
+        "prefix": "$eq( index )",
+        "body": [
+            "// index",
+            "// 类型: Integer",
+            "// 一个整数，表示该元素的零基位置。",
+            "$('选择器字符串').eq(0)"
+        ],
+        "description": "将匹配的元素集合缩减为指定索引处的元素。"
+    },
+    "缩减元素集合2": {
+        "prefix": "$eq( indexFromEnd )",
+        "body": [
+            "// indexFromEnd",
+            "// 类型: Integer",
+            "// 一个整数，表示元素的位置，从集合的最后一个元素向后计数。",
+            "$('选择器字符串').eq(-1)"
+        ],
+        "description": "将匹配的元素集合缩减为指定索引处的元素。"
+    },
+    "将事件处理程序绑定到“error”事件": {
+        "prefix": "$on( 'error' [, eventData ], handler )",
+        "body": [
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function",
+            "// 一个函数，当事件发生时会被调用。",
+            "$('选择器字符串').on( 'error' [, eventData ], function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“error”事件。"
+    },
+    "取偶数元素": {
+        "prefix": "$even()",
+        "body": [
+            "$('选择器字符串').even()"
+        ],
+        "description": "将匹配元素的集合缩减为集合中编号从零开始的偶数元素。"
+    },
+    "取当前事件的DOM元素": {
+        "prefix": "$event.currentTarget",
+        "body": [
+            "event.currentTarget"
+        ],
+        "description": "事件冒泡阶段中的当前 DOM 元素。"
+    },
+    "取当前事件的数据": {
+        "prefix": "$event.data",
+        "body": [
+            "event.data"
+        ],
+        "description": "当当前执行的处理程序被绑定时，可传递给事件方法的可选数据对象。"
+    },
+    "取当前事件的委托目标": {
+        "prefix": "$event.delegateTarget",
+        "body": [
+            "event.delegateTarget"
+        ],
+        "description": "当前调用的 jQuery 事件处理程序附加的元素。"
+    },
+    "返回此事件对象上是否曾调用过 event.preventDefault()": {
+        "prefix": "$event.isDefaultPrevented()",
+        "body": [
+            "event.isDefaultPrevented()"
+        ],
+        "description": "返回此事件对象上是否曾调用过 event.preventDefault()。"
+    },
+    "返回此事件对象上是否曾调用过 event.stopImmediatePropagation()": {
+        "prefix": "$event.isImmediatePropagationStopped()",
+        "body": [
+            "event.isImmediatePropagationStopped()"
+        ],
+        "description": "返回此事件对象上是否曾调用过 event.stopImmediatePropagation()。"
+    },
+    "返回此事件对象上是否曾调用过 event.stopPropagation()": {
+        "prefix": "$event.isPropagationStopped()",
+        "body": [
+            "event.isPropagationStopped()"
+        ],
+        "description": "返回此事件对象上是否曾调用过 event.stopPropagation()。"
+    },
+    "指示事件触发时META键是否被按下": {
+        "prefix": "$event.metaKey",
+        "body": [
+            "event.metaKey"
+        ],
+        "description": "指示事件触发时META键是否被按下。"
+    },
+    "事件触发时指定的命名空间": {
+        "prefix": "$event.namespace",
+        "body": [
+            "event.namespace"
+        ],
+        "description": "事件触发时指定的命名空间。"
+    },
+    "鼠标相对于文档左边缘的位置": {
+        "prefix": "$event.pageX",
+        "body": [
+            "event.pageX"
+        ],
+        "description": "鼠标相对于文档左边缘的位置。"
+    },
+    "鼠标相对于文档上边缘的位置": {
+        "prefix": "$event.pageY",
+        "body": [
+            "event.pageY"
+        ],
+        "description": "鼠标相对于文档上边缘的位置。"
+    },
+    "阻止事件的默认操作": {
+        "prefix": "$event.preventDefault()",
+        "body": [
+            "event.preventDefault()"
+        ],
+        "description": "如果调用此方法，事件的默认操作将不会被触发。"
+    },
+    "获取事件的关联目标": {
+        "prefix": "$event.relatedTarget",
+        "body": [
+            "event.relatedTarget"
+        ],
+        "description": "事件中涉及的另一个 DOM 元素（如果有的话）。"
+    },
+    "获取事件的返回值": {
+        "prefix": "$event.result",
+        "body": [
+            "event.result"
+        ],
+        "description": "由此事件触发的事件处理程序返回的最后一个值，除非该值未定义。"
+    },
+    "阻止事件的立即传播": {
+        "prefix": "$event.stopImmediatePropagation()",
+        "body": [
+            "event.stopImmediatePropagation()"
+        ],
+        "description": "阻止其余的处理程序被执行，并防止事件向上冒泡到DOM树。"
+    },
+    "阻止事件的传播": {
+        "prefix": "$event.stopPropagation()",
+        "body": [
+            "event.stopPropagation()"
+        ],
+        "description": "阻止事件在 DOM 树中向上冒泡，防止任何父级处理程序收到该事件的通知。"
+    },
+    "获取事件的目标元素": {
+        "prefix": "$event.target",
+        "body": [
+            "event.target"
+        ],
+        "description": "触发事件的 DOM 元素。"
+    },
+    "获取事件的时间戳": {
+        "prefix": "$event.timeStamp",
+        "body": [
+            "event.timeStamp"
+        ],
+        "description": "浏览器创建事件的时间与 1970 年 1 月 1 日之间的毫秒差异。"
+    },
+    "获取事件的类型": {
+        "prefix": "$event.type",
+        "body": [
+            "event.type"
+        ],
+        "description": "事件的类型。"
+    },
+    "获取键盘或鼠标事件按下的具体键": {
+        "prefix": "$event.which",
+        "body": [
+            "event.which"
+        ],
+        "description": "对于键盘或鼠标事件，此属性指示被按下的具体键。"
+    },
+    "淡入效果1": {
+        "prefix": "$fadeIn( [duration ] [, complete ] )",
+        "body": [
+            "// duration (default: 400)",
+            "// 类型: Number or String",
+            "// 一个字符串或数字，用于确定动画将运行的时间长度。",
+            "// complete",
+            "// 类型: Function()",
+            "// 动画完成后调用的函数，每个匹配的元素调用一次。",
+            "$('选择器字符串').fadeIn( 'slow', function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "通过将匹配的元素淡入不透明来显示它们。"
+    },
+    "淡入效果2": {
+        "prefix": "$fadeIn( options )",
+        "body": [
+            "// options",
+            "// 类型: PlainObject",
+            "// 一个包含动画选项的对象。",
+            "//   duration (default: 400)",
+            "//   类型: Number or String",
+            "//   一个字符串或数字，用于确定动画将运行的时间长度。",
+            "//   easing (default: swing)",
+            "//   类型: String",
+            "//   一个字符串，表示用于过渡的缓动函数。",
+            "//   queue (default: true)",
+            "//   类型: Boolean or String",
+            "//   一个布尔值，表示是否将动画放入效果队列。如果为 false，动画将立即开始。从 jQuery 1.7 起，queue 选项也可以接受一个字符串，此时动画会被添加到由该字符串表示的队列中。当使用自定义队列名称时，动画不会自动开始；必须调用 .dequeue('queuename') 才能启动它。",
+            "//   specialEasing",
+            "//   类型: PlainObject",
+            "//   一个对象，包含由 properties 参数定义的一个或多个 CSS 属性及其对应的缓动函数。（版本新增：1.4）",
+            "//   step",
+            "//   类型: Function( Number now, Tween tween )",
+            "//   一个函数，用于对每个动画元素的每个动画属性进行调用。该函数提供了修改 Tween 对象的机会，以在设置属性值之前更改该属性的值。",
+            "//   progress",
+            "//   类型: Function( Promise animation, Number progress, Number remainingMs )",
+            "//   在动画的每一步之后调用的函数，无论动画属性的数量如何，每个动画元素只调用一次。（版本添加：1.8）",
+            "//   complete",
+            "//   类型: Function()",
+            "//   动画完成后调用的函数，每个匹配的元素调用一次。",
+            "//   start",
+            "//   类型: Function( Promise animation )",
+            "//   当元素上的动画开始时调用的函数。（版本新增：1.8）",
+            "//   done",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画完成（其 Promise 对象被解决）时要调用的函数。（版本添加：1.8）",
+            "//   fail",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画未能完成（其 Promise 对象被拒绝）时要调用的函数。（添加版本：1.8）",
+            "//   always",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画完成或在未完成的情况下停止时调用的函数（其 Promise 对象要么被解析，要么被拒绝）。(版本添加：1.8)",
+            "$('选择器字符串').fadeIn( 'slow', {duration : 400});"
+        ],
+        "description": "通过将匹配的元素淡入不透明来显示它们。"
+    },
+    "淡入效果3": {
+        "prefix": "$fadeIn( [duration ] [, easing ] [, complete ] )",
+        "body": [
+            "// duration (default: 400)",
+            "// 类型: Number or String",
+            "// 一个字符串或数字，用于确定动画将运行的时间长度。",
+            "// easing (default: swing)",
+            "// 类型: String",
+            "// 一个字符串，表示用于过渡的缓动函数。",
+            "// complete",
+            "// 类型: Function()",
+            "// 动画完成后调用的函数，每个匹配的元素调用一次。",
+            "$('选择器字符串').fadeIn( 'slow', 'swing', function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "通过将匹配的元素淡入不透明来显示它们。"
+    },
+    "淡出效果1": {
+        "prefix": "$fadeOut( [duration ] [, complete ] )",
+        "body": [
+            "// duration (default: 400)",
+            "// 类型: Number or String",
+            "// 一个字符串或数字，用于确定动画将运行的时间长度。",
+            "// complete",
+            "// 类型: Function()",
+            "// 动画完成后调用的函数，每个匹配的元素调用一次。",
+            "$('选择器字符串').fadeOut( 'slow', function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "通过将匹配的元素淡出不透明来显示它们。"
+    },
+    "淡出效果2": {
+        "prefix": "$fadeOut( options )",
+        "body": [
+            "// options",
+            "// 类型: PlainObject",
+            "// 一个包含动画选项的对象。",
+            "//   duration (default: 400)",
+            "//   类型: Number or String",
+            "//   一个字符串或数字，用于确定动画将运行的时间长度。",
+            "//   easing (default: swing)",
+            "//   类型: String",
+            "//   一个字符串，表示用于过渡的缓动函数。",
+            "//   queue (default: true)",
+            "//   类型: Boolean or String",
+            "//   一个布尔值，表示是否将动画放入效果队列。如果为 false，动画将立即开始。从 jQuery 1.7 起，queue 选项也可以接受一个字符串，此时动画会被添加到由该字符串表示的队列中。当使用自定义队列名称时，动画不会自动开始；必须调用 .dequeue('queuename') 才能启动它。",
+            "//   specialEasing",
+            "//   类型: PlainObject",
+            "//   一个对象，包含由 properties 参数定义的一个或多个 CSS 属性及其对应的缓动函数。（版本新增：1.4）",
+            "//   step",
+            "//   类型: Function( Number now, Tween tween )",
+            "//   一个函数，用于对每个动画元素的每个动画属性进行调用。该函数提供了修改 Tween 对象的机会，以在设置属性值之前更改该属性的值。",
+            "//   progress",
+            "//   类型: Function( Promise animation, Number progress, Number remainingMs )",
+            "//   在动画的每一步之后调用的函数，无论动画属性的数量如何，每个动画元素只调用一次。（版本添加：1.8）",
+            "//   complete",
+            "//   类型: Function()",
+            "//   动画完成后调用的函数，每个匹配的元素调用一次。",
+            "//   start",
+            "//   类型: Function( Promise animation )",
+            "//   当元素上的动画开始时调用的函数。（版本新增：1.8）",
+            "//   done",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画完成（其 Promise 对象被解决）时要调用的函数。（版本添加：1.8）",
+            "//   fail",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画未能完成（其 Promise 对象被拒绝）时要调用的函数。（添加版本：1.8）",
+            "//   always",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画完成或在未完成的情况下停止时调用的函数（其 Promise 对象要么被解析，要么被拒绝）。(版本添加：1.8)",
+            "$('选择器字符串').fadeOut( 'slow', {duration : 400});"
+        ],
+        "description": "通过将匹配的元素淡出不透明来显示它们。"
+    },
+    "淡出效果3": {
+        "prefix": "$fadeOut( [duration ] [, easing ] [, complete ] )",
+        "body": [
+            "// duration (default: 400)",
+            "// 类型: Number or String",
+            "// 一个字符串或数字，用于确定动画将运行的时间长度。",
+            "// easing (default: swing)",
+            "// 类型: String",
+            "// 一个字符串，表示用于过渡的缓动函数。",
+            "// complete",
+            "// 类型: Function()",
+            "// 动画完成后调用的函数，每个匹配的元素调用一次。",
+            "$('选择器字符串').fadeOut( 'slow', 'swing', function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "通过将匹配的元素淡出不透明来显示它们。"
+    },
+    "调整不透明度1": {
+        "prefix": "$fadeTo( duration, opacity [, complete ] )",
+        "body": [
+            "// duration (default: 400)",
+            "// 类型: Number or String",
+            "// 一个字符串或数字，用于确定动画将运行的时间长度。",
+            "// opacity",
+            "// 类型: Number",
+            "// 介于0到1之间的数字，表示目标不透明度。",
+            "// complete",
+            "// 类型: Function()",
+            "// 动画完成后调用的函数，每个匹配的元素调用一次。",
+            "$('选择器字符串').fadeTo( 'slow', 0.5, function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "调整匹配元素的不透明度。"
+    },
+    "调整不透明度2": {
+        "prefix": "$fadeTo( duration, opacity [, easing ] [, complete ] )",
+        "body": [
+            "// duration (default: 400)",
+            "// 类型: Number or String",
+            "// 一个字符串或数字，用于确定动画将运行的时间长度。",
+            "// opacity",
+            "// 类型: Number",
+            "// 介于0到1之间的数字，表示目标不透明度。",
+            "// easing",
+            "// 类型: String",
+            "// 一个字符串，表示用于过渡的缓动函数。",
+            "// complete",
+            "// 类型: Function()",
+            "// 动画完成后调用的函数，每个匹配的元素调用一次。",
+            "$('选择器字符串').fadeTo( 'slow', 0.5, 'swing', function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "调整匹配元素的不透明度。"
+    },
+    "通过动画改变不透明度来显示或隐藏匹配的元素1": {
+        "prefix": "$fadeToggle( [duration ] [, easing ] [, complete ] )",
+        "body": [
+            "// duration (default: 400)",
+            "// 类型: Number or String",
+            "// 一个字符串或数字，用于确定动画将运行的时间长度。",
+            "// easing (default: swing)",
+            "// 类型: String",
+            "// 一个字符串，表示用于过渡的缓动函数。",
+            "// complete",
+            "// 类型: Function()",
+            "// 动画完成后调用的函数，每个匹配的元素调用一次。",
+            "$('选择器字符串').fadeToggle( 'slow', 'swing', function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "通过动画改变不透明度来显示或隐藏匹配的元素。"
+    },
+    "通过动画改变不透明度来显示或隐藏匹配的元素2": {
+        "prefix": "$fadeToggle( options )",
+        "body": [
+            "// options",
+            "// 类型: PlainObject",
+            "// 一个包含动画选项的对象。",
+            "//   duration (default: 400)",
+            "//   类型: Number or String",
+            "//   一个字符串或数字，用于确定动画将运行的时间长度。",
+            "//   easing (default: swing)",
+            "//   类型: String",
+            "//   一个字符串，表示用于过渡的缓动函数。",
+            "//   queue (default: true)",
+            "//   类型: Boolean or String",
+            "//   一个布尔值，表示是否将动画放入效果队列。如果为 false，动画将立即开始。从 jQuery 1.7 起，queue 选项也可以接受一个字符串，此时动画会被添加到由该字符串表示的队列中。当使用自定义队列名称时，动画不会自动开始；必须调用 .dequeue('queuename') 才能启动它。",
+            "//   specialEasing",
+            "//   类型: PlainObject",
+            "//   一个对象，包含由 properties 参数定义的一个或多个 CSS 属性及其对应的缓动函数。（版本新增：1.4）",
+            "//   step",
+            "//   类型: Function( Number now, Tween tween )",
+            "//   一个函数，用于对每个动画元素的每个动画属性进行调用。该函数提供了修改 Tween 对象的机会，以在设置属性值之前更改该属性的值。",
+            "//   progress",
+            "//   类型: Function( Promise animation, Number progress, Number remainingMs )",
+            "//   在动画的每一步之后调用的函数，无论动画属性的数量如何，每个动画元素只调用一次。（版本添加：1.8）",
+            "//   complete",
+            "//   类型: Function()",
+            "//   动画完成后调用的函数，每个匹配的元素调用一次。",
+            "//   start",
+            "//   类型: Function( Promise animation )",
+            "//   当元素上的动画开始时调用的函数。（版本新增：1.8）",
+            "//   done",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画完成（其 Promise 对象被解决）时要调用的函数。（版本添加：1.8）",
+            "//   fail",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画未能完成（其 Promise 对象被拒绝）时要调用的函数。（添加版本：1.8）",
+            "//   always",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画完成或在未完成的情况下停止时调用的函数（其 Promise 对象要么被解析，要么被拒绝）。(版本添加：1.8)",
+            "$('选择器字符串').fadeToggle( 'slow', {duration : 400});"
+        ],
+        "description": "通过动画改变不透明度来显示或隐藏匹配的元素。"
+    },
+    "选择file元素": {
+        "prefix": "$file Selector",
+        "body": [
+            "$('选择器字符串:file')"
+        ],
+        "description": "选择所有类型为file的元素。"
+    },
+    "筛选元素1": {
+        "prefix": "$filter( selector )",
+        "body": [
+            "// selector",
+            "// 类型: Selector",
+            "// 一个包含选择器表达式的字符串，用于匹配当前元素集合。",
+            "$('选择器字符串').filter('选择器字符串')"
+        ],
+        "description": "将匹配的元素集合缩小到那些匹配选择器或通过函数测试的元素。"
+    },
+    "筛选元素2": {
+        "prefix": "$filter( function )",
+        "body": [
+            "// function",
+            "// 类型: Function( Integer index, Element element ) => Boolean",
+            "// 一个用于测试集合中每个元素的函数。这是当前的 DOM 元素。",
+            "$('选择器字符串').filter(function(index, element) {",
+            "\t// 函数体",
+            "});"
+        ],
+        "description": "将匹配的元素集合缩小到那些匹配选择器或通过函数测试的元素。"
+    },
+    "筛选元素3": {
+        "prefix": "$filter( elements )",
+        "body": [
+            "// elements",
+            "// 类型: Array or jQuery",
+            "// 一个或多个 DOM 元素，用于与当前元素集合进行匹配。",
+            "$('选择器字符串').filter([document.getElementById( 'unique' )])"
+        ],
+        "description": "将匹配的元素集合缩小到那些匹配选择器或通过函数测试的元素。"
+    },
+    "筛选元素4": {
+        "prefix": "$filter( selection )",
+        "body": [
+            "// selection",
+            "// 类型: jQuery",
+            "// 一个现有的 jQuery 对象，用于与当前元素集合进行匹配。",
+            "$('选择器字符串').filter($('选择器字符串'))"
+        ],
+        "description": "将匹配的元素集合缩小到那些匹配选择器或通过函数测试的元素。"
+    },
+    "获取元素1": {
+        "prefix": "$find( selector )",
+        "body": [
+            "// selector",
+            "// 类型: Selector",
+            "// 一个包含选择器表达式的字符串，用于匹配元素。",
+            "$('选择器字符串').find('选择器字符串')"
+        ],
+        "description": "获取当前匹配元素集合中每个元素的后代，并通过选择器、jQuery 对象或元素进行过滤。"
+    },
+    "获取元素2": {
+        "prefix": "$find( element )",
+        "body": [
+            "// element",
+            "// 类型: Element or jQuery",
+            "// 用于匹配元素的元素或 jQuery 对象。",
+            "$('选择器字符串').find( document.getElementById( 'unique' ) )"
+        ],
+        "description": "获取当前匹配元素集合中每个元素的后代，并通过选择器、jQuery 对象或元素进行过滤。"
+    },
+    "停止所有动画": {
+        "prefix": "$finish( [queue ] )",
+        "body": [
+            "// queue (default: 'fx')",
+            "// 类型: String",
+            "// 用于停止动画的队列名称。",
+            "$('选择器字符串').finish()",
+            "$('选择器字符串').finish( 'queue' )"
+        ],
+        "description": "停止当前正在运行的动画，移除所有排队的动画，并完成所有匹配元素的动画。"
+    },
+    "获取第一个元素": {
+        "prefix": "$first()",
+        "body": [
+            "$('选择器字符串').first()"
+        ],
+        "description": "将匹配元素的集合缩减为集合中的第一个。"
+    },
+    "获取第一个子元素": {
+        "prefix": "$first-child Selector",
+        "body": [
+            "$('选择器字符串:first-child')"
+        ],
+        "description": "选择其父元素的第一个子元素的所有元素。"
+    },
+    "获取第一个同类型元素": {
+        "prefix": "$first-of-type Selector",
+        "body": [
+            "$('选择器字符串:first-of-type')"
+        ],
+        "description": "选择所有在同名元素的同级元素中排在第一位的元素。"
+    },
+    "将事件处理程序绑定到“focus”事件": {
+        "prefix": "$on( 'focus' [, eventData ], handler )",
+        "body": [
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function",
+            "// 一个函数，当事件发生时会被调用。",
+            "$('选择器字符串').on( 'focus' [, eventData ], function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“focus”事件。"
+    },
+    "获取当前处于焦点的元素": {
+        "prefix": "$focus Selector",
+        "body": [
+            "$('选择器字符串:focus')"
+        ],
+        "description": "如果元素当前处于焦点，则选择该元素。"
+    },
+    "将事件处理程序绑定到“focusin”事件": {
+        "prefix": "$on( 'focusin' [, eventData ], handler )",
+        "body": [
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function",
+            "// 一个函数，当事件发生时会被调用。",
+            "$('选择器字符串').on( 'focusin' [, eventData ], function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“focusin”事件。"
+    },
+    "将事件处理程序绑定到“focusout”事件": {
+        "prefix": "$on( 'focusout' [, eventData ], handler )",
+        "body": [
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function",
+            "// 一个函数，当事件发生时会被调用。",
+            "$('选择器字符串').on( 'focusout' [, eventData ], function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“focusout”事件。"
+    },
+    "获取元素": {
+        "prefix": "$get( index )",
+        "body": [
+            "// index",
+            "// 类型: Integer",
+            "// 一个以零为起点的整数，表示要检索的元素。",
+            "$('选择器字符串').get( 0 )"
+        ],
+        "description": "获取匹配元素集合中指定索引的元素。"
+    },
+    "获取有指定选择器字符串的元素1": {
+        "prefix": "$has( selector )",
+        "body": [
+            "// selector",
+            "// 类型: String",
+            "// 一个包含选择器表达式的字符串，用于匹配元素。",
+            "$('选择器字符串').has('选择器字符串')"
+        ],
+        "description": "将匹配的元素集合缩小到那些有符合选择器或 DOM 元素的子元素的元素。"
+    },
+    "获取有指定选择器字符串的元素2": {
+        "prefix": "$has( contained )",
+        "body": [
+            "// contained",
+            "// 类型: Element",
+            "// 用于匹配元素的 DOM 元素。",
+            "$('选择器字符串').has( document.getElementById( 'unique' ) )"
+        ],
+        "description": "将匹配的元素集合缩小到那些有符合选择器或 DOM 元素的子元素的元素。"
+    },
+    "获取有指定属性的元素": {
+        "prefix": "$Has Attribute Selector [name]",
+        "body": [
+            "// attribute: 属性名",
+            "$('选择器字符串[attribute]')"
+        ],
+        "description": "选择具有指定属性且值可以为任意的元素。"
+    },
+    "获取有指定元素的元素": {
+        "prefix": "$has() Selector",
+        "body": [
+            "// selector: 选择器字符串",
+            "$('选择器字符串:has(选择器字符串)')"
+        ],
+        "description": "选择包含至少一个与指定选择器匹配的元素的元素。"
+    },
+    "获取有指定类的元素": {
+        "prefix": "$hasClass( className )",
+        "body": [
+            "// className",
+            "// 类型: String",
+            "// 一个包含类名的字符串。",
+            "$('选择器字符串').hasClass( 'className' )"
+        ],
+        "description": "确定匹配的元素中是否有被分配了指定的类。"
+    },
+    "获取标题元素": {
+        "prefix": "$header Selector",
+        "body": [
+            "$('选择器字符串:header')"
+        ],
+        "description": "选择所有作为标题的元素，如 h1、h2、h3 等。"
+    },
+    "获取元素高度": {
+        "prefix": "$height()",
+        "body": [
+            "$('选择器字符串').height()"
+        ],
+        "description": "获取匹配元素集合中第一个元素的当前计算高度。"
+    },
+    "获取隐藏元素": {
+        "prefix": "$hidden Selector",
+        "body": [
+            "$('选择器字符串:hidden')"
+        ],
+        "description": "选择所有隐藏的元素。"
+    },
+    "隐藏元素1": {
+        "prefix": "$hide()",
+        "body": [
+            "$('选择器字符串').hide()"
+        ],
+        "description": "隐藏匹配的元素。"
+    },
+    "隐藏元素2": {
+        "prefix": "$hide( [duration ] [, complete ] )",
+        "body": [
+            "// duration (default: 400)",
+            "// 类型: Number or String",
+            "// 一个字符串或数字，用于确定动画将运行的时间长度。",
+            "// complete",
+            "// 类型: Function()",
+            "// 动画完成后调用的函数，每个匹配的元素调用一次。",
+            "$('选择器字符串').hide( 400, function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "隐藏匹配的元素。"
+    },
+    "隐藏元素3": {
+        "prefix": "$hide( options )",
+        "body": [
+            "// options",
+            "// 类型: PlainObject",
+            "// 一个包含动画选项的对象。",
+            "//   duration (default: 400)",
+            "//   类型: Number or String",
+            "//   一个字符串或数字，用于确定动画将运行的时间长度。",
+            "//   easing (default: swing)",
+            "//   类型: String",
+            "//   一个字符串，表示用于过渡的缓动函数。",
+            "//   queue (default: true)",
+            "//   类型: Boolean or String",
+            "//   一个布尔值，表示是否将动画放入效果队列。如果为 false，动画将立即开始。从 jQuery 1.7 起，queue 选项也可以接受一个字符串，此时动画会被添加到由该字符串表示的队列中。当使用自定义队列名称时，动画不会自动开始；必须调用 .dequeue('queuename') 才能启动它。",
+            "//   specialEasing",
+            "//   类型: PlainObject",
+            "//   一个对象，包含由 properties 参数定义的一个或多个 CSS 属性及其对应的缓动函数。（版本新增：1.4）",
+            "//   step",
+            "//   类型: Function( Number now, Tween tween )",
+            "//   一个函数，用于对每个动画元素的每个动画属性进行调用。该函数提供了修改 Tween 对象的机会，以在设置属性值之前更改该属性的值。",
+            "//   progress",
+            "//   类型: Function( Promise animation, Number progress, Number remainingMs )",
+            "//   在动画的每一步之后调用的函数，无论动画属性的数量如何，每个动画元素只调用一次。（版本添加：1.8）",
+            "//   complete",
+            "//   类型: Function()",
+            "//   动画完成后调用的函数，每个匹配的元素调用一次。",
+            "//   start",
+            "//   类型: Function( Promise animation )",
+            "//   当元素上的动画开始时调用的函数。（版本新增：1.8）",
+            "//   done",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画完成（其 Promise 对象被解决）时要调用的函数。（版本添加：1.8）",
+            "//   fail",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画未能完成（其 Promise 对象被拒绝）时要调用的函数。（添加版本：1.8）",
+            "//   always",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画完成或在未完成的情况下停止时调用的函数（其 Promise 对象要么被解析，要么被拒绝）。(版本添加：1.8)",
+            "$('选择器字符串').hide( 'slow', {duration : 400});"
+        ],
+        "description": "隐藏匹配的元素。"
+    },
+    "获取元素 HTML 内容": {
+        "prefix": "$html()",
+        "body": [
+            "$('选择器字符串').html()"
+        ],
+        "description": "获取匹配元素集合中第一个元素的 HTML 内容。"
+    },
+    "选择具有给定 id 属性的单个元素": {
+        "prefix": "$id",
+        "body": [
+            "$('#id')"
+        ],
+        "description": "选择具有给定 id 属性的单个元素。"
+    },
+    "选择image元素": {
+        "prefix": "$image Selector",
+        "body": [
+            "$('选择器字符串:image')"
+        ],
+        "description": "选择所有类型为图像的元素。"
+    },
+    "获取元素索引1": {
+        "prefix": "$index()",
+        "body": [
+            "$('选择器字符串').index()"
+        ],
+        "description": "在匹配的元素中搜索给定元素。"
+    },
+    "获取元素索引2": {
+        "prefix": "$index( selector )",
+        "body": [
+            "// selector",
+            "// 类型: Selector",
+            "// 表示要查找元素的 jQuery 集合的选择器。",
+            "$('选择器字符串').index('选择器字符串')"
+        ],
+        "description": "在匹配的元素中搜索给定元素。"
+    },
+    "获取元素索引3": {
+        "prefix": "$index( element )",
+        "body": [
+            "// element",
+            "// 类型: Element or jQuery",
+            "// 表示要查找的 DOM 元素。",
+            "$('选择器字符串').index($('选择器字符串'))",
+            "$('选择器字符串').index(document.getElementById('elementId'))"
+        ],
+        "description": "在匹配的元素中搜索给定元素。"
+    },
+    "获取元素内部高度": {
+        "prefix": "$innerHeight()",
+        "body": [
+            "$('选择器字符串').innerHeight()"
+        ],
+        "description": "获取匹配元素集合中第一个元素的内部高度。"
+    },
+    "获取元素内部宽度": {
+        "prefix": "$innerWidth()",
+        "body": [
+            "$('选择器字符串').innerWidth()"
+        ],
+        "description": "获取匹配元素集合中第一个元素的内部宽度。"
+    },
+    "选择input元素": {
+        "prefix": "$input Selector",
+        "body": [
+            "$('选择器字符串:input')"
+        ],
+        "description": "选择所有类型为输入的元素。"
+    },
+    "将元素插入到指定元素之后": {
+        "prefix": "$insertAfter( target )",
+        "body": [
+            "// target",
+            "// 类型: Selector or htmlString or Element or Array or jQuery",
+            "// 选择器、元素、元素数组、HTML 字符串或 jQuery 对象；匹配的元素集合将被插入到由此参数指定的元素之后。",
+            "$('选择器字符串').insertAfter('选择器字符串')",
+            "$('选择器字符串').insertAfter(document.getElementById('targetId'))",
+            "$('选择器字符串').insertAfter($('选择器字符串'))"
+        ],
+        "description": "将匹配元素集合中的每个元素插入到目标之后。"
+    },
+    "将元素插入到指定元素之前": {
+        "prefix": "$insertBefore( target )",
+        "body": [
+            "// target",
+            "// 类型: Selector or htmlString or Element or Array or jQuery",
+            "// 选择器、元素、元素数组、HTML 字符串或 jQuery 对象；匹配的元素集合将被插入到由此参数指定的元素之前。",
+            "$('选择器字符串').insertBefore('选择器字符串')",
+            "$('选择器字符串').insertBefore(document.getElementById('targetId'))",
+            "$('选择器字符串').insertBefore($('选择器字符串'))"
+        ],
+        "description": "将匹配元素集合中的每个元素插入到目标之前。"
+    },
+    "检查元素是否匹配选择器": {
+        "prefix": "$is( selector )",
+        "body": [
+            "// selector",
+            "// 类型: Selector",
+            "// 表示要查找元素的 jQuery 集合的选择器。",
+            "$('选择器字符串').is('选择器字符串')"
+        ],
+        "description": "检查当前匹配的元素集合是否与选择器、元素或 jQuery 对象匹配，如果至少有一个元素符合给定的参数，则返回 true。"
+    },
+    "检查元素是否匹配函数": {
+        "prefix": "$is( function )",
+        "body": [
+            "// function",
+            "// 类型: Function",
+            "// 一个函数，用于测试元素是否符合给定的条件。",
+            "$('选择器字符串').is(function() {",
+            "    // 判断函数",
+            "});"
+        ],
+        "description": "检查当前匹配的元素集合是否与选择器、元素或 jQuery 对象匹配，如果至少有一个元素符合给定的参数，则返回 true。"
+    },
+    "检查元素是否匹配jQuery对象": {
+        "prefix": "$is( selection )",
+        "body": [
+            "// selection",
+            "// 类型: jQuery",
+            "// 一个jQuery对象，用于测试元素是否符合给定的条件。",
+            "$('选择器字符串').is($('选择器字符串'));"
+        ],
+        "description": "检查当前匹配的元素集合是否与选择器、元素或 jQuery 对象匹配，如果至少有一个元素符合给定的参数，则返回 true。"
+    },
+    "检查元素是否匹配DOM元素": {
+        "prefix": "$is( elements )",
+        "body": [
+            "// elements",
+            "// 类型: Element",
+            "// 一个或多个DOM元素，用于测试元素是否符合给定的条件。",
+            "$('选择器字符串').is(document.getElementById('targetId'));"
+        ],
+        "description": "检查当前匹配的元素集合是否与选择器、元素或 jQuery 对象匹配，如果至少有一个元素符合给定的参数，则返回 true。"
+    },
+    "构造jQuery对象1": {
+        "prefix": "$jQuery( selector [, context ] )",
+        "body": [
+            "// selector",
+            "// 类型: Selector",
+            "// 包含选择器表达式的字符串",
+            "// context",
+            "// 类型: Element or jQuery or Selector",
+            "// 要用作上下文的 DOM 元素、文档、jQuery 或选择器字符串。",
+            "$('选择器字符串')",
+            "$('选择器字符串', this.document)"
+        ],
+        "description": "接受一个包含 CSS 选择器的字符串，然后用它来匹配一组元素。"
+    },
+    "构造jQuery对象2": {
+        "prefix": "$jQuery( element )",
+        "body": [
+            "// element",
+            "// 类型: Element",
+            "// 一个 DOM 元素，用于创建 jQuery 对象。",
+            "$(document.getElementById('targetId'));"
+        ],
+        "description": "接受一个 DOM 元素，然后用它来创建一个 jQuery 对象。"
+    },
+    "构造jQuery对象3": {
+        "prefix": "$jQuery( elementArray )",
+        "body": [
+            "// elementArray",
+            "// 类型: Array",
+            "// 一个包含一组要包裹在 jQuery 对象中的 DOM 元素的数组。",
+            "$( [ document.getElementById('targetId') ] );"
+        ],
+        "description": "接受一个 DOM 元素数组，然后用它来创建一个 jQuery 对象。"
+    },
+    "构造jQuery对象4": {
+        "prefix": "$jQuery( object )",
+        "body": [
+            "// object",
+            "// 类型: PlainObject",
+            "// 一个用于包装在 jQuery 对象中的普通对象。",
+            "$( { key: 'value' } );"
+        ],
+        "description": "接受一个普通对象，然后用它来创建一个 jQuery 对象。"
+    },
+    "构造jQuery对象5": {
+        "prefix": "$jQuery( selection )",
+        "body": [
+            "// selection",
+            "// 类型: jQuery",
+            "// 一个 jQuery 对象，用于创建新的 jQuery 对象。",
+            "$( $('选择器字符串') );"
+        ],
+        "description": "接受一个 jQuery 对象，然后用它来创建一个新的 jQuery 对象。"
+    },
+    "构造jQuery对象6": {
+        "prefix": "$jQuery()",
+        "body": [
+            "$();"
+        ],
+        "description": "创建一个新的 jQuery 对象。"
+    },
+    "获取jQuery版本号": {
+        "prefix": "$jquery",
+        "body": [
+            "$('选择器字符串').jquery;"
+        ],
+        "description": "一个包含 jQuery 版本号的字符串。"
+    },
+    "执行异步 HTTP（Ajax）请求1": {
+        "prefix": "$ajax( url [, settings ] )",
+        "body": [
+            "// url",
+            "// 类型: String",
+            "// 一个包含要请求的 URL 的字符串。",
+            "// settings",
+            "// 类型: PlainObject",
+            "// 一组用于配置 Ajax 请求的键/值对。所有设置都是可选的。可以使用 $.ajaxSetup() 为任何选项设置默认值。完整的设置列表请参见 $ajax( [settings ] )。",
+            "$.ajax('/path/to/resource');"
+        ],
+        "description": "执行异步 HTTP（Ajax）请求。"
+    },
+    "执行异步 HTTP（Ajax）请求2": {
+        "prefix": "$ajax( [settings ] )",
+        "body": [
+            "// settings",
+            "// 类型: PlainObject",
+            "// 一组配置 Ajax 请求的键/值对。所有设置都是可选的。可以使用 $.ajaxSetup() 为任何选项设置默认值。",
+            "//   accepts (default: depends on dataType)",
+            "//   类型: PlainObject",
+            "//   一组键/值对，将给定的数据类型映射到其 MIME 类型，该类型会在 Accept 请求头中发送。此头部告诉服务器它将接受哪种类型的响应。",
+            "//   async (default: true)",
+            "//   类型: Boolean",
+            "//   默认情况下，所有请求都是异步发送的（即默认设置为 true）。如果您需要同步请求，请将此选项设置为 false。跨域请求和 dataType 为 “jsonp” 的请求不支持同步操作。请注意，同步请求可能会暂时锁定浏览器，在请求活动期间禁用任何操作。从 jQuery 1.8 开始，不推荐在 jqXHR ($.Deferred) 上使用 async: false；您必须使用 success/error/complete 回调选项，而不是使用 jqXHR 对象的相应方法，例如 jqXHR.done()。",
+            "//   beforeSend",
+            "//   类型: Function( jqXHR jqXHR, PlainObject settings )",
+            "//   一个预请求回调函数，可用于在发送 jqXHR（在 jQuery 1.4.x 中为 XMLHTTPRequest）对象之前修改它。使用此函数可以设置自定义头等。jqXHR 和 settings 对象将作为参数传入。这是一个 Ajax 事件。在 beforeSend 函数中返回 false 将取消请求。从 jQuery 1.5 开始，无论请求类型如何，beforeSend 选项都会被调用。",
+            "//   cache (default: true, false for dataType 'script' and 'jsonp')",
+            "//   类型: Boolean",
+            "//   如果设置为 false，它将强制浏览器不缓存请求的页面。注意：将 cache 设置为 false 只会在 HEAD 和 GET 请求中正确工作。它的工作原理是向 GET 参数中添加“_={timestamp}”。对于其他类型的请求不需要该参数，除非在 IE8 中对已经通过 GET 请求过的 URL 进行 POST 请求时。",
+            "//   complete",
+            "//   类型: Function( jqXHR jqXHR, String textStatus )",
+            "//   请求完成时要调用的函数（在成功和错误回调执行之后）。该函数接收两个参数：jqXHR（在 jQuery 1.4.x 中为 XMLHTTPRequest）对象和一个描述请求状态的字符串（success、notmodified、nocontent、error、timeout、abort 或 parsererror）。从 jQuery 1.5 开始，complete 设置可以接受一个函数数组。每个函数将依次被调用。这是一个 Ajax 事件。",
+            "//   contents",
+            "//   类型: PlainObject",
+            "//   一个由字符串/正则表达式对组成的对象，用于根据响应的内容类型决定 jQuery 如何解析响应。（版本添加：1.5）",
+            "//   contentType (default: 'application/x-www-form-urlencoded; charset=UTF-8')",
+            "//   类型: Boolean or String",
+            "//   在向服务器发送数据时，请使用此内容类型。默认值是 application/x-www-form-urlencoded; charset=UTF-8 ，在大多数情况下这是可以的。如果你在 $.ajax() 中显式传入 content-type，那么它总会发送到服务器（即使没有发送数据）。从 jQuery 1.6 开始，你可以传入 false 来告诉 jQuery 不设置任何内容类型头。注意：W3C 的 XMLHttpRequest 规范规定字符集始终为 UTF-8；指定其他字符集不会强制浏览器更改编码。注意：对于跨域请求，将内容类型设置为除 application/x-www-form-urlencoded、multipart/form-data 或 text/plain 之外的任何类型，都会触发浏览器向服务器发送预检 OPTIONS 请求。",
+            "//   context",
+            "//   类型: PlainObject",
+            "//   此对象将作为所有与 Ajax 相关的回调的上下文。默认情况下，上下文是一个对象，表示调用中使用的 Ajax 设置（$.ajaxSettings 与传递给 $.ajax 的设置合并）。",
+            "//   converters (default: {'* text': window.String, 'text html': true, 'text json': jQuery.parseJSON, 'text xml': jQuery.parseXML})",
+            "//   类型: PlainObject",
+            "//   一个包含数据类型到数据类型转换器的对象。每个转换器的值都是一个函数，该函数返回响应的转换值。（版本添加：1.5）",
+            "//   crossDomain (default: false for same-domain requests, true for cross-domain requests)",
+            "//   类型: Boolean",
+            "//   如果您希望在同一域上强制执行跨域请求（例如 JSONP），请将 crossDomain 的值设置为 true。这例如允许服务器端重定向到另一个域。（版本新增：1.5）",
+            "//   data",
+            "//   类型: PlainObject or String or Array",
+            "//   要发送到服务器的数据。如果 HTTP 方法是不能有实体主体的方法，例如 GET，则数据会附加到 URL 上。",
+            "//   当数据是一个对象时，除非 processData 选项被设置为 false，jQuery 会从对象的键/值对生成数据字符串。例如，{ a: 'bc', d: 'e,f' } 会被转换为字符串 'a=bc&d=e,f'。如果值是数组，jQuery 会根据 traditional 设置的值（如下所述）对相同键的多个值进行序列化。例如，{ a: [1,2] } 在默认 traditional: false 设置下会变成字符串 'a[]=1&a[]=2'。",
+            "//   当数据作为字符串传递时，它应该已经使用 contentType 的正确编码进行编码，默认情况下为 application/x-www-form-urlencoded。",
+            "//   在 dataType 为 json 或 jsonp 的请求中，如果字符串在 URL 中的任何位置包含双问号 (??) 或查询字符串中包含单问号 (?)，则它会被 jQuery 生成的值替换，该值对于页面上每个库的副本都是唯一的（例如 jQuery21406515378922229067_1479880736745）。",
+            "//   dataFilter",
+            "//   类型: Function( String data, String type ) => Anything",
+            "//   一个用于处理 XMLHttpRequest 原始响应数据的函数。这是一个预过滤函数，用于清理响应。你应该返回清理后的数据。该函数接受两个参数：服务器返回的原始数据和 'dataType' 参数。",
+            "//   dataType (default: Intelligent Guess (xml, json, script, or html))",
+            "//   类型: String",
+            "//   您期望从服务器返回的数据类型。如果没有指定，jQuery 将根据响应的 MIME 类型尝试推断数据类型（XML MIME 类型将返回 XML，在 1.4 中 JSON 将返回 JavaScript 对象，1.4 中 script 将执行脚本，其他类型将作为字符串返回）。可用的数据类型（以及传给成功回调的第一个参数的结果）包括：",
+            "//      xml: 返回一个可以通过 jQuery 处理的 XML 文档。",
+            "//      html: 返回纯文本 HTML 信息；包含 script 标签的 HTML 将被执行。",
+            "//      script: 返回纯文本 JavaScript 代码，并在全局上下文中执行它。",
+            "//      json: 返回 JSON 数据，并将其解析为 JavaScript 对象。",
+            "//      jsonp: 将 JSON 数据作为 JSONP 响应返回，并将其解析为 JavaScript 对象。",
+            "//      text: 一个纯文本字符串。",
+            "//      多个以空格分隔的值：从 jQuery 1.5 开始，jQuery 可以将数据类型从 Content-Type 头中收到的类型转换为你所需要的类型。例如，如果你希望将文本响应处理为 XML，可以将 dataType 设置为“text xml”。你也可以发起一个 JSONP 请求，接收到文本后，再由 jQuery 将其解释为 XML：“jsonp text xml”。类似地，简写字符串如“jsonp xml”将首先尝试从 jsonp 转换为 xml，如果失败，再从 jsonp 转换为文本，然后再从文本转换为 xml。",
+            "//   error",
+            "//   类型: Function( jqXHR jqXHR, String textStatus, String errorThrown )",
+            "//   如果请求失败，将调用的函数。该函数接收三个参数：jqXHR（在 jQuery 1.4.x 中为 XMLHttpRequest）对象、描述发生错误类型的字符串以及可选的异常对象（如果有的话）。第二个参数的可能值（除了 null）有“timeout”、“error”、“abort”和“parsererror”。当发生 HTTP 错误时，errorThrown 将接收 HTTP 状态的文本部分，例如“Not Found”或“Internal Server Error”（在 HTTP/2 中可能是空字符串）。从 jQuery 1.5 起，error 设置可以接受函数数组。每个函数将依次被调用。注意：此处理器不会被跨域脚本和跨域 JSONP 请求调用。这是一个 Ajax 事件。",
+            "//   global (default: true)",
+            "//   类型: Boolean",
+            "//   是否为此请求触发全局 Ajax 事件处理程序。默认值为 true。设置为 false 可防止触发像 ajaxStart 或 ajaxStop 这样的全局处理程序。这可以用来控制各种 Ajax 事件。",
+            "//   headers (default: {})",
+            "//   类型: PlainObject",
+            "//   一个用于在使用 XMLHttpRequest 传输发送请求时附加的额外头部键/值对对象。头部 X-Requested-With: XMLHttpRequest 始终会被添加，但其默认的 XMLHttpRequest 值可以在此处更改。headers 设置中的值也可以在 beforeSend 函数中被覆盖。（添加版本：1.5）",
+            "//   ifModified (default: false)",
+            "//   类型: Boolean",
+            "//   仅当响应自上次请求以来已更改时才允许请求成功。这是通过检查 Last-Modified 头来完成的。默认值为 false，会忽略该头。在 jQuery 1.4 中，这种技术还会检查服务器指定的 'etag' 以捕获未修改的数据。",
+            "//   isLocal (default: depends on current location protocol)",
+            "//   类型: Boolean",
+            "//   允许将当前环境识别为“本地”（例如文件系统），即使 jQuery 默认不将其识别为本地。当前被识别为本地的协议有：file、*-extension 和 widget。如果需要修改 isLocal 设置，建议在 $.ajaxSetup() 方法中进行一次修改。（版本新增：1.5.1）",
+            "//   jsonp",
+            "//   类型: String or Boolean",
+            "//   在 JSONP 请求中覆盖回调函数名称。此值将替代 URL 查询字符串中 'callback=?' 部分的 'callback'。例如，{jsonp:'onJSONPLoad'} 将导致 'onJSONPLoad=?' 被传递到服务器。从 jQuery 1.5 开始，将 jsonp 选项设置为 false 可以防止 jQuery 在 URL 中添加 ?callback 字符串或尝试使用 =? 进行转换。在这种情况下，你还应该显式设置 jsonpCallback 设置。例如，{ jsonp: false, jsonpCallback: 'callbackName' }。如果你不信任 Ajax 请求的目标，出于安全原因可以考虑将 jsonp 属性设置为 false。",
+            "//   jsonpCallback",
+            "//   类型: String or Function()",
+            "//   为 JSONP 请求指定回调函数的名称。该值将替代 jQuery 自动生成的随机名称。通常建议让 jQuery 自动生成唯一名称，因为这将更容易管理请求并提供回调和错误处理。当你希望启用更好的浏览器 GET 请求缓存时，可能需要指定回调函数。从 jQuery 1.5 开始，你也可以为此设置使用一个函数，在这种情况下，jsonpCallback 的值将被设置为该函数的返回值。",
+            "//   method (default: 'GET')",
+            "//   类型: String",
+            "//   用于请求的 HTTP 方法（例如 “POST”、“GET”、“PUT”）。 （版本新增：1.9）",
+            "//   mimeType",
+            "//   类型: String",
+            "//   用于覆盖 XHR MIME 类型的 MIME 类型。（版本新增：1.5.1）",
+            "//   password",
+            "//   类型: String",
+            "//   用于在 HTTP 访问身份验证请求中与 XMLHttpRequest 配合使用的密码。",
+            "//   processData (default: true)",
+            "//   类型: Boolean",
+            "//   默认情况下，传入 data 选项的数据作为对象（严格来说，除了字符串以外的任何内容）将被处理并转换为查询字符串，适用于默认的内容类型 application/x-www-form-urlencoded。如果你想发送 DOM 文档或其他未经处理的数据，请将此选项设置为 false。",
+            "//   scriptAttrs",
+            "//   类型: PlainObject",
+            "//   定义一个带有额外属性的对象，用于“script”或“jsonp”请求。键表示属性的名称，值表示属性的值。如果提供了该对象，将强制使用 script 标签传输。例如，这可以用于设置 nonce、integrity 或 crossorigin 属性，以满足内容安全策略的要求。（版本新增：3.4）",
+            "//   scriptCharset",
+            "//   类型: String",
+            "//   仅在使用“script”传输时适用。在请求中使用的 script 标签上设置 charset 属性。当本地页面的字符集与远程脚本的字符集不同时使用。或者，也可以在 scriptAttrs 中指定 charset 属性，这也将确保使用“script”传输。",
+            "//   statusCode (default: {})",
+            "//   类型: PlainObject",
+            "//   一个包含数字 HTTP 代码的对象，以及在响应具有相应代码时要调用的函数。",
+            "//   如果请求成功，状态码函数的参数与成功回调相同；如果请求出错（包括重定向到另一个域的3xx），它们的参数与错误回调相同。重定向到同一域的3xx由浏览器处理，不受jQuery控制。",
+            "//   success",
+            "//   类型: Function( Anything data, String textStatus, jqXHR jqXHR )",
+            "//   如果请求成功，将调用的函数。该函数会传入三个参数：从服务器返回的数据，根据 dataType 参数或 dataFilter 回调函数（如果指定）格式化；描述状态的字符串；以及 jqXHR（在 jQuery 1.4.x 中为 XMLHttpRequest）对象。从 jQuery 1.5 开始，success 设置可以接受一个函数数组。每个函数将依次被调用。这是一个 Ajax 事件。",
+            "//   timeout",
+            "//   类型: Number",
+            "//   为请求设置超时时间（以毫秒为单位）。值为0表示没有超时。这将覆盖通过 $.ajaxSetup() 设置的任何全局超时。超时时间从发起 $.ajax 调用时开始计算；如果有多个其他请求正在进行且浏览器没有可用连接，请求可能在发送之前就已超时。在 jQuery 1.4.x 及以下版本中，如果请求超时，XMLHttpRequest 对象将处于无效状态；访问任何对象成员可能会抛出异常。在仅限 Firefox 3.0 的情况下，脚本和 JSONP 请求不能通过超时取消；即使它在超时期限之后到达，脚本仍会运行。",
+            "//   traditional",
+            "//   类型: Boolean",
+            "//   如果您希望使用传统的参数序列化样式，请将此设置为 true。",
+            "//   type (default: 'GET')",
+            "//   类型: String",
+            "//   method的别名。如果您使用的是 jQuery 1.9.0 之前的版本，应该使用 type。",
+            "//   url (default: The current page)",
+            "//   类型: String",
+            "//   包含发送请求的 URL 的字符串。",
+            "//   username",
+            "//   类型: String",
+            "//   用于在 HTTP 访问身份验证请求中与 XMLHttpRequest 配合使用的用户名。",
+            "//   xhr (default: ActiveXObject when available (IE), the XMLHttpRequest otherwise)",
+            "//   类型: Function()",
+            "//   用于创建 XMLHttpRequest 对象的回调。当可用时默认为 ActiveXObject（IE），否则为 XMLHttpRequest。可以重写以提供你自己的 XMLHttpRequest 实现或对工厂的增强。",
+            "//   xhrFields",
+            "//   类型: PlainObject",
+            "//   一个包含 fieldName-fieldValue 对的对象，用于在原生 XHR 对象上设置。例如，如果需要，你可以使用它将 withCredentials 设置为 true，以进行跨域请求。",
+            "//   在 jQuery 1.5 中，withCredentials 属性没有传播到原生的 XHR，因此需要该属性的 CORS 请求会忽略这个标志。因此，如果您需要使用它，我们建议使用 jQuery 1.5.1。",
+            "//   (版本添加：1.5.1)",
+            "$.ajax({",
+            "  url: 'https://fiddle.jshell.net/favicon.png',",
+            "  beforeSend: function( xhr ) {",
+            "    xhr.setRequestHeader('X-Custom-Header', 'MyValue');",
+            "  },",
+            "})",
+            "  .done(function( data ) {",
+            "    console.log('成功:', data);",
+            "  })",
+            "  .fail(function( jqXHR, textStatus, errorThrown ) {",
+            "    console.error('失败:', textStatus, errorThrown);",
+            "  });"
+        ],
+        "description": "执行异步 HTTP（Ajax）请求。"
+    },
+    "在发送HTTP请求之前处理自定义的 Ajax 选项或修改现有选项": {
+        "prefix": "$ajaxPrefilter( [dataTypes ], handler )",
+        "body": [
+            "// dataTypes",
+            "// 类型: String",
+            "// 一个可选的字符串，包含一个或多个以空格分隔的数据类型",
+            "// handler",
+            "// 类型: Function( PlainObject options, PlainObject originalOptions, jqXHR jqXHR )",
+            "// 用于为将来的 Ajax 请求设置默认值的处理程序。",
+            "$.ajaxPrefilter(function( options, originalOptions, jqXHR ){});"
+        ],
+        "description": "在每次请求发送之前以及在 $.ajax() 处理它们之前，处理自定义的 Ajax 选项或修改现有选项。"
+    },
+    "为未来的 Ajax 请求设置默认值": {
+        "prefix": "$ajaxSetup( options )",
+        "body": [
+            "// options",
+            "// 类型: PlainObject",
+            "// 一组配置默认 Ajax 请求的键/值对。所有选项都是可选的。",
+            "$.ajaxSetup({});"
+        ],
+        "description": "为未来的 Ajax 请求设置默认值。不推荐使用它。"
+    },
+    "创建一个处理 Ajax 数据实际传输的对象": {
+        "prefix": "$ajaxTransport( dataType, handler )",
+        "body": [
+            "// dataType",
+            "// 类型: String",
+            "// 一个标识要使用的数据类型的字符串",
+            "// handler",
+            "// 类型: Function( PlainObject options, PlainObject originalOptions, jqXHR jqXHR )",
+            "// 一个处理程序，用于返回与第一个参数提供的数据类型一起使用的新传输对象。",
+            "$.ajaxSetup({});"
+        ],
+        "description": "创建一个处理 Ajax 数据实际传输的对象。"
+    },
+    "获取回调函数列表": {
+        "prefix": "$Callbacks( flags )",
+        "body": [
+            "// flags",
+            "// 类型: String",
+            "// 一个可选的以空格分隔的标志列表，用于更改回调列表的行为。",
+            "$.Callbacks();"
+        ],
+        "description": "一个多用途的回调函数列表对象，提供了一种强大的方式来管理回调函数列表。"
+    },
+    "检查元素是否为后代": {
+        "prefix": "$contains( container, contained )",
+        "body": [
+            "// container",
+            "// 类型: Element",
+            "// 可能包含其他元素的 DOM 元素。",
+            "// contained",
+            "// 类型: Element",
+            "// 可能被另一个元素（或其后代）包含的 DOM 元素。",
+            "$.contains( document.documentElement, document.body );"
+        ],
+        "description": "检查一个 DOM 元素是否是另一个 DOM 元素的后代。"
+    },
+    "CSS 钩子": {
+        "prefix": "$cssHooks",
+        "body": [
+            "$.cssHooks"
+        ],
+        "description": "直接钩入 jQuery，以重写特定 CSS 属性的获取或设置方式，规范 CSS 属性命名，或创建自定义属性。"
+    },
+    "存储数据": {
+        "prefix": "$data( element, key, value )",
+        "body": [
+            "// element",
+            "// 类型: Element",
+            "// 要与数据关联的 DOM 元素。",
+            "// key",
+            "// 类型: String",
+            "// 一个用于命名要设置的数据的字符串。",
+            "// value",
+            "// 类型: Anything",
+            "// 新的数据值；这可以是任何 Javascript 类型，除了 undefined。",
+            "$.data( document.body, 'foo', 52 )"
+        ],
+        "description": "存储与指定元素关联的任意数据。返回已设置的值。"
+    },
+    "创建延迟对象": {
+        "prefix": "$Deferred( [beforeStart ] )",
+        "body": [
+            "// beforeStart",
+            "// 类型: Function",
+            "// 在构造函数返回之前调用的函数。",
+            "$.Deferred( function() {} )"
+        ],
+        "description": "一个工厂函数，它返回一个可链式调用的工具对象，该对象具有将多个回调注册到回调队列、调用回调队列以及传递任何同步或异步函数的成功或失败状态的方法。"
+    },
+    "定义错误处理钩子": {
+        "prefix": "$Deferred.exceptionHook()",
+        "body": [
+            "$.Deferred.exceptionHook = function( error, asyncError ) {",
+            "   console.error('jQuery.Deferred exception: ' + error.message + asyncError.message);",
+            "};"
+        ],
+        "description": "处理由延迟对象产生的错误。"
+    },
+    "定义返回错误的钩子": {
+        "prefix": "$Deferred.getErrorHook()",
+        "body": [
+            "$.Deferred.getErrorHook = function() {",
+            "  try {",
+            "    throw new Error();",
+            "  } catch ( error ) {",
+            "    return error;",
+            "  }",
+            "};"
+        ],
+        "description": "返回一个具有定义堆栈的 Error 实例。"
+    },
+    "执行队列中的函数": {
+        "prefix": "$dequeue( element [, queueName ] )",
+        "body": [
+            "// element",
+            "// 类型: Element",
+            "// 要从队列中出列的 DOM 元素。",
+            "// queueName",
+            "// 类型: String",
+            "// 一个可选的字符串，用于指定要出列的队列的名称。",
+            "$.dequeue( document.body );",
+            "$.dequeue( document.body, 'fx' );"
+        ],
+        "description": "对匹配的元素执行队列中的下一个函数。"
+    },
+    "对每个元素执行回调函数": {
+        "prefix": "$each( array, callback )",
+        "body": [
+            "// array",
+            "// 类型: ArrayLikeObject",
+            "// 要遍历的数组或类数组对象。",
+            "// callback",
+            "// 类型: Function( Integer indexInArray, Object value )",
+            "// 在每个元素上执行的函数。",
+            "$.each( [1, 2, 3], function( element, index ) {",
+            "    console.log( index + ': ' + element );",
+            "} );"
+        ],
+        "description": "一个通用的迭代器函数，可以用于无缝地迭代对象和数组。具有长度属性的数组和类数组对象（例如函数的 arguments 对象）通过数字索引迭代，从 0 到 length-1。其他对象通过它们的命名属性进行迭代。"
+    },
+    "对每个对象执行回调函数": {
+        "prefix": "$each( object, callback )",
+        "body": [
+            "// object",
+            "// 类型: Object",
+            "// 要遍历的对象。",
+            "// callback",
+            "// 类型: Function( Integer indexInArray, Object value )",
+            "// 在每个元素上执行的函数。",
+            "$.each( [1, 2, 3], function( object, index ) {",
+            "    console.log( index + ': ' + object.value );",
+            "} );"
+        ],
+        "description": "一个通用的迭代器函数，可以用于无缝地迭代对象和数组。具有长度属性的数组和类数组对象（例如函数的 arguments 对象）通过数字索引迭代，从 0 到 length-1。其他对象通过它们的命名属性进行迭代。"
+    },
+    "抛出错误": {
+        "prefix": "$error( message )",
+        "body": [
+            "// message",
+            "// 类型: String",
+            "// 要抛出的错误消息。",
+            "$.error( 'An error occurred.' );"
+        ],
+        "description": "接收一个字符串并抛出包含该字符串的异常。"
+    },
+    "转义选择器": {
+        "prefix": "$escapeSelector( selector )",
+        "body": [
+            "// selector",
+            "// 类型: String",
+            "// 要转义的选择器字符串。",
+            "$.escapeSelector( '选择器字符串' );"
+        ],
+        "description": "转义一个字符串，使其可以作为 CSS 选择器使用。"
+    },
+    "扩展对象1": {
+        "prefix": "$extend( target, object1 [, objectN ] )",
+        "body": [
+            "// target",
+            "// 类型: Object",
+            "// 要扩展的目标对象。",
+            "// object1",
+            "// 类型: Object",
+            "// 要合并到目标对象的源对象。",
+            "// objectN",
+            "// 类型: Object",
+            "// （可选）要合并到目标对象的源对象。",
+            "$.extend( {}, {} );",
+            "$.extend( {}, {}, {} );"
+        ],
+        "description": "将一个或多个源对象的属性合并到目标对象中。"
+    },
+    "扩展对象2": {
+        "prefix": "$extend( [deep ], target, object1 [, objectN ] )",
+        "body": [
+            "// deep",
+            "// 类型: Boolean",
+            "// 如果为true，合并将变为递归（也称为深拷贝）。不支持将此参数传递为假。",
+            "// target",
+            "// 类型: Object",
+            "// 要扩展的目标对象。",
+            "// target",
+            "// 类型: Object",
+            "// 要扩展的目标对象。",
+            "// object1",
+            "// 类型: Object",
+            "// 要合并到目标对象的源对象。",
+            "// objectN",
+            "// 类型: Object",
+            "// （可选）要合并到目标对象的源对象。",
+            "$.extend( true, {}, {} );",
+            "$.extend( true, {}, {}, {} );"
+        ],
+        "description": "将一个或多个源对象的属性合并到目标对象中。"
+    },
+    "扩展对象3": {
+        "prefix": "$extend( object )",
+        "body": [
+            "// object",
+            "// 类型: Object",
+            "// 要合并到目标对象的源对象。",
+            "$.extend( {} );"
+        ],
+        "description": "将一个或多个源对象的属性合并到目标对象中。"
+    },
+    "查找对象": {
+        "prefix": "$find()",
+        "body": [
+            "$.find( '选择器字符串' );"
+        ],
+        "description": "jQuery 选择器引擎，原名 Sizzle，通过 jQuery.find 对外提供。本页描述了 jQuery.find 下的所有 API。"
+    },
+    "将对象的内容合并到 jQuery prototype 上": {
+        "prefix": "$fn.extend( object )",
+        "body": [
+            "// object",
+            "// 类型: Object",
+            "// 要合并到 jQuery prototype 的源对象。",
+            "$.fn.extend( {} );"
+        ],
+        "description": "将对象的内容合并到 jQuery 原型上，以提供新的 jQuery 实例方法。"
+    },
+    "全局禁用所有动画": {
+        "prefix": "$fx.off",
+        "body": [
+            "$.fx.off = true;"
+        ],
+        "description": "全局禁用所有动画。"
+    },
+    "发送GET请求1": {
+        "prefix": "$get( url [, data ] [, success ] [, dataType ] )",
+        "body": [
+            "// url",
+            "// 类型: String",
+            "// 发送请求的 URL。",
+            "// data",
+            "// 类型: PlainObject or String",
+            "// 一个普通对象或字符串，与请求一起发送到服务器。",
+            "// success",
+            "// 类型: Function( PlainObject data, String textStatus, jqXHR jqXHR )",
+            "// 如果请求成功执行的回调函数。如果提供了 dataType，则必须提供，但你可以使用 null 或 jQuery.noop 作为占位符。注意：在 jQuery 3.x 及更早版本中，当为 success 提供 null 值时，你还必须提供 data 参数；你可以将其设置为 null 或 undefined。",
+            "// dataType",
+            "// 类型: String",
+            "// 从服务器预期的数据类型。默认值：智能猜测（xml、json、script、text、html）。",
+            "$.get( 'URL' );"
+        ],
+        "description": "使用 HTTP GET 请求从服务器加载数据。"
+    },
+    "发送GET请求2": {
+        "prefix": "$get( [settings ] )",
+        "body": [
+            "// settings",
+            "// 类型: PlainObject",
+            "// 一组用于配置 Ajax 请求的键/值对。除了 url 之外，所有属性都是可选的。可以使用 $.ajaxSetup() 为任何选项设置默认值。有关所有设置的完整列表，请参见 jQuery.ajax( settings )。type 选项将自动设置为 GET。",
+            "$.get( settings );"
+        ],
+        "description": "使用 HTTP GET 请求从服务器加载数据。"
+    },
+    "发送GET请求获取JSON": {
+        "prefix": "$getJSON( url [, data ] [, success ] )",
+        "body": [
+            "// url",
+            "// 类型: String",
+            "// 发送请求的 URL。",
+            "// data",
+            "// 类型: PlainObject or String",
+            "// 一个普通对象或字符串，与请求一起发送到服务器。",
+            "// success",
+            "// 类型: Function( PlainObject data, String textStatus, jqXHR jqXHR )",
+            "// 如果请求成功，则执行的回调函数。",
+            "$.getJSON( 'URL' );"
+        ],
+        "description": "使用 GET HTTP 请求从服务器加载 JSON 编码的数据。"
+    },
+    "发送GET请求获取JavaScript文件": {
+        "prefix": "$getScript( url [, success ] )",
+        "body": [
+            "// url",
+            "// 类型: String",
+            "// 发送请求的 URL。",
+            "// success",
+            "// 类型: Function( PlainObject data, String textStatus, jqXHR jqXHR )",
+            "// 如果请求成功，则执行的回调函数。",
+            "$.getScript( 'URL' );"
+        ],
+        "description": "使用 GET HTTP 请求从服务器加载一个 JavaScript 文件，然后执行它。"
+    },
+    "全局执行JavaScript代码1": {
+        "prefix": "$globalEval( code )",
+        "body": [
+            "// code",
+            "// 类型: String",
+            "// 要执行的 JavaScript 代码。",
+            "$.globalEval( 'JavaScript 代码' );"
+        ],
+        "description": "在全局执行一些 JavaScript 代码。"
+    },
+    "全局执行JavaScript代码2": {
+        "prefix": "$globalEval( code [, options ] )",
+        "body": [
+            "// code",
+            "// 类型: String",
+            "// 要执行的 JavaScript 代码。",
+            "// options",
+            "// 类型: PlainObject",
+            "//   nonce",
+            "//   类型: string",
+            "//   传递给执行脚本的 nonce 属性。",
+            "$.globalEval( 'JavaScript 代码', { nonce: 'nonce-value' } );"
+        ],
+        "description": "在全局执行一些 JavaScript 代码。"
+    },
+    "全局执行JavaScript代码3": {
+        "prefix": "$globalEval( code [, options ] [, doc ] )",
+        "body": [
+            "// code",
+            "// 类型: String",
+            "// 要执行的 JavaScript 代码。",
+            "// options",
+            "// 类型: PlainObject",
+            "//   nonce",
+            "//   类型: string",
+            "//   传递给执行脚本的 nonce 属性。",
+            "// doc",
+            "// 类型: Document",
+            "// 一份用于评估代码的上下文的文档。",
+            "$.globalEval( 'JavaScript 代码', { nonce: 'nonce-value' }, document );"
+        ],
+        "description": "在全局执行一些 JavaScript 代码。"
+    },
+    "过滤数组元素，原数组不变": {
+        "prefix": "$grep( array, function [, invert ] )",
+        "body": [
+            "// array",
+            "// 类型: Array",
+            "// 要搜索的类数组对象。",
+            "// function",
+            "// 类型: Function( Object elementOfArray, Integer indexInArray ) => Boolean",
+            "// 用于处理每个项目的函数。函数的第一个参数是项目，第二个参数是索引。函数应返回一个布尔值。这将是全局 window 对象。",
+            "// invert",
+            "// 类型: Boolean",
+            "// 如果 invert 为 false 或未提供，则该函数返回一个数组，数组包含所有使得 callback 返回 true 的元素。如果 invert 为 true，则该函数返回一个数组，数组包含所有使得 callback 返回 false 的元素。",
+            "$.grep( [1, 2, 3, 4, 5], function( n ) { return n > 2; }, false );"
+        ],
+        "description": "查找满足过滤函数的数组元素。原始数组不受影响。"
+    },
+    "确定一个元素是否有与之关联的任何 jQuery 数据": {
+        "prefix": "$hasData( element )",
+        "body": [
+            "// element",
+            "// 类型: Element",
+            "// 要检查数据的 DOM 元素。",
+            "var $p = jQuery( 'p' );",
+            "$.hasData( $p );"
+        ],
+        "description": "确定一个元素是否有与之关联的任何 jQuery 数据。"
+    },
+    "预处理 HTML 内容": {
+        "prefix": "$htmlPrefilter( html )",
+        "body": [
+            "// html",
+            "// 类型: String",
+            "// 要预处理的 HTML 内容。",
+            "$.htmlPrefilter( '<p>Hello, world!</p>' );"
+        ],
+        "description": "预处理 HTML 内容。"
+    },
+    "在数组中查找元素": {
+        "prefix": "$inArray( value, array [, fromIndex ] )",
+        "body": [
+            "// value",
+            "// 类型: Object",
+            "// 要查找的值。",
+            "// array",
+            "// 类型: Array",
+            "// 一个要搜索的数组。",
+            "// fromIndex",
+            "// 类型: Number",
+            "// 开始搜索的数组索引。默认值是 0，这将搜索整个数组。",
+            "$.inArray( 3, [1, 2, 3, 4, 5] );"
+        ],
+        "description": "在数组中搜索指定值并返回其索引（如果未找到则返回 -1）。"
+    },
+    "检查对象是否为空": {
+        "prefix": "$isEmptyObject( object )",
+        "body": [
+            "// object",
+            "// 类型: Object",
+            "// 将要检查是否为空的对象。",
+            "$.isEmptyObject( {} );"
+        ],
+        "description": "检查对象是否为空（不包含可枚举属性）。"
+    },
+    "检查对象是否为普通对象": {
+        "prefix": "$isPlainObject( object )",
+        "body": [
+            "// object",
+            "// 类型: Object",
+            "// 将要被检查是否为普通对象的对象。",
+            "$.isPlainObject( {} );"
+        ],
+        "description": "检查一个对象是否是普通对象（使用“{}”或“new Object”创建）。"
+    },
+    "检查对象是否为 XML 文档": {
+        "prefix": "$isXMLDoc( node )",
+        "body": [
+            "// node",
+            "// 类型: Node",
+            "// 将要被检查是否为 XML 文档的节点。",
+            "$.isXMLDoc( document );"
+        ],
+        "description": "检查一个对象是否是 XML 文档。"
+    },
+    "将对象转换为数组": {
+        "prefix": "$makeArray( obj )",
+        "body": [
+            "// obj",
+            "// 类型: Object",
+            "// 将要被转换为数组的对象。",
+            "$.makeArray( { 0: 'zero', 1: 'one' } );"
+        ],
+        "description": "将类数组对象转换为真正的 JavaScript 数组。"
+    },
+    "映射数组元素1": {
+        "prefix": "$map( array, callback )",
+        "body": [
+            "// array",
+            "// 类型: Array",
+            "// 要处理的数组或类数组对象。",
+            "// callback",
+            "// 类型: Function( Object elementOfArray, Integer indexInArray ) => Object",
+            "// 用于处理每个项目的函数。函数的第一个参数是项目，第二个参数是索引。",
+            "$.map( [1, 2, 3], function( n ) { return n * 2; } );"
+        ],
+        "description": "将数组或对象中的所有项转换为新数组的项。"
+    },
+    "映射数组元素2": {
+        "prefix": "$map( object, callback )",
+        "body": [
+            "// object",
+            "// 类型: Object",
+            "// 要处理的对象。",
+            "// callback",
+            "// 类型: Function( Object elementOfArray, Integer indexInArray ) => Object",
+            "// 用于处理每个项目的函数。函数的第一个参数是项目，第二个参数是索引。",
+            "$.map( { a: 1, b: 2, c: 3 }, function( n ) { return n * 2; } );"
+        ],
+        "description": "将数组或对象中的所有项转换为新数组的项。"
+    },
+    "合并数组元素": {
+        "prefix": "$merge( first, second )",
+        "body": [
+            "// first",
+            "// 类型: ArrayLikeObject",
+            "// 要合并的第一个类数组对象，第二个的元素被添加。",
+            "// second",
+            "// 类型: ArrayLikeObject",
+            "// 要合并到第一个的第二个类数组对象，保持不变。",
+            "$.merge( [1, 2, 3], [4, 5, 6] );"
+        ],
+        "description": "将两个数组的内容合并到第一个数组中。"
+    },
+    "放弃 jQuery 控制": {
+        "prefix": "$noConflict( [removeAll ] )",
+        "body": [
+            "// removeAll",
+            "// 类型: Boolean",
+            "// 一个布尔值，指示是否从全局作用域中移除所有 jQuery 变量（包括 jQuery 本身）。",
+            "$.noConflict();"
+        ],
+        "description": "放弃 jQuery 对 $ 变量的控制。"
+    },
+    "空函数": {
+        "prefix": "$noop()",
+        "body": [
+            "$.noop();"
+        ],
+        "description": "一个空函数。"
+    },
+    "序列化对象1": {
+        "prefix": "$param( obj )",
+        "body": [
+            "// obj",
+            "// 类型: Array or PlainObject or jQuery",
+            "// 要序列化的数组、普通对象或 jQuery 对象。",
+            "$.param( { name: 'John', age: 30 } );"
+        ],
+        "description": "将对象序列化为查询字符串。"
+    },
+    "序列化对象2": {
+        "prefix": "$param( obj, traditional )",
+        "body": [
+            "// obj",
+            "// 类型: Array or PlainObject or jQuery",
+            "// 要序列化的数组、普通对象或 jQuery 对象。",
+            "// traditional",
+            "// 类型: Boolean",
+            "// 一个布尔值，用于指示是否执行传统的“浅层”序列化。",
+            "$.param( { name: 'John', age: 30 }, false );"
+        ],
+        "description": "将对象序列化为查询字符串。"
+    },
+    "解析HTML": {
+        "prefix": "$parseHTML( data [, context ] [, keepScripts ] )",
+        "body": [
+            "// data",
+            "// 类型: String",
+            "// 要解析的 HTML 字符串。",
+            "// context (default: document)",
+            "// 类型: Element",
+            "// 作为创建 HTML 片段的上下文的文档元素",
+            "// keepScripts (default: false)",
+            "// 类型: Boolean",
+            "// 一个布尔值，指示是否包含 HTML 字符串中的script标签。",
+            "$.parseHTML( '<p>Hello</p><script>alert(\"Hello\");</script>', document.getElementById('container'), true );"
+        ],
+        "description": "将 HTML 字符串解析为 DOM 节点。"
+    },
+    "解析XML": {
+        "prefix": "$parseXML( data )",
+        "body": [
+            "// data",
+            "// 类型: String",
+            "// 一个格式良好的待解析的 XML 字符串",
+            "$.parseXML( '<rss version='2.0'><channel><title>RSS Title</title></channel></rss>' );"
+        ],
+        "description": "将字符串解析为 XML 文档。"
+    },
+    "发送POST请求1": {
+        "prefix": "$post( url [, data ] [, success ] [, dataType ] )",
+        "body": [
+            "// url",
+            "// 类型: String",
+            "// 发送请求的 URL。",
+            "// data",
+            "// 类型: PlainObject or String",
+            "// 一个普通对象或字符串，与请求一起发送到服务器。",
+            "// success",
+            "// 类型: Function( PlainObject data, String textStatus, jqXHR jqXHR )",
+            "// 如果请求成功执行的回调函数。如果提供了 dataType，则必须提供，但你可以使用 null 或 jQuery.noop 作为占位符。注意：在 jQuery 3.x 及更早版本中，当为 success 提供 null 值时，你还必须提供 data 参数；你可以将其设置为 null 或 undefined。",
+            "// dataType",
+            "// 类型: String",
+            "// 从服务器预期的数据类型。默认值：智能猜测（xml、json、script、text、html）。",
+            "$.post( 'URL' );"
+        ],
+        "description": "使用 HTTP POST 请求从服务器加载数据。"
+    },
+    "发送POST请求2": {
+        "prefix": "$post( [settings ] )",
+        "body": [
+            "// settings",
+            "// 类型: PlainObject",
+            "// 一组用于配置 Ajax 请求的键/值对。除了 url 之外，所有属性都是可选的。可以使用 $.ajaxSetup() 为任何选项设置默认值。有关所有设置的完整列表，请参见 jQuery.ajax( settings )。type 选项将自动设置为 POST。",
+            "$.post( settings );"
+        ],
+        "description": "使用 HTTP POST 请求从服务器加载数据。"
+    },
+    "显示队列中的函数": {
+        "prefix": "$queue( element [, queueName ] )",
+        "body": [
+            "// element",
+            "// 类型: Element",
+            "// 要检查其附加队列的 DOM 元素。",
+            "// queueName",
+            "// 类型: String",
+            "// （可选）队列的名称。",
+            "$.queue( document.getElementById('element') );",
+            "$.queue( document.getElementById('element'), 'queueName' );"
+        ],
+        "description": "显示将在匹配元素上执行的函数队列。"
+    },
+    "ready对象": {
+        "prefix": "$ready",
+        "body": [
+            "$.when( $.ready ).then( function() {} );"
+        ],
+        "description": "一个类似 Promise 的对象（或“thenable”），当文档准备好时会被解析。"
+    },
+    "处理ready对象抛出的错误": {
+        "prefix": "$readyException( error )",
+        "body": [
+            "// error",
+            "// 类型: Error",
+            "// 在 jQuery() 包装的函数中抛出的错误。",
+            "$.readyException = function(){};"
+        ],
+        "description": "处理在 jQuery() 包装的函数中同步抛出的错误。"
+    },
+    "删除之前存储的一条数据": {
+        "prefix": "$removeData( element [, name ] )",
+        "body": [
+            "// element",
+            "// 类型: Element",
+            "// 要从中删除数据的 DOM 元素。",
+            "// name",
+            "// 类型: String",
+            "// （可选）要删除的数据的名称。",
+            "$.removeData( document.getElementById('element'), 'name' );"
+        ],
+        "description": "删除之前存储的一条数据。"
+    },
+    "创建动画属性对象1": {
+        "prefix": "$speed( [duration ] [, settings ] )",
+        "body": [
+            "// duration (default: 400)",
+            "// 类型: Number or String",
+            "// 一个字符串或数字，用于确定动画运行的时长。",
+            "// settings",
+            "// 类型: PlainObject",
+            "//   easing (default: swing)",
+            "//   类型: String",
+            "//   一个字符串，表示用于过渡的缓动函数。",
+            "//   complete",
+            "//   类型: Function()",
+            "//   动画完成后调用的函数。",
+            "$.speed()",
+            "$.speed( 400 )",
+            "$.speed( 400, {easing: 'linear', complete: function() { console.log('动画完成'); } } );"
+        ],
+        "description": "创建一个包含一组属性的对象，可用于自定义动画的定义中。"
+    },
+    "创建动画属性对象2": {
+        "prefix": "$speed( [duration ] [, easing ] [, complete ] )",
+        "body": [
+            "// duration (default: 400)",
+            "// 类型: Number or String",
+            "// 一个字符串或数字，用于确定动画运行的时长。",
+            "// easing (default: swing)",
+            "// 类型: String",
+            "// 一个字符串，表示用于过渡的缓动函数。",
+            "// complete",
+            "// 类型: Function()",
+            "// 动画完成后调用的函数。",
+            "$.speed()",
+            "$.speed( 400 )",
+            "$.speed( 400, 'linear' );",
+            "$.speed( 400, 'linear', function() { console.log('动画完成'); } );"
+        ],
+        "description": "创建一个包含一组属性的对象，可用于自定义动画的定义中。"
+    },
+    "创建动画属性对象3": {
+        "prefix": "$speed( settings )",
+        "body": [
+            "// settings",
+            "// 类型: PlainObject",
+            "//   duration (default: 400)",
+            "//   类型: Number or String",
+            "//   一个字符串或数字，用于确定动画运行的时长。",
+            "//   easing (default: swing)",
+            "//   类型: String",
+            "//   一个字符串，表示用于过渡的缓动函数。",
+            "//   complete",
+            "//   类型: Function()",
+            "//   动画完成后调用的函数。",
+            "$.speed( { duration: 400, easing: 'linear', complete: function() { console.log('动画完成'); } } );"
+        ],
+        "description": "创建一个包含一组属性的对象，可用于自定义动画的定义中。"
+    },
+    "排序并移除重复项": {
+        "prefix": "$uniqueSort( array )",
+        "body": [
+            "// array",
+            "// 类型: ArrayLikeObject",
+            "// 一个数组或类似数组的对象。",
+            "$.uniqueSort( [element1, element2, element3] );"
+        ],
+        "description": "对一个数组或类似数组的 DOM 元素对象进行原地排序，并移除重复项。请注意，这仅适用于 DOM 元素的数组/类似数组对象，不适用于字符串或数字。"
+    },
+    "对异步操作进行处理": {
+        "prefix": "$when( deferreds )",
+        "body": [
+            "// deferreds",
+            "// 类型: Deferred or Promise or Thenable",
+            "// 零个或多个异步对象。",
+            "$.when( $.ajax( 'test.aspx' ) )"
+        ],
+        "description": "提供一种方法，根据零个或多个异步对象（通常是表示异步事件的延迟对象）执行回调函数。"
+    },
+    "keydown事件": {
+        "prefix": "$on( 'keydown' [, eventData ], handler )",
+        "body": [
+            "// keydown",
+            "// 类型: string",
+            "// 字符串'keydown'",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 每次事件触发时执行的函数。",
+            "$('选择器字符串').on( 'keydown' , {error: 'Keydown error'}, function( event ) {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“keydown”事件，或在元素上触发该事件。"
+    },
+    "keypress事件": {
+        "prefix": "$on( 'keypress' [, eventData ], handler )",
+        "body": [
+            "// keypress",
+            "// 类型: string",
+            "// 字符串'keypress'",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 每次事件触发时执行的函数。",
+            "$('选择器字符串').on( 'keypress' , {error: 'Keypress error'}, function( event ) {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“keypress”事件，或在元素上触发该事件。"
+    },
+    "keyup事件": {
+        "prefix": "$on( 'keyup' [, eventData ], handler )",
+        "body": [
+            "// keyup",
+            "// 类型: string",
+            "// 字符串'keyup'",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 每次事件触发时执行的函数。",
+            "$('选择器字符串').on( 'keyup' , {error: 'Keyup error'}, function( event ) {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“keyup”事件，或在元素上触发该事件。"
+    },
+    "选择指定语言的所有元素": {
+        "prefix": "$lang(language)",
+        "body": [
+            "// language: 一个语言代码",
+            "$('选择器字符串:lang(zh-cn)')"
+        ],
+        "description": "选择指定语言的所有元素。"
+    },
+    "选择最后一个元素": {
+        "prefix": "$last()",
+        "body": [
+            "$('选择器字符串').last()"
+        ],
+        "description": "将匹配的元素集合缩减为集合中的最后一个元素。"
+    },
+    "选择最后一个子元素": {
+        "prefix": "$last-child Selector",
+        "body": [
+            "$( '选择器字符串:last-child' )"
+        ],
+        "description": "选择其父元素的最后一个子元素的所有元素。"
+    },
+    "选择最后一个同类型元素": {
+        "prefix": "$last-of-type Selector",
+        "body": [
+            "$( '选择器字符串:last-of-type' )"
+        ],
+        "description": "选择所有在同名元素的同级元素中最后的元素。"
+    },
+    "获取匹配元素的数目": {
+        "prefix": "$length",
+        "body": [
+            "$( '选择器字符串' ).length"
+        ],
+        "description": "获取匹配元素的数目。"
+    },
+    "发送请求并渲染HTML": {
+        "prefix": "$load( url [, data ] [, complete ] )",
+        "body": [
+            "// url",
+            "// 类型: String",
+            "// 发送请求的 URL。",
+            "// data",
+            "// 类型: PlainObject or String",
+            "// 一个普通对象或字符串，与请求一起发送到服务器。",
+            "// complete",
+            "// 类型: Function( PlainObject data, String textStatus, jqXHR jqXHR )",
+            "// 请求完成时执行的回调函数。",
+            "$( '选择器字符串' ).load( 'URL' );"
+        ],
+        "description": "从服务器加载数据，并将返回的 HTML 放入匹配的元素中。"
+    },
+    "load事件": {
+        "prefix": "$on( 'load' [, eventData ], handler )",
+        "body": [
+            "// load",
+            "// 类型: string",
+            "// 字符串'load'",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 每次事件触发时执行的函数。",
+            "$('选择器字符串').on( 'load' , {error: 'Load error'}, function( event ) {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“load”事件，或在元素上触发该事件。"
+    },
+    "映射匹配的元素": {
+        "prefix": "$map( callback )",
+        "body": [
+            "// callback",
+            "// 类型: Function( Integer index, Element domElement ) => Object",
+            "// 一个函数对象，将对当前集合中的每个元素调用。",
+            "$('选择器字符串').map( function( n ) { return n * 2; } );"
+        ],
+        "description": "将当前匹配集合中的每个元素传递给一个函数，生成一个包含返回值的新 jQuery 对象。"
+    },
+    "mousedown事件": {
+        "prefix": "$on( 'mousedown' [, eventData ], handler )",
+        "body": [
+            "// mousedown",
+            "// 类型: string",
+            "// 字符串'mousedown'",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 每次事件触发时执行的函数。",
+            "$('选择器字符串').on( 'mousedown' , {error: 'Mousedown error'}, function( event ) {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“mousedown”事件，或在元素上触发该事件。"
+    },
+    "mouseenter事件": {
+        "prefix": "$on( 'mouseenter' [, eventData ], handler )",
+        "body": [
+            "// mouseenter",
+            "// 类型: string",
+            "// 字符串'mouseenter'",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 每次事件触发时执行的函数。",
+            "$('选择器字符串').on( 'mouseenter' , {error: 'Mouseenter error'}, function( event ) {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“mouseenter”事件，或在元素上触发该事件。"
+    },
+    "mouseleave事件": {
+        "prefix": "$on( 'mouseleave' [, eventData ], handler )",
+        "body": [
+            "// mouseleave",
+            "// 类型: string",
+            "// 字符串'mouseleave'",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 每次事件触发时执行的函数。",
+            "$('选择器字符串').on( 'mouseleave' , {error: 'Mouseleave error'}, function( event ) {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“mouseleave”事件，或在元素上触发该事件。"
+    },
+    "mousemove事件": {
+        "prefix": "$on( 'mousemove' [, eventData ], handler )",
+        "body": [
+            "// mousemove",
+            "// 类型: string",
+            "// 字符串'mousemove'",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 每次事件触发时执行的函数。",
+            "$('选择器字符串').on( 'mousemove' , {error: 'Mousemove error'}, function( event ) {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“mousemove”事件，或在元素上触发该事件。"
+    },
+    "mouseout事件": {
+        "prefix": "$on( 'mouseout' [, eventData ], handler )",
+        "body": [
+            "// mouseout",
+            "// 类型: string",
+            "// 字符串'mouseout'",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 每次事件触发时执行的函数。",
+            "$('选择器字符串').on( 'mouseout' , {error: 'Mouseout error'}, function( event ) {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“mouseout”事件，或在元素上触发该事件。"
+    },
+    "mouseover事件": {
+        "prefix": "$on( 'mouseover' [, eventData ], handler )",
+        "body": [
+            "// mouseover",
+            "// 类型: string",
+            "// 字符串'mouseover'",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 每次事件触发时执行的函数。",
+            "$('选择器字符串').on( 'mouseover' , {error: 'Mouseover error'}, function( event ) {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“mouseover”事件，或在元素上触发该事件。"
+    },
+    "mouseup事件": {
+        "prefix": "$on( 'mouseup' [, eventData ], handler )",
+        "body": [
+            "// mouseup",
+            "// 类型: string",
+            "// 字符串'mouseup'",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 每次事件触发时执行的函数。",
+            "$('选择器字符串').on( 'mouseup' , {error: 'Mouseup error'}, function( event ) {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“mouseup”事件，或在元素上触发该事件。"
+    },
+    "获取匹配所有属性过滤器的元素": {
+        "prefix": "$Multiple Attribute Selector [name=”value”][name2=”value2″]",
+        "body": [
+            "// [attributeFilter1][attributeFilter2][attributeFilterN]",
+            "// attributeFilter1: 一个属性筛选器。",
+            "// attributeFilter2: 另一个属性筛选，进一步缩小选择范围",
+            "// attributeFilterN: 根据需要添加更多属性筛选",
+            "$('选择器字符串[attributeFilter1][attributeFilter2][attributeFilterN]')"
+        ],
+        "description": "匹配符合所有指定属性过滤器的元素。"
+    },
+    "选择多个选择器": {
+        "prefix": "$Multiple Selector (“selector1, selector2, selectorN”)",
+        "body": [
+            "// selector1, selector2, selectorN",
+            "// selector1: 一个选择器字符串。",
+            "// selector2: 另一个选择器字符串",
+            "// selectorN: 任意多的选择器字符串",
+            "$('selector1, selector2, selectorN')"
+        ],
+        "description": "选择所有指定选择器的组合结果。"
+    },
+    "选择下一个元素": {
+        "prefix": "$next( [selector ] )",
+        "body": [
+            "// selector",
+            "// 类型: Selector",
+            "// 一个包含选择器表达式的字符串，用于匹配元素。",
+            "$('选择器字符串').next()",
+            "$('选择器字符串').next( '选择器字符串' )"
+        ],
+        "description": "获取每个匹配元素集合中元素的紧接着的下一个同级元素。如果提供了选择器，只有在下一个同级元素匹配该选择器时才会被获取。"
+    },
+    "选择下一个选择器": {
+        "prefix": "$Next Adjacent Selector (“prev + next”)",
+        "body": [
+            "// prev + next",
+            "// prev: 一个选择器字符串。",
+            "// next: 一个选择器，用于匹配紧邻第一个选择器的元素。",
+            "$('prev + next')"
+        ],
+        "description": "选择所有紧接其前有兄弟元素“prev”的下一个匹配元素“next”。"
+    },
+    "选择下一个兄弟元素选择器": {
+        "prefix": "$Next Siblings Selector (“prev ~ siblings”)",
+        "body": [
+            "// prev ~ siblings",
+            "// prev: 一个选择器字符串。",
+            "// siblings: 一个选择器，用于匹配紧邻第一个选择器的兄弟元素。",
+            "$('prev ~ siblings')"
+        ],
+        "description": "选择所有位于“prev”元素之后、具有相同父元素并匹配过滤器“siblings”选择器的兄弟元素。"
+    },
+    "选择所有后续同级元素": {
+        "prefix": "$nextAll( [selector ] )",
+        "body": [
+            "// selector",
+            "// 类型: Selector",
+            "// 一个包含选择器表达式的字符串，用于匹配元素。",
+            "$('选择器字符串').nextAll()",
+            "$('选择器字符串').nextAll( '选择器字符串' )"
+        ],
+        "description": "获取匹配元素集合中每个元素的所有后续同级元素，可选择性地通过选择器进行过滤。"
+    },
+    "选择所有后续同级元素直到1": {
+        "prefix": "$nextUntil( [selector ] [, filter ] )",
+        "body": [
+            "// selector",
+            "// 类型: Selector",
+            "// 一个包含选择器表达式的字符串，用于指示在哪里停止匹配后续兄弟元素。",
+            "// filter",
+            "// 类型: Selector",
+            "// 一个包含选择器表达式的字符串，用于匹配元素。",
+            "$('选择器字符串').nextUntil( '选择器字符串' )",
+            "$('选择器字符串').nextUntil( '选择器字符串', '过滤器字符串' )"
+        ],
+        "description": "获取每个元素之后的所有同级元素，但不包括与传入的选择器、DOM 节点或 jQuery 对象匹配的元素。"
+    },
+    "选择所有后续同级元素直到2": {
+        "prefix": "$nextUntil( [element ] [, filter ] )",
+        "body": [
+            "// element",
+            "// 类型: Element or jQuery",
+            "// 一个 DOM 节点或 jQuery 对象，指示在何处停止匹配后续的同级元素。",
+            "// filter",
+            "// 类型: Selector",
+            "// 一个包含选择器表达式的字符串，用于匹配元素。",
+            "$('选择器字符串').nextUntil( document.getElementById('element') )",
+            "$('选择器字符串').nextUntil( document.getElementById('element'), '过滤器字符串' )"
+        ],
+        "description": "获取每个元素之后的所有同级元素，但不包括与传入的选择器、DOM 节点或 jQuery 对象匹配的元素。"
+    },
+    "移除匹配的元素1": {
+        "prefix": "$not( selector )",
+        "body": [
+            "// selector",
+            "// 类型: Selector or Element or Array",
+            "// 一个包含选择器表达式、DOM 元素或要与集合匹配的元素数组的字符串。",
+            "$('选择器字符串').not( '选择器字符串' )"
+        ],
+        "description": "从匹配的元素集合中移除元素。"
+    },
+    "移除匹配的元素2": {
+        "prefix": "$not( function )",
+        "body": [
+            "// function",
+            "// 类型: Function( Integer index, Element element ) => Boolean",
+            "// 一个用于测试集合中每个元素的函数。它接受两个参数，index，即元素在 jQuery 集合中的索引，以及 element，即 DOM 元素。在函数内部，this 指当前的 DOM 元素。",
+            "$('选择器字符串').not( function( index, element ) { return true; } )"
+        ],
+        "description": "从匹配的元素集合中移除元素。"
+    },
+    "移除匹配的元素3": {
+        "prefix": "$not( selection )",
+        "body": [
+            "// selection",
+            "// 类型: jQuery",
+            "// 一个现有的 jQuery 对象，用于与当前元素集合进行匹配。",
+            "$('选择器字符串').not( $('选择器字符串') )"
+        ],
+        "description": "从匹配的元素集合中移除元素。"
+    },
+    "选择不匹配选择器的元素": {
+        "prefix": "$not() Selector",
+        "body": [
+            "// not(selector)",
+            "// selector: 用于筛选的选择器。",
+            "$('选择器字符串:not(选择器字符串)')"
+        ],
+        "description": "选择所有不匹配给定选择器的元素。"
+    },
+    "选择其父元素的第 n 个子元素的所有元素": {
+        "prefix": "$nth-child() Selector",
+        "body": [
+            "// nth-child(index/even/odd/equation)",
+            "// index: 匹配每个子元素的索引，从 1 开始，字符串为 even 或 odd，或一个等式（例如 :nth-child(even), :nth-child(4n)）",
+            "$('选择器字符串:nth-child(index/even/odd/equation)')"
+        ],
+        "description": "选择其父元素的第 n 个子元素的所有元素。"
+    },
+    "选择其父元素的第 n 个子元素的所有元素，从最后一个元素计数到第一个元素": {
+        "prefix": "$nth-last-child() Selector",
+        "body": [
+            "// nth-last-child(index/even/odd/equation)",
+            "// index: 匹配每个子元素的索引，从 1 开始，字符串为 even 或 odd，或一个等式（例如 :nth-last-child(even), :nth-last-child(4n)）",
+            "$('选择器字符串:nth-last-child(index/even/odd/equation)')"
+        ],
+        "description": "选择其父元素的第 n 个子元素的所有元素，从最后一个元素计数到第一个元素。"
+    },
+    "选择相对于具有相同元素名称的兄弟元素的父元素的第 n 个子元素，从最后一个元素数到第一个元素": {
+        "prefix": "$nth-last-of-type() Selector",
+        "body": [
+            "// nth-last-of-type(index/even/odd/equation)",
+            "// index: 匹配每个子元素的索引，从 1 开始，字符串为 even 或 odd，或一个等式（例如 :nth-last-of-type(even), :nth-last-of-type(4n)）",
+            "$('选择器字符串:nth-last-of-type(index/even/odd/equation)')"
+        ],
+        "description": "选择相对于具有相同元素名称的兄弟元素的父元素的第 n 个子元素，从最后一个元素数到第一个元素。"
+    },
+    "选择相对于具有相同元素名称的兄弟元素的父元素的第 n 个子元素": {
+        "prefix": "$nth-of-type() Selector",
+        "body": [
+            "// nth-of-type(index/even/odd/equation)",
+            "// index: 匹配每个子元素的索引，从 1 开始，字符串为 even 或 odd，或一个等式（例如 :nth-of-type(even), :nth-of-type(4n)）",
+            "$('选择器字符串:nth-of-type(index/even/odd/equation)')"
+        ],
+        "description": "选择相对于具有相同元素名称的兄弟元素的父元素的第 n 个子元素。"
+    },
+    "取奇数元素": {
+        "prefix": "$odd()",
+        "body": [
+            "$('选择器字符串').odd()"
+        ],
+        "description": "将匹配元素的集合缩减为集合中编号从零开始的奇数元素。"
+    },
+    "移除一个事件处理程序1": {
+        "prefix": "$off( events [, selector ] [, handler ] )",
+        "body": [
+            "// events",
+            "// 类型: String",
+            "// 一个或多个由空格分隔的事件类型和可选的命名空间，或者仅命名空间，例如 click、keydown.myPlugin 或 .myPlugin。",
+            "// selector",
+            "// 类型: String",
+            "// 一个选择器，应该与在附加事件处理程序时最初传递给 .on() 的选择器相匹配。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 先前为事件附加的处理函数，或特殊值 false。",
+            "$('选择器字符串').off( events [, selector ] [, handler ] )"
+        ],
+        "description": "移除一个事件处理程序。"
+    },
+    "移除一个事件处理程序2": {
+        "prefix": "$off( events [, selector ] )",
+        "body": [
+            "// events",
+            "// 类型: PlainObject",
+            "// 一个对象，其中字符串键表示一个或多个以空格分隔的事件类型和可选的命名空间，而值表示之前为这些事件附加的处理函数。",
+            "// selector",
+            "// 类型: String",
+            "// 一个选择器，应该与在附加事件处理程序时最初传递给 .on() 的选择器相匹配。",
+            "$('选择器字符串').off( events [, selector ] )"
+        ],
+        "description": "移除一个事件处理程序。"
+    },
+    "移除一个事件处理程序3": {
+        "prefix": "$off( event )",
+        "body": [
+            "// event",
+            "// 类型: Event",
+            "// 一个 jQuery.Event 对象。",
+            "$('选择器字符串').off( event )"
+        ],
+        "description": "移除一个事件处理程序。"
+    },
+    "移除一个事件处理程序4": {
+        "prefix": "$off()",
+        "body": [
+            "$('选择器字符串').off()"
+        ],
+        "description": "移除一个事件处理程序。"
+    },
+    "获取元素坐标": {
+        "prefix": "$offset()",
+        "body": [
+            "$('选择器字符串').offset()"
+        ],
+        "description": "获取匹配元素集合中第一个元素相对于文档的当前坐标。"
+    },
+    "获取最近的有定位的祖先元素": {
+        "prefix": "$offsetParent()",
+        "body": [
+            "$('选择器字符串').offsetParent()"
+        ],
+        "description": "获取最近的有定位的祖先元素。"
+    },
+    "附加一个事件处理程序1": {
+        "prefix": "$on( events [, selector ] [, data ] , handler )",
+        "body": [
+            "// events",
+            "// 类型: String",
+            "// 一个或多个以空格分隔的事件类型和可选命名空间，例如“click”或“keydown.myPlugin”。",
+            "// selector",
+            "// 类型: String",
+            "// 用于过滤触发事件的所选元素的子孙元素的选择器字符串。如果选择器为 null 或省略，当事件到达所选元素时，事件总是被触发。",
+            "// data",
+            "// 类型: Anything",
+            "// 当事件被触发时，要传递给处理程序的数据在 event.data 中。",
+            "// handler",
+            "// 类型: Function( Event eventObject [, Anything extraParameter ] [, ... ] )",
+            "// 当事件被触发时要执行的函数。值 false 也被允许，作为一个简单返回 false 的函数的简写。",
+            "$('选择器字符串').on( events [, selector ] [, data ] , handler )"
+        ],
+        "description": "为所选元素附加一个或多个事件的事件处理函数。"
+    },
+    "附加一个事件处理程序2": {
+        "prefix": "$on( events [, selector ] [, data ] )",
+        "body": [
+            "// events",
+            "// 类型: PlainObject",
+            "// 一个或多个以空格分隔的事件类型和可选命名空间，例如“click”或“keydown.myPlugin”。",
+            "// selector",
+            "// 类型: String",
+            "// 用于过滤触发事件的所选元素的子孙元素的选择器字符串。如果选择器为 null 或省略，当事件到达所选元素时，事件总是被触发。",
+            "// data",
+            "// 类型: Anything",
+            "// 当事件被触发时，要传递给处理程序的数据在 event.data 中。",
+            "$('选择器字符串').on( events [, selector ] )"
+        ],
+        "description": "为所选元素附加一个或多个事件的事件处理函数。"
+    },
+    "附加一个只执行一次的事件处理程序1": {
+        "prefix": "$one( events [, data ], handler )",
+        "body": [
+            "// events",
+            "// 类型: String",
+            "// 一个包含一个或多个 JavaScript 事件类型的字符串，例如“click”或“submit”，或自定义事件名称。",
+            "// data",
+            "// 类型: PlainObject",
+            "// 当事件被触发时，要传递给处理程序的数据在 event.data 中。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 在事件触发时执行的函数。",
+            "$('选择器字符串').one( events [, data ], handler )"
+        ],
+        "description": "为元素的事件附加一个处理程序。每个元素每种事件类型的处理程序最多执行一次。"
+    },
+    "附加一个只执行一次的事件处理程序2": {
+        "prefix": "$one( events [, selector ] [, data ], handler )",
+        "body": [
+            "// events",
+            "// 类型: String",
+            "// 一个包含一个或多个 JavaScript 事件类型的字符串，例如“click”或“submit”，或自定义事件名称。",
+            "// selector",
+            "// 类型: String",
+            "// 用于过滤触发事件的所选元素的子孙元素的选择器字符串。如果选择器为 null 或省略，当事件到达所选元素时，事件总是被触发。",
+            "// data",
+            "// 类型: PlainObject",
+            "// 当事件被触发时，要传递给处理程序的数据在 event.data 中。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 在事件触发时执行的函数。",
+            "$('选择器字符串').one( events [, selector ] [, data ], handler )"
+        ],
+        "description": "为元素的事件附加一个处理程序。每个元素每种事件类型的处理程序最多执行一次。"
+    },
+    "附加一个只执行一次的事件处理程序3": {
+        "prefix": "$one( events [, selector ] [, data ] )",
+        "body": [
+            "// events",
+            "// 类型: PlainObject",
+            "// 一个对象，其中字符串键表示一个或多个以空格分隔的事件类型和可选的命名空间，值表示要为该事件调用的处理函数。",
+            "// selector",
+            "// 类型: String",
+            "// 用于过滤触发事件的所选元素的子孙元素的选择器字符串。如果选择器为 null 或省略，当事件到达所选元素时，事件总是被触发。",
+            "// data",
+            "// 类型: PlainObject",
+            "// 当事件被触发时，要传递给处理程序的数据在 event.data 中。",
+            "$('选择器字符串').one( events [, selector ] [, data ] )"
+        ],
+        "description": "为元素的事件附加一个处理程序。每个元素每种事件类型的处理程序最多执行一次。"
+    },
+    "选择其父元素中唯一的子元素的所有元素": {
+        "prefix": "$only-child Selector",
+        "body": [
+            "$('选择器字符串:only-child')"
+        ],
+        "description": "选择其父元素中唯一的子元素的所有元素。"
+    },
+    "选择所有没有同名兄弟元素的元素": {
+        "prefix": "$only-of-type Selector",
+        "body": [
+            "$('选择器字符串:only-of-type')"
+        ],
+        "description": "选择所有没有同名兄弟元素的元素。"
+    },
+    "获取元素的外部高度": {
+        "prefix": "$outerHeight( [includeMargin ] )",
+        "body": [
+            "// includeMargin (default: false)",
+            "// 类型: Boolean",
+            "// 一个布尔值，用于指示是否在计算中包括元素的外边距。",
+            "$('选择器字符串').outerHeight()",
+            "$('选择器字符串').outerHeight( true )"
+        ],
+        "description": "获取匹配元素集合中第一个元素的当前计算外部高度（包括内边距、边框，以及可选的外边距）。"
+    },
+    "获取元素的外部宽度": {
+        "prefix": "$outerWidth( [includeMargin ] )",
+        "body": [
+            "// includeMargin (default: false)",
+            "// 类型: Boolean",
+            "// 一个布尔值，用于指示是否在计算中包括元素的外边距。",
+            "$('选择器字符串').outerWidth()",
+            "$('选择器字符串').outerWidth( true )"
+        ],
+        "description": "获取匹配元素集合中第一个元素的当前计算外部宽度（包括内边距、边框，以及可选的外边距）。"
+    },
+    "获取元素的父元素": {
+        "prefix": "$parent( [selector ] )",
+        "body": [
+            "// selector",
+            "// 类型: Selector",
+            "// 一个包含选择器表达式的字符串，用于匹配元素。",
+            "$('选择器字符串').parent()",
+            "$('选择器字符串').parent( '选择器字符串' )"
+        ],
+        "description": "获取当前匹配元素集合中每个元素的父元素，可以选择通过选择器进行筛选。"
+    },
+    "选择所有至少有一个子节点（元素或文本）的元素": {
+        "prefix": "$parent Selector",
+        "body": [
+            "$('选择器字符串:parent')"
+        ],
+        "description": "选择所有至少有一个子节点（元素或文本）的元素。"
+    },
+    "获取元素的祖先元素": {
+        "prefix": "$parents( [selector ] )",
+        "body": [
+            "// selector",
+            "// 类型: Selector",
+            "// 一个包含选择器表达式的字符串，用于匹配元素。",
+            "$('选择器字符串').parents()",
+            "$('选择器字符串').parents( '选择器字符串' )"
+        ],
+        "description": "获取当前匹配元素集合中每个元素的祖先元素，可选择通过选择器进行过滤。"
+    },
+    "获取元素的祖先元素直到1": {
+        "prefix": "$parentsUntil( [selector ] [, filter ] )",
+        "body": [
+            "// selector",
+            "// 类型: Selector",
+            "// 一个包含选择器表达式的字符串，用于指示在哪里停止匹配祖先元素。",
+            "// filter",
+            "// 类型: Selector",
+            "// 一个包含选择器表达式的字符串，用于匹配元素。",
+            "$('选择器字符串').parentsUntil( '选择器字符串' )",
+            "$('选择器字符串').parentsUntil( '选择器字符串', '过滤器字符串' )"
+        ],
+        "description": "获取当前匹配元素集合中每个元素的祖先元素，可选择通过选择器进行过滤。"
+    },
+    "获取元素的祖先元素直到2": {
+        "prefix": "$parentsUntil( [element ] [, filter ] )",
+        "body": [
+            "// element",
+            "// 类型: Element or jQuery",
+            "// 一个 DOM 节点或 jQuery 对象，用于指示停止匹配祖先元素的位置。",
+            "// filter",
+            "// 类型: Selector",
+            "// 一个包含选择器表达式的字符串，用于匹配元素。",
+            "$('选择器字符串').parentsUntil( document.getElementById('element') )",
+            "$('选择器字符串').parentsUntil( document.getElementById('element'), '过滤器字符串' )"
+        ],
+        "description": "获取当前匹配元素集合中每个元素的祖先元素，可选择通过选择器进行过滤。"
+    },
+    "选择密码元素": {
+        "prefix": "$password Selector",
+        "body": [
+            "$('选择器字符串:password')"
+        ],
+        "description": "选择所有类型为密码的元素。"
+    },
+    "获取元素的位置": {
+        "prefix": "$position()",
+        "body": [
+            "$('选择器字符串').position()"
+        ],
+        "description": "获取元素相对于其定位父元素的位置。"
+    },
+    "在元素内部的开头插入内容1": {
+        "prefix": "$prepend( content [, content ] )",
+        "body": [
+            "// content",
+            "// 类型: htmlString or Element or Text or Array or jQuery",
+            "// DOM 元素、文本节点、元素和文本节点数组、HTML 字符串或 jQuery 对象，插入到匹配元素集合中每个元素的开头。",
+            "// content",
+            "// 类型: htmlString or Element or Text or Array or jQuery",
+            "// 一个或多个 DOM 元素、文本节点、元素和文本节点数组、HTML 字符串或 jQuery 对象，插入到匹配元素集合中每个元素的开头。",
+            "$('选择器字符串').prepend( '内容' )"
+        ],
+        "description": "在元素内部的开头插入内容。"
+    },
+    "在元素内部的开头插入内容2": {
+        "prefix": "$prepend( function )",
+        "body": [
+            "// function",
+            "// 类型: Function( Integer elementOfArray, String html ) => htmlString or Element or Text or jQuery",
+            "// 一个函数，返回一个 HTML 字符串、DOM 元素、文本节点或 jQuery 对象，以插入到匹配元素集合中每个元素的开头。接收元素在集合中的索引位置和元素的旧 HTML 值作为参数。在函数内部，this 指的是集合中的当前元素。",
+            "$('选择器字符串').prepend( function( index, html ) { return '内容'; } )"
+        ],
+        "description": "在元素内部的开头插入内容。"
+    },
+    "将元素插入到目标的开头": {
+        "prefix": "$prependTo( target )",
+        "body": [
+            "// target",
+            "// 类型: Selector or htmlString or Element or Array or jQuery",
+            "// 一个选择器、元素、HTML 字符串、元素数组或 jQuery 对象；匹配的元素集合将被插入到由此参数指定的元素的开头。",
+            "$('选择器字符串').prependTo( '目标选择器字符串' )"
+        ],
+        "description": "将匹配元素集合中的每个元素插入到目标的开头。"
+    },
+    "获取元素的前一个兄弟元素": {
+        "prefix": "$prev( [selector ] )",
+        "body": [
+            "// selector",
+            "// 类型: Selector",
+            "// 一个包含选择器表达式的字符串，用于匹配元素。",
+            "$('选择器字符串').prev()",
+            "$('选择器字符串').prev( '选择器字符串' )"
+        ],
+        "description": "获取每个匹配元素集合中元素的紧邻前一个兄弟元素。如果提供了选择器，则仅在前一个兄弟元素匹配该选择器时才检索它。"
+    },
+    "获取元素的所有之前兄弟元素": {
+        "prefix": "$prevAll( [selector ] )",
+        "body": [
+            "// selector",
+            "// 类型: Selector",
+            "// 一个包含选择器表达式的字符串，用于匹配元素。",
+            "$('选择器字符串').prevAll()",
+            "$('选择器字符串').prevAll( '选择器字符串' )"
+        ],
+        "description": "获取匹配元素集合中每个元素的所有前面兄弟元素，可以选择通过选择器进行过滤，按文档逆序排列。"
+    },
+    "获取元素的所有之前兄弟元素直到1": {
+        "prefix": "$prevUntil( [selector ] [, filter ] )",
+        "body": [
+            "// selector",
+            "// 类型: Selector",
+            "// 一个包含选择器表达式的字符串，用于指示在哪里停止匹配前面的兄弟元素。",
+            "// filter",
+            "// 类型: Selector",
+            "// 一个包含选择器表达式的字符串，用于匹配元素。",
+            "$('选择器字符串').prevUntil( '选择器字符串' )",
+            "$('选择器字符串').prevUntil( '选择器字符串', '过滤器字符串' )"
+        ],
+        "description": "获取每个元素之前的所有兄弟元素，但不包括与选择器、DOM 节点或 jQuery 对象匹配的元素。"
+    },
+    "获取元素的所有之前兄弟元素直到2": {
+        "prefix": "$prevUntil( [element ] [, filter ] )",
+        "body": [
+            "// element",
+            "// 类型: Element",
+            "// 一个 DOM 节点，用于指示在哪里停止匹配前面的兄弟元素。",
+            "// filter",
+            "// 类型: Selector",
+            "// 一个包含选择器表达式的字符串，用于匹配元素。",
+            "$('选择器字符串').prevUntil( document.getElementById('element') )",
+            "$('选择器字符串').prevUntil( document.getElementById('element'), '过滤器字符串' )"
+        ],
+        "description": "获取每个元素之前的所有兄弟元素，但不包括与选择器、DOM 节点或 jQuery 对象匹配的元素。"
+    },
+    "返回一个 Promise 对象": {
+        "prefix": "$promise( [type ] [, target ] )",
+        "body": [
+            "// type (default: fx)",
+            "// 类型: String",
+            "// 需要观察的队列类型。",
+            "// target",
+            "// 类型: PlainObject",
+            "// 需要绑定promise方法的对象",
+            "$('选择器字符串').promise()",
+            "$('选择器字符串').promise( 'fx' )",
+            "$('选择器字符串').promise( 'fx', { error: 'Promise error' } )"
+        ],
+        "description": "返回一个 Promise 对象，以便在集合中绑定的某种类型的所有操作（无论是否排队）完成时进行观察。"
+    },
+    "获取元素的属性值": {
+        "prefix": "$prop( propertyName )",
+        "body": [
+            "// propertyName",
+            "// 类型: String",
+            "// 要获取的属性名称。",
+            "$('选择器字符串').prop( '属性名称' )"
+        ],
+        "description": "获取匹配元素集合中第一个元素的属性值。"
+    },
+    "将元素推入栈中1": {
+        "prefix": "$pushStack( elements )",
+        "body": [
+            "// elements",
+            "// 类型: Array",
+            "// 一组要推入栈中并转换为新的 jQuery 对象的元素。",
+            "$('选择器字符串').pushStack( [元素1, 元素2] )"
+        ],
+        "description": "将一组 DOM 元素添加到 jQuery 栈中。"
+    },
+    "将元素推入栈中2": {
+        "prefix": "$pushStack( elements, name, arguments )",
+        "body": [
+            "// elements",
+            "// 类型: Array",
+            "// 一组要推入栈中并转换为新的 jQuery 对象的元素。",
+            "// name",
+            "// 类型: String",
+            "// 要推入栈中的元素的名称。",
+            "// arguments",
+            "// 类型: Array",
+            "// 传递给 jQuery 方法的参数（用于序列化）。",
+            "$('选择器字符串').pushStack( [元素1, 元素2], '元素名称', [参数1, 参数2] )"
+        ],
+        "description": "将一组 DOM 元素添加到 jQuery 栈中。"
+    },
+    "显示队列": {
+        "prefix": "$queue( [queueName ] )",
+        "body": [
+            "// queueName",
+            "// 类型: string",
+            "// 一个包含队列名称的字符串。默认值为 fx，即标准效果队列。",
+            "$('选择器字符串').queue()",
+            "$('选择器字符串').queue( queueName )"
+        ],
+        "description": "显示将在匹配的元素上执行的函数队列。"
+    },
+    "选择单选框元素": {
+        "prefix": "$radio Selector",
+        "body": [
+            "$('选择器字符串:radio')"
+        ],
+        "description": "选择所有类型为单选框的元素。"
+    },
+    "在 DOM 加载完成后执行指定的函数": {
+        "prefix": "$ready( handler )",
+        "body": [
+            "// handler",
+            "// 类型: Function()",
+            "// 在 DOM 准备好后执行的函数。",
+            "$('选择器字符串').ready( function() {",
+            "\t// 处理程序",
+            "} );"
+        ],
+        "description": "在 DOM 加载完成后执行指定的函数。"
+    },
+    "移除元素": {
+        "prefix": "$remove( [selector ] )",
+        "body": [
+            "// selector",
+            "// 类型: Selector",
+            "// 一个包含选择器表达式的字符串，用于匹配元素。",
+            "$('选择器字符串').remove()",
+            "$('选择器字符串').remove( '选择器字符串' )"
+        ],
+        "description": "从 DOM 中移除匹配的元素集合。"
+    },
+    "移除元素的属性": {
+        "prefix": "$removeAttr( attributeName )",
+        "body": [
+            "// attributeName",
+            "// 类型: String",
+            "// 要移除的属性名称。",
+            "$('选择器字符串').removeAttr( '属性名称' )"
+        ],
+        "description": "从匹配的元素集合中移除指定的属性。"
+    },
+    "移除元素的类1": {
+        "prefix": "$removeClass( className )",
+        "body": [
+            "// className",
+            "// 类型: String",
+            "// 要移除的类名称。",
+            "$('选择器字符串').removeClass( '类名称' )"
+        ],
+        "description": "一个或多个以空格分隔的类，将从每个匹配元素的 class 属性中移除。"
+    },
+    "移除元素的类2": {
+        "prefix": "$removeClass( classNames )",
+        "body": [
+            "// classNames",
+            "// 类型: Array",
+            "// 从匹配元素集合中的每个元素中删除单个类、多个类或所有类。",
+            "$('选择器字符串').removeClass( ['类名称1', '类名称2'] )"
+        ],
+        "description": "一个或多个以空格分隔的类，将从每个匹配元素的 class 属性中移除。"
+    },
+    "移除元素的类3": {
+        "prefix": "$removeClass( function )",
+        "body": [
+            "// function",
+            "// 类型: Function( Integer index, String className ) => String",
+            "// 一个函数，返回一个或多个用空格分隔的要移除的类名。接收元素在集合中的索引位置和旧的类值作为参数。",
+            "$('选择器字符串').removeClass( function( index, className ) { return '类名称'; } )"
+        ],
+        "description": "一个或多个以空格分隔的类，将从每个匹配元素的 class 属性中移除。"
+    },
+    "移除元素的类4": {
+        "prefix": "$removeClass( function )",
+        "body": [
+            "// function",
+            "// 类型: Function( Integer index, String className ) => String | Array",
+            "// 一个函数，返回一个或多个以空格分隔的类名，或者一个要移除的类名数组。接收元素在集合中的索引位置和旧的类值作为参数。",
+            "$('选择器字符串').removeClass( function( index, className ) { return '类名称'; } )",
+            "$('选择器字符串').removeClass( function( index, className ) { return ['类名称1', '类名称2']; } )"
+        ],
+        "description": "一个或多个以空格分隔的类，将从每个匹配元素的 class 属性中移除。"
+    },
+    "移除元素的数据1": {
+        "prefix": "$removeData( [name ] )",
+        "body": [
+            "// name",
+            "// 类型: String",
+            "// 要移除的数据名称。",
+            "$('选择器字符串').removeData( '数据名称' )"
+        ],
+        "description": "删除先前存储的数据。"
+    },
+    "移除元素的数据2": {
+        "prefix": "$removeData( [list ] )",
+        "body": [
+            "// list",
+            "// 类型: Array or String",
+            "// 一个数组或用空格分隔的字符串，指定要删除的数据项。",
+            "$('选择器字符串').removeData( ['数据名称1', '数据名称2'] )",
+            "$('选择器字符串').removeData( '数据名称1 数据名称2' )"
+        ],
+        "description": "删除先前存储的数据。"
+    },
+    "移除元素的私有属性": {
+        "prefix": "$removeProp( propertyName )",
+        "body": [
+            "// propertyName",
+            "// 类型: String",
+            "// 要移除的属性名称。",
+            "$('选择器字符串').removeProp( '属性名称' )"
+        ],
+        "description": "从匹配元素的集合中移除一个属性。"
+    },
+    "替换所有元素": {
+        "prefix": "$replaceAll( target )",
+        "body": [
+            "// target",
+            "// 类型: Selector or jQuery or Array or Element",
+            "// 一个选择器字符串、jQuery 对象、DOM 元素或元素数组，用于指示要替换的元素。",
+            "$('选择器字符串').replaceAll( '目标元素' )",
+            "$('选择器字符串').replaceAll( $('目标元素') )",
+            "$('选择器字符串').replaceAll( [目标元素1, 目标元素2] )",
+            "$('选择器字符串').replaceAll( document.getElementById('目标元素') )"
+        ],
+        "description": "将每个目标元素替换为匹配元素的集合。"
+    },
+    "用新内容替换所有元素1": {
+        "prefix": "$replaceWith( newContent )",
+        "body": [
+            "// newContent",
+            "// 类型: htmlString or Element or Array or jQuery",
+            "// 要插入的内容。可以是 HTML 字符串、DOM 元素、DOM 元素数组或 jQuery 对象。",
+            "$('选择器字符串').replaceWith( '新内容' )"
+        ],
+        "description": "将匹配元素集合中的每个元素替换为提供的新内容，并返回被移除的元素集合。"
+    },
+    "用新内容替换所有元素2": {
+        "prefix": "$replaceWith( function )",
+        "body": [
+            "// function",
+            "// 类型: Function()",
+            "// 一个返回内容的函数，用于替换匹配元素集合。",
+            "$('选择器字符串').replaceWith( function( index, oldElement ) { return '新内容'; } )"
+        ],
+        "description": "将匹配元素集合中的每个元素替换为提供的新内容，并返回被移除的元素集合。"
+    },
+    "选择所有类型为 reset 的元素": {
+        "prefix": "$reset Selector",
+        "body": [
+            "$('选择器字符串:reset')"
+        ],
+        "description": "选择所有类型为 reset 的元素。"
+    },
+    "大小改变事件": {
+        "prefix": "$on( 'resize' [, eventData ], handler )",
+        "body": [
+            "// resize",
+            "// 类型: string",
+            "// 字符串'resize'。",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 每次事件触发时执行的函数。",
+            "$('选择器字符串').on( 'resize' , {reason: 'resized'}, function( event ) {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“resize”事件。"
+    },
+    "选择所有类型为 root 的元素": {
+        "prefix": "$root Selector",
+        "body": [
+            "$('选择器字符串:root')"
+        ],
+        "description": "选择所有类型为 root 的元素。"
+    },
+    "滚动事件": {
+        "prefix": "$on( 'scroll' [, eventData ], handler )",
+        "body": [
+            "// scroll",
+            "// 类型: string",
+            "// 字符串'scroll'。",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 每次事件触发时执行的函数。",
+            "$('选择器字符串').on( 'scroll' , {reason: 'scrolled'}, function( event ) {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“scroll”事件。"
+    },
+    "获取水平滚动条位置": {
+        "prefix": "$scrollLeft()",
+        "body": [
+            "$('选择器字符串').scrollLeft()"
+        ],
+        "description": "获取或设置匹配元素的水平滚动条位置。"
+    },
+    "设置水平滚动条位置": {
+        "prefix": "$scrollLeft( value )",
+        "body": [
+            "// value",
+            "// 类型: Number",
+            "// An integer indicating the new position to set the scroll bar to.",
+            "$('选择器字符串').scrollLeft( 100 )"
+        ],
+        "description": "获取或设置匹配元素的水平滚动条位置。"
+    },
+    "获取垂直滚动条位置": {
+        "prefix": "$scrollTop()",
+        "body": [
+            "$('选择器字符串').scrollTop()"
+        ],
+        "description": "获取或设置匹配元素的垂直滚动条位置。"
+    },
+    "设置垂直滚动条位置": {
+        "prefix": "$scrollTop( value )",
+        "body": [
+            "// value",
+            "// 类型: Number",
+            "// An integer indicating the new position to set the scroll bar to.",
+            "$('选择器字符串').scrollTop( 100 )"
+        ],
+        "description": "获取或设置匹配元素的垂直滚动条位置。"
+    },
+    "选择事件": {
+        "prefix": "$on( 'select' [, eventData ], handler )",
+        "body": [
+            "// select",
+            "// 类型: string",
+            "// 字符串'select'。",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 每次事件触发时执行的函数。",
+            "$('选择器字符串').on( 'select' , {reason: 'selected'}, function( event ) {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“select”事件。"
+    },
+    "选择所有类型为 selected 的元素": {
+        "prefix": "$selected Selector",
+        "body": [
+            "$('选择器字符串:selected')"
+        ],
+        "description": "选择所有类型为 selected 的元素。"
+    },
+    "将一组表单元素编码为字符串以进行提交": {
+        "prefix": "$serialize()",
+        "body": [
+            "$('选择器字符串').serialize()"
+        ],
+        "description": "将一组表单元素编码为字符串以进行提交。"
+    },
+    "将一组表单元素编码为数组以进行提交": {
+        "prefix": "$serializeArray()",
+        "body": [
+            "$('选择器字符串').serializeArray()"
+        ],
+        "description": "将一组表单元素编码为数组以进行提交。"
+    },
+    "显示匹配的元素1": {
+        "prefix": "$show()",
+        "body": [
+            "$('选择器字符串').show()"
+        ],
+        "description": "显示匹配的元素。"
+    },
+    "显示匹配的元素2": {
+        "prefix": "$show( [duration ] [, complete ] )",
+        "body": [
+            "// duration (default: 400)",
+            "// 类型: Number or String",
+            "// 一个字符串或数字，用于确定动画将运行的时间长度。",
+            "// complete",
+            "// 类型: Function()",
+            "// 动画完成后调用的函数，每个匹配的元素调用一次。",
+            "$('选择器字符串').show( 400, function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "显示匹配的元素。"
+    },
+    "显示匹配的元素3": {
+        "prefix": "$show( options )",
+        "body": [
+            "// options",
+            "// 类型: PlainObject",
+            "// 传递给方法的附加选项映射。",
+            "//   duration (default: 400)",
+            "//   类型: Number or String",
+            "//   一个字符串或数字，用于确定动画将运行的时间长度。",
+            "//   easing (default: swing)",
+            "//   类型: String",
+            "//   一个字符串，表示用于过渡的缓动函数。",
+            "//   queue (default: true)",
+            "//   类型: Boolean or String",
+            "//   一个布尔值，表示是否将动画放入效果队列。如果为 false，动画将立即开始。从 jQuery 1.7 起，queue 选项也可以接受一个字符串，此时动画会被添加到由该字符串表示的队列中。当使用自定义队列名称时，动画不会自动开始；必须调用 .dequeue('queuename') 才能启动它。",
+            "//   specialEasing",
+            "//   类型: PlainObject",
+            "//   一个对象，包含由 properties 参数定义的一个或多个 CSS 属性及其对应的缓动函数。（版本新增：1.4）",
+            "//   step",
+            "//   类型: Function( Number now, Tween tween )",
+            "//   一个函数，用于对每个动画元素的每个动画属性进行调用。该函数提供了修改 Tween 对象的机会，以在设置属性值之前更改该属性的值。",
+            "//   progress",
+            "//   类型: Function( Promise animation, Number progress, Number remainingMs )",
+            "//   在动画的每一步之后调用的函数，无论动画属性的数量如何，每个动画元素只调用一次。（版本添加：1.8）",
+            "//   complete",
+            "//   类型: Function()",
+            "//   动画完成后调用的函数，每个匹配的元素调用一次。",
+            "//   start",
+            "//   类型: Function( Promise animation )",
+            "//   当元素上的动画开始时调用的函数。（版本新增：1.8）",
+            "//   done",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画完成（其 Promise 对象被解决）时要调用的函数。（版本添加：1.8）",
+            "//   fail",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画未能完成（其 Promise 对象被拒绝）时要调用的函数。（添加版本：1.8）",
+            "//   always",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画完成或在未完成的情况下停止时调用的函数（其 Promise 对象要么被解析，要么被拒绝）。(版本添加：1.8)",
+            "$('选择器字符串').show( 'slow', {duration : 400});"
+        ],
+        "description": "显示匹配的元素。"
+    },
+    "显示匹配的元素4": {
+        "prefix": "$show( duration [, easing ] [, complete ] )",
+        "body": [
+            "// duration (default: 400)",
+            "// 类型: Number or String",
+            "// 一个字符串或数字，用于确定动画的运行时长。",
+            "// easing (default: swing)",
+            "// 类型: String",
+            "// 一个字符串，指示过渡动画要使用的缓动函数。",
+            "// complete",
+            "// 类型: Function()",
+            "// 动画完成后要调用的函数，每个匹配的元素调用一次。",
+            "$('选择器字符串').show(",
+            "\t400,",
+            "\t'swing',",
+            "\tfunction() {",
+            "\t\t// animation complete.",
+            "\t}",
+            ");"
+        ],
+        "description": "显示匹配的元素。"
+    },
+    "获取同级元素": {
+        "prefix": "$siblings( [selector ] )",
+        "body": [
+            "// selector",
+            "// 类型: String",
+            "// 一个字符串，表示用于过滤同级元素的选择器。",
+            "$('选择器字符串').siblings();",
+            "$('选择器字符串').siblings( '选择器字符串' );"
+        ],
+        "description": "获取匹配元素集合中每个元素的同级元素，可选择按选择器进行过滤。"
+    },
+    "获取元素切片": {
+        "prefix": "$slice( start [, end ] )",
+        "body": [
+            "// start",
+            "// 类型: Integer",
+            "// 一个整数，表示元素开始被选择的位置，采用从0开始计数。如果为负数，则表示相对于集合末尾的偏移量。",
+            "// end",
+            "// 类型: Integer",
+            "// 一个整数，表示元素停止选择的基于0的位置。如果为负数，则表示从集合末尾的偏移量。如果省略，则范围会一直延续到集合的末尾。",
+            "$('选择器字符串').slice( 2 );",
+            "$('选择器字符串').slice( 2, 5 );"
+        ],
+        "description": "根据索引获取匹配元素集合中的一部分元素。"
+    },
+    "以滑动的方式显示匹配的元素1": {
+        "prefix": "$slideDown( [duration ] [, complete ] )",
+        "body": [
+            "// duration (default: 400)",
+            "// 类型: Number or String",
+            "// 一个字符串或数字，用于确定动画将运行的时间长度。",
+            "// complete",
+            "// 类型: Function()",
+            "// 动画完成后调用的函数，每个匹配的元素调用一次。",
+            "$('选择器字符串').slideDown( 400, function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "以滑动的方式显示匹配的元素。"
+    },
+    "以滑动的方式显示匹配的元素2": {
+        "prefix": "$slideDown( options )",
+        "body": [
+            "// options",
+            "// 类型: PlainObject",
+            "// 传递给方法的附加选项映射。",
+            "//   duration (default: 400)",
+            "//   类型: Number or String",
+            "//   一个字符串或数字，用于确定动画将运行的时间长度。",
+            "//   easing (default: swing)",
+            "//   类型: String",
+            "//   一个字符串，表示用于过渡的缓动函数。",
+            "//   queue (default: true)",
+            "//   类型: Boolean or String",
+            "//   一个布尔值，表示是否将动画放入效果队列。如果为 false，动画将立即开始。从 jQuery 1.7 起，queue 选项也可以接受一个字符串，此时动画会被添加到由该字符串表示的队列中。当使用自定义队列名称时，动画不会自动开始；必须调用 .dequeue('queuename') 才能启动它。",
+            "//   specialEasing",
+            "//   类型: PlainObject",
+            "//   一个对象，包含由 properties 参数定义的一个或多个 CSS 属性及其对应的缓动函数。（版本新增：1.4）",
+            "//   step",
+            "//   类型: Function( Number now, Tween tween )",
+            "//   一个函数，用于对每个动画元素的每个动画属性进行调用。该函数提供了修改 Tween 对象的机会，以在设置属性值之前更改该属性的值。",
+            "//   progress",
+            "//   类型: Function( Promise animation, Number progress, Number remainingMs )",
+            "//   在动画的每一步之后调用的函数，无论动画属性的数量如何，每个动画元素只调用一次。（版本添加：1.8）",
+            "//   complete",
+            "//   类型: Function()",
+            "//   动画完成后调用的函数，每个匹配的元素调用一次。",
+            "//   start",
+            "//   类型: Function( Promise animation )",
+            "//   当元素上的动画开始时调用的函数。（版本新增：1.8）",
+            "//   done",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画完成（其 Promise 对象被解决）时要调用的函数。（版本添加：1.8）",
+            "//   fail",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画未能完成（其 Promise 对象被拒绝）时要调用的函数。（添加版本：1.8）",
+            "//   always",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画完成或在未完成的情况下停止时调用的函数（其 Promise 对象要么被解析，要么被拒绝）。(版本添加：1.8)",
+            "$('选择器字符串').slideDown( 'slow', {duration : 400});"
+        ],
+        "description": "以滑动的方式显示匹配的元素。"
+    },
+    "以滑动的方式显示或隐藏匹配的元素1": {
+        "prefix": "$slideToggle( [duration ] [, complete ] )",
+        "body": [
+            "// duration (default: 400)",
+            "// 类型: Number or String",
+            "// 一个字符串或数字，用于确定动画将运行的时间长度。",
+            "// complete",
+            "// 类型: Function()",
+            "// 动画完成后调用的函数，每个匹配的元素调用一次。",
+            "$('选择器字符串').slideToggle( 400, function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "以滑动的方式显示或隐藏匹配的元素。"
+    },
+    "以滑动的方式显示或隐藏匹配的元素2": {
+        "prefix": "$slideToggle( options )",
+        "body": [
+            "// options",
+            "// 类型: PlainObject",
+            "// 传递给方法的附加选项映射。",
+            "//   duration (default: 400)",
+            "//   类型: Number or String",
+            "//   一个字符串或数字，用于确定动画将运行的时间长度。",
+            "//   easing (default: swing)",
+            "//   类型: String",
+            "//   一个字符串，表示用于过渡的缓动函数。",
+            "//   queue (default: true)",
+            "//   类型: Boolean or String",
+            "//   一个布尔值，表示是否将动画放入效果队列。如果为 false，动画将立即开始。从 jQuery 1.7 起，queue 选项也可以接受一个字符串，此时动画会被添加到由该字符串表示的队列中。当使用自定义队列名称时，动画不会自动开始；必须调用 .dequeue('queuename') 才能启动它。",
+            "//   specialEasing",
+            "//   类型: PlainObject",
+            "//   一个对象，包含由 properties 参数定义的一个或多个 CSS 属性及其对应的缓动函数。（版本新增：1.4）",
+            "//   step",
+            "//   类型: Function( Number now, Tween tween )",
+            "//   一个函数，用于对每个动画元素的每个动画属性进行调用。该函数提供了修改 Tween 对象的机会，以在设置属性值之前更改该属性的值。",
+            "//   progress",
+            "//   类型: Function( Promise animation, Number progress, Number remainingMs )",
+            "//   在动画的每一步之后调用的函数，无论动画属性的数量如何，每个动画元素只调用一次。（版本添加：1.8）",
+            "//   complete",
+            "//   类型: Function()",
+            "//   动画完成后调用的函数，每个匹配的元素调用一次。",
+            "//   start",
+            "//   类型: Function( Promise animation )",
+            "//   当元素上的动画开始时调用的函数。（版本新增：1.8）",
+            "//   done",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画完成（其 Promise 对象被解决）时要调用的函数。（版本添加：1.8）",
+            "//   fail",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画未能完成（其 Promise 对象被拒绝）时要调用的函数。（添加版本：1.8）",
+            "//   always",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画完成或在未完成的情况下停止时调用的函数（其 Promise 对象要么被解析，要么被拒绝）。(版本添加：1.8)",
+            "$('选择器字符串').slideToggle( 'slow', {duration : 400});"
+        ],
+        "description": "以滑动的方式显示或隐藏匹配的元素。"
+    },
+    "以滑动的方式隐藏匹配的元素1": {
+        "prefix": "$slideUp( [duration ] [, complete ] )",
+        "body": [
+            "// duration (default: 400)",
+            "// 类型: Number or String",
+            "// 一个字符串或数字，用于确定动画将运行的时间长度。",
+            "// complete",
+            "// 类型: Function()",
+            "// 动画完成后调用的函数，每个匹配的元素调用一次。",
+            "$('选择器字符串').slideUp( 400, function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "以滑动的方式隐藏匹配的元素。"
+    },
+    "以滑动的方式隐藏匹配的元素2": {
+        "prefix": "$slideUp( options )",
+        "body": [
+            "// options",
+            "// 类型: PlainObject",
+            "// 传递给方法的附加选项映射。",
+            "//   duration (default: 400)",
+            "//   类型: Number or String",
+            "//   一个字符串或数字，用于确定动画将运行的时间长度。",
+            "//   easing (default: swing)",
+            "//   类型: String",
+            "//   一个字符串，表示用于过渡的缓动函数。",
+            "//   queue (default: true)",
+            "//   类型: Boolean or String",
+            "//   一个布尔值，表示是否将动画放入效果队列。如果为 false，动画将立即开始。从 jQuery 1.7 起，queue 选项也可以接受一个字符串，此时动画会被添加到由该字符串表示的队列中。当使用自定义队列名称时，动画不会自动开始；必须调用 .dequeue('queuename') 才能启动它。",
+            "//   specialEasing",
+            "//   类型: PlainObject",
+            "//   一个对象，包含由 properties 参数定义的一个或多个 CSS 属性及其对应的缓动函数。（版本新增：1.4）",
+            "//   step",
+            "//   类型: Function( Number now, Tween tween )",
+            "//   一个函数，用于对每个动画元素的每个动画属性进行调用。该函数提供了修改 Tween 对象的机会，以在设置属性值之前更改该属性的值。",
+            "//   progress",
+            "//   类型: Function( Promise animation, Number progress, Number remainingMs )",
+            "//   在动画的每一步之后调用的函数，无论动画属性的数量如何，每个动画元素只调用一次。（版本添加：1.8）",
+            "//   complete",
+            "//   类型: Function()",
+            "//   动画完成后调用的函数，每个匹配的元素调用一次。",
+            "//   start",
+            "//   类型: Function( Promise animation )",
+            "//   当元素上的动画开始时调用的函数。（版本新增：1.8）",
+            "//   done",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画完成（其 Promise 对象被解决）时要调用的函数。（版本添加：1.8）",
+            "//   fail",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画未能完成（其 Promise 对象被拒绝）时要调用的函数。（添加版本：1.8）",
+            "//   always",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画完成或在未完成的情况下停止时调用的函数（其 Promise 对象要么被解析，要么被拒绝）。(版本添加：1.8)",
+            "$('选择器字符串').slideUp( 'slow', {duration : 400});"
+        ],
+        "description": "以滑动的方式隐藏匹配的元素。"
+    },
+    "停止匹配元素上当前正在运行的动画1": {
+        "prefix": "$stop( [clearQueue ] [, jumpToEnd ] )",
+        "body": [
+            "// clearQueue (default: false)",
+            "// 类型: Boolean",
+            "// 一个布尔值，指示是否也要移除排队的动画。默认值为 false。",
+            "// jumpToEnd (default: false)",
+            "// 类型: Boolean",
+            "// 一个布尔值，指示是否要跳转到动画的结束位置。默认值为 false。",
+            "$('选择器字符串').stop();",
+            "$('选择器字符串').stop(true);",
+            "$('选择器字符串').stop(true, true);"
+        ],
+        "description": "停止匹配元素上当前正在运行的动画。"
+    },
+    "停止匹配元素上当前正在运行的动画2": {
+        "prefix": "$stop( [queue ] [, clearQueue ] [, jumpToEnd ] )",
+        "body": [
+            "// queue",
+            "// 类型: String",
+            "// 用于停止动画的队列名称。",
+            "// clearQueue (default: false)",
+            "// 类型: Boolean",
+            "// 一个布尔值，指示是否也要移除排队的动画。默认值为 false。",
+            "// jumpToEnd (default: false)",
+            "// 类型: Boolean",
+            "// 一个布尔值，指示是否要跳转到动画的结束位置。默认值为 false。",
+            "$('选择器字符串').stop();",
+            "$('选择器字符串').stop('fx');",
+            "$('选择器字符串').stop('fx', true);",
+            "$('选择器字符串').stop('fx', true, true);"
+        ],
+        "description": "停止匹配元素上当前正在运行的动画。"
+    },
+    "submit事件": {
+        "prefix": "$on( 'submit' [, eventData ], handler )",
+        "body": [
+            "// submit",
+            "// 类型: string",
+            "// 字符串'submit'",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 每次事件触发时执行的函数。",
+            "$('选择器字符串').on( 'submit' , {error: 'Submit error'}, function( event ) {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“submit”事件，或在元素上触发该事件。"
+    },
+    "选择所有类型为 submit 的元素": {
+        "prefix": "$submit Selector",
+        "body": [
+            "$('选择器字符串:submit')"
+        ],
+        "description": "选择所有类型为 submit 的元素。"
+    },
+    "选择所有类型为 target 的元素": {
+        "prefix": "$target Selector",
+        "body": [
+            "$('选择器字符串:target')"
+        ],
+        "description": "选择所有类型为 target 的元素。"
+    },
+    "获取文本内容": {
+        "prefix": "$text()",
+        "body": [
+            "$('选择器字符串').text()"
+        ],
+        "description": "获取匹配元素集合中每个元素的组合文本内容，包括它们的子孙元素。"
+    },
+    "设置文本内容1": {
+        "prefix": "$text( text )",
+        "body": [
+            "// text",
+            "// 类型: String or Number or Boolean",
+            "// 要设置为每个匹配元素内容的文本。当提供数字或布尔值时，它将被转换为字符串表示。",
+            "$('选择器字符串').text( '新文本' )"
+        ],
+        "description": "设置匹配元素集合中每个元素的文本内容。"
+    },
+    "设置文本内容2": {
+        "prefix": "$text( function )",
+        "body": [
+            "// function",
+            "// 类型: Function( Integer index, String text ) => String",
+            "// 一个函数，返回要设置为每个匹配元素内容的文本。函数接收两个参数：当前元素的索引和当前的文本内容。",
+            "$('选择器字符串').text( function( index, text ) {",
+            "\treturn '新文本';",
+            "})"
+        ],
+        "description": "设置匹配元素集合中每个元素的文本内容。"
+    },
+    "选择所有类型为 text 的元素": {
+        "prefix": "$text Selector",
+        "body": [
+            "$('选择器字符串:text')"
+        ],
+        "description": "选择所有类型为 text 的元素。"
+    },
+    "将jQuery集合转换为数组": {
+        "prefix": "$toArray()",
+        "body": [
+            "$('选择器字符串').toArray()"
+        ],
+        "description": "以数组的形式获取jQuery集合中包含的所有元素。"
+    },
+    "切换元素的显示和隐藏1": {
+        "prefix": "$toggle( [duration ] [, complete ] )",
+        "body": [
+            "// duration (default: 400)",
+            "// 类型: Number or String",
+            "// 一个字符串或数字，用于确定动画将运行的时间长度。",
+            "// complete",
+            "// 类型: Function()",
+            "// 动画完成后调用的函数，每个匹配的元素调用一次。",
+            "$('选择器字符串').slideUp( 400, function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "显示或隐藏匹配的元素。"
+    },
+    "切换元素的显示和隐藏2": {
+        "prefix": "$toggle( options )",
+        "body": [
+            "// options",
+            "// 类型: PlainObject",
+            "// 传递给方法的附加选项映射。",
+            "//   duration (default: 400)",
+            "//   类型: Number or String",
+            "//   一个字符串或数字，用于确定动画将运行的时间长度。",
+            "//   easing (default: swing)",
+            "//   类型: String",
+            "//   一个字符串，表示用于过渡的缓动函数。",
+            "//   queue (default: true)",
+            "//   类型: Boolean or String",
+            "//   一个布尔值，表示是否将动画放入效果队列。如果为 false，动画将立即开始。从 jQuery 1.7 起，queue 选项也可以接受一个字符串，此时动画会被添加到由该字符串表示的队列中。当使用自定义队列名称时，动画不会自动开始；必须调用 .dequeue('queuename') 才能启动它。",
+            "//   specialEasing",
+            "//   类型: PlainObject",
+            "//   一个对象，包含由 properties 参数定义的一个或多个 CSS 属性及其对应的缓动函数。（版本新增：1.4）",
+            "//   step",
+            "//   类型: Function( Number now, Tween tween )",
+            "//   一个函数，用于对每个动画元素的每个动画属性进行调用。该函数提供了修改 Tween 对象的机会，以在设置属性值之前更改该属性的值。",
+            "//   progress",
+            "//   类型: Function( Promise animation, Number progress, Number remainingMs )",
+            "//   在动画的每一步之后调用的函数，无论动画属性的数量如何，每个动画元素只调用一次。（版本添加：1.8）",
+            "//   complete",
+            "//   类型: Function()",
+            "//   动画完成后调用的函数，每个匹配的元素调用一次。",
+            "//   start",
+            "//   类型: Function( Promise animation )",
+            "//   当元素上的动画开始时调用的函数。（版本新增：1.8）",
+            "//   done",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画完成（其 Promise 对象被解决）时要调用的函数。（版本添加：1.8）",
+            "//   fail",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画未能完成（其 Promise 对象被拒绝）时要调用的函数。（添加版本：1.8）",
+            "//   always",
+            "//   类型: Function( Promise animation, Boolean jumpedToEnd )",
+            "//   当元素上的动画完成或在未完成的情况下停止时调用的函数（其 Promise 对象要么被解析，要么被拒绝）。(版本添加：1.8)",
+            "$('选择器字符串').toggle( 'slow', {duration : 400});"
+        ],
+        "description": "切换元素的显示和隐藏。"
+    },
+    "切换元素的显示和隐藏3": {
+        "prefix": "$toggle( duration [, easing ] [, complete ] )",
+        "body": [
+            "// duration (default: 400)",
+            "// 类型: Number or String",
+            "// 一个字符串或数字，用于确定动画将运行的时间长度。",
+            "// easing (default: swing)",
+            "// 类型: String",
+            "// 一个字符串，表示用于过渡的缓动函数。",
+            "// complete",
+            "// 类型: Function()",
+            "// 动画完成后调用的函数，每个匹配的元素调用一次。",
+            "$('选择器字符串').toggle( 'slow', 'swing', function() {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "切换元素的显示和隐藏。"
+    },
+    "切换元素的显示和隐藏4": {
+        "prefix": "$toggle( display )",
+        "body": [
+            "// display",
+            "// 类型: Boolean",
+            "// 一个布尔值，用于确定元素是否显示。",
+            "$('选择器字符串').toggle(true);"
+        ],
+        "description": "切换元素的显示和隐藏。"
+    },
+    "添加或移除CSS类1": {
+        "prefix": "$toggleClass( className )",
+        "body": [
+            "// className",
+            "// 类型: String",
+            "// 要为匹配集合中的每个元素切换的一个或多个类（用空格分隔）。",
+            "$('选择器字符串').toggleClass('className');"
+        ],
+        "description": "根据类是否存在或状态参数的值，为匹配元素集合中的每个元素添加或移除一个或多个类。"
+    },
+    "添加或移除CSS类2": {
+        "prefix": "$toggleClass( className, state )",
+        "body": [
+            "// className",
+            "// 类型: String",
+            "// 要为匹配集合中的每个元素切换的一个或多个类（用空格分隔）。",
+            "// state",
+            "// 类型: Boolean",
+            "// 一个布尔值（不仅仅是真值/假值），用于确定是否应该添加或移除该类。",
+            "$('选择器字符串').toggleClass('className', true);"
+        ],
+        "description": "根据类是否存在或状态参数的值，为匹配元素集合中的每个元素添加或移除一个或多个类。"
+    },
+    "添加或移除CSS类3": {
+        "prefix": "$toggleClass( classNames )",
+        "body": [
+            "// classNames",
+            "// 类型: Array",
+            "// 要切换到匹配集合中每个元素的类数组。",
+            "$('选择器字符串').toggleClass(['className1', 'className2']);"
+        ],
+        "description": "根据类是否存在或状态参数的值，为匹配元素集合中的每个元素添加或移除一个或多个类。"
+    },
+    "添加或移除CSS类4": {
+        "prefix": "$toggleClass( classNames, state )",
+        "body": [
+            "// classNames",
+            "// 类型: Array",
+            "// 要切换到匹配集合中每个元素的类数组。",
+            "// state",
+            "// 类型: Boolean",
+            "// 一个布尔值（不仅仅是真值/假值），用于确定是否应该添加或移除该类。",
+            "$('选择器字符串').toggleClass(['className1', 'className2'], true);"
+        ],
+        "description": "根据类是否存在或状态参数的值，为匹配元素集合中的每个元素添加或移除一个或多个类。"
+    },
+    "添加或移除CSS类5": {
+        "prefix": "$toggleClass( function [, state ] )",
+        "body": [
+            "// function",
+            "// 类型: Function( Integer index, String className, Boolean state ) => String",
+            "// 一个函数，返回一个或多个以空格分隔的类名，这些类名将在匹配集合中每个元素的 class 属性中切换。接收元素在集合中的索引位置、旧的类值和状态作为参数。",
+            "// state",
+            "// 类型: Boolean",
+            "// 一个布尔值（不仅仅是真值/假值），用于确定是否应该添加或移除该类。",
+            "$('选择器字符串').toggleClass(function(index, className, state){ return 'className' });",
+            "$('选择器字符串').toggleClass(function(index, className, state){ return 'className' }, true);"
+        ],
+        "description": "根据类是否存在或状态参数的值，为匹配元素集合中的每个元素添加或移除一个或多个类。"
+    },
+    "添加或移除CSS类6": {
+        "prefix": "$toggleClass( function [, state ] )",
+        "body": [
+            "// function",
+            "// 类型: Function( Integer index, String className, Boolean state ) => String | Array",
+            "// 一个函数，返回一个或多个以空格分隔的类名，或返回一个要在匹配集合中每个元素的 class 属性中切换的类名数组。接收元素在集合中的索引位置、旧的类值和状态作为参数。",
+            "// state",
+            "// 类型: Boolean",
+            "// 一个布尔值（不仅仅是真值/假值），用于确定是否应该添加或移除该类。",
+            "$('选择器字符串').toggleClass(function(index, className, state){ return ['className1', 'className2'] });",
+            "$('选择器字符串').toggleClass(function(index, className, state){ return ['className1', 'className2'] }, true);"
+        ],
+        "description": "根据类是否存在或状态参数的值，为匹配元素集合中的每个元素添加或移除一个或多个类。"
+    },
+    "触发事件1": {
+        "prefix": "$trigger( eventType [, extraParameters ] )",
+        "body": [
+            "// eventType",
+            "// 类型: String",
+            "// 一个包含 JavaScript 事件类型的字符串，例如 click 或 submit。",
+            "// extraParameters",
+            "// 类型: Array or PlainObject",
+            "// 传递给事件处理程序的附加参数。",
+            "$('选择器字符串').trigger('eventType');",
+            "$('选择器字符串').trigger('eventType', [param1, param2]);"
+        ],
+        "description": "对给定事件类型，执行附加到匹配元素的所有处理程序和行为。"
+    },
+    "触发事件2": {
+        "prefix": "$trigger( event [, extraParameters ] )",
+        "body": [
+            "// event",
+            "// 类型: Event",
+            "// 一个 jQuery.Event 对象。",
+            "// extraParameters",
+            "// 类型: Array or PlainObject",
+            "// 传递给事件处理程序的附加参数。",
+            "var event = jQuery.Event( 'submit' );",
+            "$('选择器字符串').trigger( event );",
+            "$('选择器字符串').trigger( event , [param1, param2]);"
+        ],
+        "description": "对给定事件类型，执行附加到匹配元素的所有处理程序和行为。"
+    },
+    "触发第一个元素的事件1": {
+        "prefix": "$triggerHandler( eventType [, extraParameters ] )",
+        "body": [
+            "// eventType",
+            "// 类型: String",
+            "// 一个包含 JavaScript 事件类型的字符串，例如 click 或 submit。",
+            "// extraParameters",
+            "// 类型: Array or PlainObject",
+            "// 传递给事件处理程序的附加参数。",
+            "$('选择器字符串').triggerHandler('eventType');",
+            "$('选择器字符串').triggerHandler('eventType', [param1, param2]);"
+        ],
+        "description": "执行附加到某个元素的事件的所有处理程序。"
+    },
+    "触发第一个元素的事件2": {
+        "prefix": "$triggerHandler( event [, extraParameters ] )",
+        "body": [
+            "// event",
+            "// 类型: Event",
+            "// 一个 jQuery.Event 对象。",
+            "// extraParameters",
+            "// 类型: Array or PlainObject",
+            "// 传递给事件处理程序的附加参数。",
+            "var event = jQuery.Event( 'submit' );",
+            "$('选择器字符串').triggerHandler( event );",
+            "$('选择器字符串').triggerHandler( event , [param1, param2]);"
+        ],
+        "description": "执行附加到某个元素的事件的所有处理程序。"
+    },
+    "去重排序": {
+        "prefix": "$uniqueSort()",
+        "body": [
+            "$('选择器字符串').uniqueSort();"
+        ],
+        "description": "对一个 jQuery 对象的 DOM 元素进行排序，就地操作，同时移除重复项。请注意，这仅适用于由 DOM 元素组成的 jQuery 对象，而不适用于字符串或数字。"
+    },
+    "unload事件": {
+        "prefix": "$on( 'unload' [, eventData ], handler )",
+        "body": [
+            "// unload",
+            "// 类型: string",
+            "// 字符串'unload'",
+            "// eventData",
+            "// 类型: Anything",
+            "// 包含将传递给事件处理程序的数据的对象。",
+            "// handler",
+            "// 类型: Function( Event eventObject )",
+            "// 每次事件触发时执行的函数。",
+            "$('选择器字符串').on( 'unload' , {error: 'unload error'}, function( event ) {",
+            "\t// 事件处理程序",
+            "});"
+        ],
+        "description": "将事件处理程序绑定到“unload”事件，或在元素上触发该事件。"
+    },
+    "移除父元素1": {
+        "prefix": "$unwrap()",
+        "body": [
+            "$('选择器字符串').unwrap();"
+        ],
+        "description": "从 DOM 中移除匹配元素集合的父元素，保留匹配元素原位。"
+    },
+    "移除父元素2": {
+        "prefix": "$unwrap( [selector ] )",
+        "body": [
+            "// selector",
+            "// 类型: String",
+            "// 用于检查父元素的选择器。如果元素的父元素与选择器不匹配，该元素将不会被拆包。",
+            "$('选择器字符串').unwrap('选择器字符串');"
+        ],
+        "description": "从 DOM 中移除匹配元素集合的父元素，保留匹配元素原位。"
+    },
+    "获取值": {
+        "prefix": "$val()",
+        "body": [
+            "$('选择器字符串').val();"
+        ],
+        "description": "获取匹配元素集合中第一个元素的当前值。"
+    },
+    "设置值1": {
+        "prefix": "$val( value )",
+        "body": [
+            "// value",
+            "// 类型: String or Number or Array",
+            "// 一串文本、一个数字，或一个字符串数组，对应每个匹配元素的值，以设置为选中/勾选。",
+            "$('选择器字符串').val('新值');"
+        ],
+        "description": "设置匹配元素集合中每个元素的值。"
+    },
+    "设置值2": {
+        "prefix": "$val( function )",
+        "body": [
+            "// value",
+            "// 类型: Function( Integer index, String value ) => String",
+            "// 一个返回要设置的值的函数。this是当前元素。接收元素在集合中的索引位置和旧值作为参数。",
+            "$('选择器字符串').val(function(index, value) { return '新值'; });"
+        ],
+        "description": "设置匹配元素集合中每个元素的值。"
+    },
+    "选择所有可见的元素": {
+        "prefix": "$visible Selector",
+        "body": [
+            "$('选择器字符串:visible')"
+        ],
+        "description": "选择所有可见的元素。"
+    },
+    "获取计算宽度": {
+        "prefix": "$width()",
+        "body": [
+            "$('选择器字符串').width();"
+        ],
+        "description": "获取匹配元素集合中第一个元素的当前计算宽度。"
+    },
+    "设置CSS宽度1": {
+        "prefix": "$width( value )",
+        "body": [
+            "// width",
+            "// 类型: String or Number",
+            "// 表示像素数量的整数，或者附带可选度量单位的整数（以字符串形式）。",
+            "$('选择器字符串').width('新值');"
+        ],
+        "description": "设置匹配元素集合中每个元素的 CSS 宽度。"
+    },
+    "设置CSS宽度2": {
+        "prefix": "$width( function )",
+        "body": [
+            "// width",
+            "// 类型: Function( Integer index, Integer value ) => String or Number",
+            "// 一个返回要设置的宽度的函数。接收集合中元素的索引位置和旧宽度作为参数。在函数内部，this 指当前集合中的元素。",
+            "$('选择器字符串').width(function(index, value) { return '新值'; });"
+        ],
+        "description": "设置匹配元素集合中每个元素的 CSS 宽度。"
+    },
+    "包裹元素1": {
+        "prefix": "$wrap( wrappingElement )",
+        "body": [
+            "// wrappingElement",
+            "// 类型: Selector or htmlString or Element or jQuery",
+            "// 一个选择器、元素、HTML 字符串或 jQuery 对象，指定要包裹匹配元素的结构。当你传递一个包含多个元素的 jQuery 集合，或一个匹配多个元素的选择器时，将使用第一个元素。",
+            "$('选择器字符串').wrap('选择器字符串');",
+            "$('选择器字符串').wrap('<div></div>');",
+            "$('选择器字符串').wrap( document.getElementById('div1') );",
+            "$('选择器字符串').wrap($('选择器字符串'));"
+        ],
+        "description": "在匹配元素的集合中的每个元素周围包裹一个 HTML 结构。"
+    },
+    "包裹元素2": {
+        "prefix": "$wrap( function )",
+        "body": [
+            "// wrappingElement",
+            "// 类型: Function( Integer index ) => String or jQuery",
+            "// 一个回调函数，返回要包裹匹配元素的 HTML 内容或 jQuery 对象。接收元素在集合中的索引位置作为参数。在函数内部，this 指向集合中的当前元素。",
+            "$('选择器字符串').wrap( function(index) { return '新内容'; } );"
+        ],
+        "description": "在匹配元素的集合中的每个元素周围包裹一个 HTML 结构。"
+    },
+    "包裹所有元素1": {
+        "prefix": "$wrapAll( wrappingElement )",
+        "body": [
+            "// wrappingElement",
+            "// 类型: Selector or htmlString or Element or jQuery",
+            "// 一个选择器、元素、HTML 字符串或 jQuery 对象，指定要包裹匹配元素的结构。当你传递一个包含多个元素的 jQuery 集合，或一个匹配多个元素的选择器时，将使用第一个元素。",
+            "$('选择器字符串').wrapAll('选择器字符串');",
+            "$('选择器字符串').wrapAll('<div></div>');",
+            "$('选择器字符串').wrapAll( document.getElementById('div1') );",
+            "$('选择器字符串').wrapAll($('选择器字符串'));"
+        ],
+        "description": "在匹配元素的集合中的所有元素周围包裹一个 HTML 结构。"
+    },
+    "包裹所有元素2": {
+        "prefix": "$wrapAll( function )",
+        "body": [
+            "// wrappingElement",
+            "// 类型: Function( Integer index ) => String or jQuery",
+            "// 一个回调函数，返回要包裹匹配元素的 HTML 内容或 jQuery 对象。接收元素在集合中的索引位置作为参数。在函数内部，this 指向集合中的当前元素。",
+            "$('选择器字符串').wrapAll( function(index) { return '新内容'; } );"
+        ],
+        "description": "在匹配元素的集合中的所有元素周围包裹一个 HTML 结构。"
+    },
+    "在内部包裹所有元素1": {
+        "prefix": "$wrapAll( wrappingElement )",
+        "body": [
+            "// wrappingElement",
+            "// 类型: Selector or htmlString or Element or jQuery",
+            "// 一个选择器、元素、HTML 字符串或 jQuery 对象，指定要包裹匹配元素的结构。当你传递一个包含多个元素的 jQuery 集合，或一个匹配多个元素的选择器时，将使用第一个元素。",
+            "$('选择器字符串').wrapAll('选择器字符串');",
+            "$('选择器字符串').wrapAll('<div></div>');",
+            "$('选择器字符串').wrapAll( document.getElementById('div1') );",
+            "$('选择器字符串').wrapAll($('选择器字符串'));"
+        ],
+        "description": "在匹配元素集合中每个元素的内容周围包裹一个 HTML 结构。"
+    },
+    "在内部包裹所有元素2": {
+        "prefix": "$wrapAll( function )",
+        "body": [
+            "// wrappingElement",
+            "// 类型: Function( Integer index ) => String or jQuery",
+            "// 一个回调函数，返回要包裹匹配元素的 HTML 内容或 jQuery 对象。接收元素在集合中的索引位置作为参数。在函数内部，this 指向集合中的当前元素。",
+            "$('选择器字符串').wrapAll( function(index) { return '新内容'; } );"
+        ],
+        "description": "在匹配元素集合中每个元素的内容周围包裹一个 HTML 结构。"
+    }
+}
