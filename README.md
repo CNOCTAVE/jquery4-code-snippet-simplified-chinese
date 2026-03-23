@@ -1,7 +1,7 @@
 # jquery4-code-snippet-simplified-chinese
 # jQuery4 Code Snippet (简体中文)
 
-一个简单的 Visual Studio Code 插件，提供 jQuery4 代码片段，并且每条片段都包含简体中文注释，方便中文开发者快速使用 jQuery。
+一个简单的 Visual Studio Code 插件，提供 jQuery4 代码片段，并且每条片段都包含简体中文注释，方便中文开发者快速使用 jQuery，特别适合原生前端（例如HarmonyOS）开发。
 
 ## 特性
 
