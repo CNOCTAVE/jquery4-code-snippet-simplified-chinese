@@ -22,4 +22,7 @@
  ![the dropdown looking](./docs/pic/translate_dropdown.png)  
  The code for adding dropdown is like the picture below.  
  ![the dropdown code](./docs/pic/translate_dropdown_code.png) 
- 4. PR to jquery4-code-snippet-simplified-chinese.
+ 4. There are 2 jquery4.json copies in this repository. 
+ One is for VSCode extension, the other one is for this document. 
+ Copy the jquery4.json which you modified onto another jquery4.json. 
+ 5. PR to jquery4-code-snippet-simplified-chinese.
