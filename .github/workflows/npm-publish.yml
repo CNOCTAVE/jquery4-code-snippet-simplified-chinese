@@ -22,6 +22,12 @@ jobs:
       - run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+  publish-vsce:
+    runs-on: ubuntu-latest
+    env:
+      NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+    steps:
       - uses: actions/checkout@v4
       - uses: lannonbr/vsce-action@4.0.0
         with:
